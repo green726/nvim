@@ -1,11 +1,9 @@
-require('plugins')
+require('plugins/packer')
 
-require('monokai').setup { palette = require('monokai').pro }
-require'nvim-treesitter.configs'.setup {
-    highlight = {
-      enable = true,
-    },
-  }
-
+require('plugins/monokai')
+require('plugins/treesitter')
+require('plugins/bufferline')
+require('plugins/feline')
+require('plugins/indent-blanklines')
 
 vim.opt.number = true
