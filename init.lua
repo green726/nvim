@@ -1,5 +1,5 @@
 
-require('plugins/packer')
+require('plugins')
 
 require('monokai').setup { palette = require('monokai').pro }
---require'lspconfig'.tsserver.setup{}
+local lspconfig = require("lspconfig")
