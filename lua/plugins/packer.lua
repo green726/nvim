@@ -24,6 +24,20 @@ return require('packer').startup(function()
   use "lukas-reineke/indent-blankline.nvim"
   --auto pairs
   use 'jiangmiao/auto-pairs'
-
+  --git suff
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+  }
+  --file tree 
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    },
+    config = function() require'nvim-tree'.setup {} end
+}
 
   end)
