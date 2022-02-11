@@ -22,6 +22,8 @@ return require('packer').startup(function()
   use 'feline-nvim/feline.nvim'
   --indents
   use "lukas-reineke/indent-blankline.nvim"
+  --auto pairs
+  use 'jiangmiao/auto-pairs'
 
 
   end)
