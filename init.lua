@@ -6,6 +6,7 @@ require('plugins/bufferline')
 require('plugins/feline')
 require('plugins/indent-blanklines')
 require('plugins/git-signs')
+require('plugins/alpha')
 
 vim.opt.number = true
 vim.opt.encoding = 'UTF-8'
