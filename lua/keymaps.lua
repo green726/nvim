@@ -13,3 +13,6 @@ map("n", "}b", ":BufferLineMoveNext<CR>", { silent = true })
 map("n", "{b", ":BufferLineMovePrev<CR>", { silent = true })
 
 map("n", "ff", ":Telescope find_files<CR>", { silent = true })
+
+map("n", "<C-f>", ":NvimTreeFocus<CR>", { silent = true })
+map("n", "<C-b>", ":NvimTreeClose<CR>", { silent = true })
