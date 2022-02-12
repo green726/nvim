@@ -14,3 +14,10 @@ require('keymaps')
 vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.encoding = 'UTF-8'
+
+--below code goes in coc-settings.json
+--[[{
+    "codeLens.enable": true,
+    "java.referencesCodeLens.enabled": true,
+    "java.jdt.ls.vmargs": "-javaagent:C:\\Coding\\lombok\\lombok.jar"
+}]]
