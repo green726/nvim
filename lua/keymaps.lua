@@ -11,3 +11,9 @@ map("n", "[b", ":BufferLineCyclePrev<CR>", { silent = true })
 
 map("n", "}b", ":BufferLineMoveNext<CR>", { silent = true })
 map("n", "{b", ":BufferLineMovePrev<CR>", { silent = true })
+
+--[[{
+    "codeLens.enable": true,
+    "java.referencesCodeLens.enabled": true,
+    "java.jdt.ls.vmargs": "-javaagent:C:\\Coding\\lombok\\lombok.jar"
+}]]
