@@ -38,6 +38,8 @@ return require('packer').startup(function()
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
     },
     config = function() require'nvim-tree'.setup {} end
-}
+  }
+  --home menu/start
+  use 'goolord/alpha-nvim'
 
   end)
