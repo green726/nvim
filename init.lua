@@ -9,6 +9,7 @@ require('plugins/alpha')
 require('plugins/nvim-tree')
 require('plugins/bufferline')
 require('plugins/web-devicons')
+require('plugins/telescope')
 require('keymaps')
 
 vim.opt.termguicolors = true

@@ -13,12 +13,12 @@ dashboard.section.header.val = {
 dashboard.section.buttons.val = {
     dashboard.button( "o", "  Open File Tree", ":e . <CR>"),
     dashboard.button( "e", "  New file" , ":ene <BAR> startinsert <CR>"),
-    dashboard.button( "q", "  Quit NVIM" , ":qa<CR>")
+    dashboard.button( "q", "  Quit NVIM" , ":q!<CR>")
 }
 
 
 dashboard.config.opts.noautocmd = true
 
-vim.cmd[[autocmd User AlphaReady echo 'ready']]
+vim.cmd[[autocmd User AlphaReady echo 'Hello there!']]
 
 alpha.setup(dashboard.config)
