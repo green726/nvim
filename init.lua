@@ -19,5 +19,5 @@ vim.opt.encoding = 'UTF-8'
 --[[{
     "codeLens.enable": true,
     "java.referencesCodeLens.enabled": true,
-    "java.jdt.ls.vmargs": "-javaagent:C:\\Coding\\lombok\\lombok.jar"
+    "java.jdt.ls.vmargs": "-javaagent:E:\\Coding\\lombok\\lombok.jar"
 }]]
