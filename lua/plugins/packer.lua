@@ -16,7 +16,7 @@ return require('packer').startup(function()
   }
   --icons
   use 'kyazdani42/nvim-web-devicons'
-  --buffer/tabs
+  --bufferline
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
   --statusline
   use 'feline-nvim/feline.nvim'
@@ -36,8 +36,7 @@ return require('packer').startup(function()
     'kyazdani42/nvim-tree.lua',
     requires = {
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
-    },
-    config = function() require'nvim-tree'.setup {} end
+    }
   }
   --home menu/start
   use 'goolord/alpha-nvim'
