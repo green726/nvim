@@ -9,7 +9,7 @@ return require('packer').startup(function()
   --markdown viewer
   use {"ellisonleao/glow.nvim"}
   --syntax highlighting
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}  
+  use {'nvim-treesitter/nvim-treesitter'}  
   --file finder
   use {
     'nvim-telescope/telescope.nvim',
