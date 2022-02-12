@@ -4,8 +4,7 @@ return require('packer').startup(function(use)
   use 'tanvirtin/monokai.nvim'
   --completion
   --need to run this in powershell for java to work  curl https://projectlombok.org/downloads/lombok.jar -O E:\Coding\lombok\lombok.jar
-  use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}  
-  --need to install glow withchoco
+  use {'neoclide/coc.nvim', branch = 'release'}  --need to install glow withchoco
   --markdown viewer
   use {"ellisonleao/glow.nvim"}
   --syntax highlighting
@@ -43,5 +42,7 @@ return require('packer').startup(function(use)
   }
   --home menu/start
   use 'goolord/alpha-nvim'
+  --terminal
+  use {"akinsho/toggleterm.nvim"}
 
   end)
