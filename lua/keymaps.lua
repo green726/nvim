@@ -14,6 +14,7 @@ map("n", "{b", ":BufferLineMovePrev<CR>", { silent = true })
 
 map("n", "bc", ":BufferClose<CR>", { silent = true })
 
+map("n", "<leader>t", ":ToggleTerm<CR>", { silent = true })
 
 map("n", "ff", ":Telescope find_files<CR>", { silent = true })
 

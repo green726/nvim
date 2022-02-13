@@ -114,11 +114,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\mguin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
-  ["monokai.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\mguin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\monokai.nvim",
-    url = "https://github.com/tanvirtin/monokai.nvim"
-  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "C:\\Users\\mguin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",
@@ -163,6 +158,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\mguin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\mguin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["vim-snippets"] = {
     loaded = true,

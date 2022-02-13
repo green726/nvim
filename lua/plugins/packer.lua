@@ -1,7 +1,7 @@
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   --theme
-  use 'tanvirtin/monokai.nvim'
+  use 'folke/tokyonight.nvim'
   --completion
   --need to run this in powershell for java to work  curl https://projectlombok.org/downloads/lombok.jar -O E:\Coding\lombok\lombok.jar
   use {'neoclide/coc.nvim', branch = 'release'}  

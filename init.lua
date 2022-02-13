@@ -1,6 +1,9 @@
+vim.opt.termguicolors = true
+vim.opt.number = true
+vim.opt.encoding = 'UTF-8'
+
 require('plugins/packer')
 
-require('plugins/monokai')
 require('plugins/treesitter')
 require('plugins/feline')
 require('plugins/indent-blanklines')
@@ -15,9 +18,9 @@ require('plugins/todo-comments')
 
 require('keymaps')
 
-vim.opt.termguicolors = true
-vim.opt.number = true
-vim.opt.encoding = 'UTF-8'
+vim.cmd[[colorscheme tokyonight]]
+
+
 
 --i use the below guide for unity
 --https://chrislabarge.com/posts/neovim-unity-engine/
