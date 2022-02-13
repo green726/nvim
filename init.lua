@@ -11,12 +11,24 @@ require('plugins/bufferline')
 require('plugins/web-devicons')
 require('plugins/telescope')
 require('plugins/toggle-term')
+require('plugins/todo-comments')
 
 require('keymaps')
 
 vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.encoding = 'UTF-8'
+
+--i use the below guide for unity
+--https://chrislabarge.com/posts/neovim-unity-engine/
+--https://www.youtube.com/watch?v=FlhNSNMNYOo
+
+--need to run coc and treesitter install commands for this to work
+--coc-javascript
+--treesitter-tsserver
+--coc-tabnine
+--coc-snippets
+--coc-omnisharp
 
 --below code goes in coc-settings.json
 --[[{

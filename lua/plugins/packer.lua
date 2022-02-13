@@ -41,5 +41,14 @@ return require('packer').startup(function(use)
   use 'goolord/alpha-nvim'
   --terminal
   use {"akinsho/toggleterm.nvim"}
+  --snippets for use with coc-snippets
+  use 'honza/vim-snippets'
+  --better comments
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+  }
+  --c# stuff
+  use 'OmniSharp/omnisharp-vim'
 
   end)

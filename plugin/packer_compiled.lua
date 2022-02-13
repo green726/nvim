@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\mguin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  ["omnisharp-vim"] = {
+    loaded = true,
+    path = "C:\\Users\\mguin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\omnisharp-vim",
+    url = "https://github.com/OmniSharp/omnisharp-vim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "C:\\Users\\mguin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
@@ -144,10 +149,20 @@ _G.packer_plugins = {
     path = "C:\\Users\\mguin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\mguin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
+  },
   ["toggleterm.nvim"] = {
     loaded = true,
     path = "C:\\Users\\mguin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["vim-snippets"] = {
+    loaded = true,
+    path = "C:\\Users\\mguin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-snippets",
+    url = "https://github.com/honza/vim-snippets"
   }
 }
 
