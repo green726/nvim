@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\mguin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "C:\\Users\\mguin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["feline.nvim"] = {
     loaded = true,
     path = "C:\\Users\\mguin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\feline.nvim",

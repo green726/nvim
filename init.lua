@@ -22,6 +22,7 @@ vim.opt.encoding = 'UTF-8'
 --i use the below guide for unity
 --https://chrislabarge.com/posts/neovim-unity-engine/
 --https://www.youtube.com/watch?v=FlhNSNMNYOo
+--https://rudism.com/coding-csharp-in-neovim/
 
 --need to run coc and treesitter install commands for this to work
 --coc-javascript
@@ -34,5 +35,7 @@ vim.opt.encoding = 'UTF-8'
 --[[{
     "codeLens.enable": true,
     "java.referencesCodeLens.enabled": true,
-    "java.jdt.ls.vmargs": "-javaagent:E:\\Coding\\lombok\\lombok.jar"
+    "java.jdt.ls.vmargs": "-javaagent:E:\\Coding\\lombok\\lombok.jar",
+    "coc.source.OmniSharp.enable" : true,
+    "coc.source.OmniSharp.triggerCharacters": "."
 }]]

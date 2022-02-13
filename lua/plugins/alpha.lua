@@ -16,7 +16,6 @@ dashboard.section.buttons.val = {
     dashboard.button( "q", "  Quit NVIM" , ":q!<CR>")
 }
 
-
 dashboard.config.opts.noautocmd = true
 
 vim.cmd[[autocmd User AlphaReady echo 'Hello there!']]
