@@ -2,7 +2,7 @@ vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.encoding = 'UTF-8'
 
-require('plugins/packer')
+require('plugins/paq')
 
 require('plugins/treesitter')
 require('plugins/feline')
