@@ -1,0 +1,30 @@
+using System.Diagnostics;
+
+namespace Program;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Process cmd = new Process();
+        cmd.StartInfo.FileName = "cmd.exe";
+        cmd.StartInfo.RedirectStandardInput = true;
+        cmd.StartInfo.RedirectStandardOutput = true;
+        cmd.StartInfo.CreateNoWindow = true;
+        cmd.StartInfo.UseShellExecute = false;
+        cmd.Start();
+
+        if (args.Length > 0)
+        {
+            cmd.StandardInput.WriteLine($"nvr --servername 127.0.0.1:7777 --remote-silent {args[0]} {args[1]}");
+        }
+        else
+        {
+            cmd.StandardInput.WriteLine($"nvr --servername 127.0.0.1:7777 --remote-silent .");
+        }
+        cmd.StandardInput.Flush();
+        cmd.StandardInput.Close();
+        cmd.WaitForExit();
+        Console.WriteLine(cmd.StandardOutput.ReadToEnd());
+    }
+}
