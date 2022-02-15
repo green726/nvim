@@ -15,7 +15,7 @@ return require('paq') {
    {"ellisonleao/glow.nvim"};
   --syntax highlighting
    {'nvim-treesitter/nvim-treesitter'};  
---file finder
+   --file finder
    {'nvim-telescope/telescope.nvim'};
   --icons
    {'kyazdani42/nvim-web-devicons'};
