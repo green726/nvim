@@ -6,7 +6,8 @@ return require('paq') {
   --bunch of stuff requires this 
   {'nvim-lua/plenary.nvim'};
   --theme
-  {'folke/tokyonight.nvim'};
+  --{'folke/tokyonight.nvim'};
+  {'Mofiqul/vscode.nvim'};
   --completion
   --need to run this in powershell for java to work  curl https://projectlombok.org/downloads/lombok.jar -O E:\Coding\lombok\lombok.jar
    {'neoclide/coc.nvim', branch = 'release'};  
@@ -14,7 +15,7 @@ return require('paq') {
   --markdown viewer
    {"ellisonleao/glow.nvim"};
   --syntax highlighting
-   {'nvim-treesitter/nvim-treesitter'};  
+  {'nvim-treesitter/nvim-treesitter'};  
    --file finder
    {'nvim-telescope/telescope.nvim'};
   --icons
@@ -40,7 +41,7 @@ return require('paq') {
   --better comments
   {"folke/todo-comments.nvim"};
   --c# stuff
-  {'OmniSharp/omnisharp-vim'};
+  --{'OmniSharp/omnisharp-vim'};
   --github copilot
   {'github/copilot.vim'};
 

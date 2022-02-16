@@ -15,11 +15,17 @@ require('plugins/web-devicons')
 require('plugins/telescope')
 require('plugins/toggle-term')
 require('plugins/todo-comments')
+require('plugins/omnisharp')
 
 require('keymaps')
 
-vim.cmd[[colorscheme tokyonight]]
+--vim.cmd[[colorscheme tokyonight]]
 
+vim.g.vscode_style = "dark"
+vim.g.vscode_italic_comment = 1
+
+
+vim.cmd[[colorscheme vscode]]
 
 
 --i use the below guide for unity
