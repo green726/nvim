@@ -1,0 +1,14 @@
+need to run coc and treesitter install commands for all features to work
+coc-javascript
+treesitter-tsserver
+treesitter java
+treesitter javascript
+coc-tabnine
+coc-snippets
+coc-omnisharp
+coc-prettier
+coc-java
+
+Other commands
+Copilot setup
+OmniSharpInstall

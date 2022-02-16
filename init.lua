@@ -27,18 +27,14 @@ vim.cmd[[colorscheme tokyonight]]
 --https://www.youtube.com/watch?v=FlhNSNMNYOo
 --https://rudism.com/coding-csharp-in-neovim/
 
---need to run coc and treesitter install commands for this to work
---coc-javascript
---treesitter-tsserver
---coc-tabnine
---coc-snippets
---coc-omnisharp
+
 
 --below code goes in coc-settings.json
 --[[{
     "codeLens.enable": true,
     "java.referencesCodeLens.enabled": true,
-    "java.jdt.ls.vmargs": "-javaagent:E:\\Coding\\lombok\\lombok.jar",
+    "java.jdt.ls.vmargs": "-javaagent:C:\\code\\lombok\\lombok.jar",
+    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown"]
     "coc.source.OmniSharp.enable" : true,
     "coc.source.OmniSharp.triggerCharacters": "."
 }]]
