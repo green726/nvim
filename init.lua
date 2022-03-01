@@ -1,3 +1,5 @@
+--!!! very important, cant have spaces in file/folder names for the unity open in greenvim to work
+
 vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.encoding = 'UTF-8'
@@ -16,6 +18,7 @@ require('plugins/telescope')
 require('plugins/toggle-term')
 require('plugins/todo-comments')
 require('plugins/omnisharp')
+require('plugins/neo-scroll')
 
 require('keymaps')
 
@@ -25,8 +28,10 @@ vim.g.vscode_style = "dark"
 vim.g.vscode_italic_comment = 1
 
 
-vim.cmd[[colorscheme vscode]]
-
+vim.cmd [[colorscheme vscode]]
+vim.cmd [[set tabstop=4]]
+vim.cmd [[set shiftwidth=4]]
+vim.cmd [[set expandtab]]
 
 --i use the below guide for unity
 --https://chrislabarge.com/posts/neovim-unity-engine/

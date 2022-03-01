@@ -18,5 +18,12 @@ map("n", "<leader>t", ":ToggleTerm<CR>", { silent = true })
 
 map("n", "ff", ":Telescope find_files<CR>", { silent = true })
 
-map("n", "<C-f>", ":NvimTreeFocus<CR>", { silent = true })
+map("n", "<C-v>", ":NvimTreeFocus<CR>", { silent = true })
 map("n", "<C-b>", ":NvimTreeClose<CR>", { silent = true })
+--[[
+var io = require('socket.io')(http, { 
+    cors: {
+      origin: "*"
+    }
+    });
+  ]]

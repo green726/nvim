@@ -41,8 +41,9 @@ return require('paq') {
   --better comments
   {"folke/todo-comments.nvim"};
   --c# stuff
-  --{'OmniSharp/omnisharp-vim'};
+  {'OmniSharp/omnisharp-vim'};
   --github copilot
   {'github/copilot.vim'};
-
+  --scrolling
+  {'karb94/neoscroll.nvim'};
 }
