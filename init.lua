@@ -38,6 +38,7 @@ vim.cmd [[set expandtab]]
 --https://www.youtube.com/watch?v=FlhNSNMNYOo
 --https://rudism.com/coding-csharp-in-neovim/
 
+--need to have mingw installed (gcc)
 
 
 --below code goes in coc-settings.json
