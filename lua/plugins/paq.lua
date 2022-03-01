@@ -13,15 +13,15 @@ return require('paq') {
    {'neoclide/coc.nvim', branch = 'release'};  
   --need to install glow withchoco
   --markdown viewer
-   {"ellisonleao/glow.nvim"};
+  {"ellisonleao/glow.nvim"};
   --syntax highlighting
   {'nvim-treesitter/nvim-treesitter'};  
-   --file finder
-   {'nvim-telescope/telescope.nvim'};
+  --file finder
+  {'nvim-telescope/telescope.nvim'};
   --icons
-   {'kyazdani42/nvim-web-devicons'};
+  {'kyazdani42/nvim-web-devicons'};
   -- bufferline
-   {'akinsho/bufferline.nvim'};
+  {'akinsho/bufferline.nvim'};
   --statusline
   {'feline-nvim/feline.nvim'};
   --indents
