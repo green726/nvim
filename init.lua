@@ -38,7 +38,9 @@ vim.cmd [[set expandtab]]
 --https://www.youtube.com/watch?v=FlhNSNMNYOo
 --https://rudism.com/coding-csharp-in-neovim/
 
---need to have mingw installed (gcc)
+--need to have clang installed
+--need to have vs 2019 installed
+--if clang errors cant find vs, follow the steps here: https://stackoverflow.com/questions/66692772/nvim-treesitter-installation-on-windows (!!Must run in nvim-qt)
 
 
 --below code goes in coc-settings.json
