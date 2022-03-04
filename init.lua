@@ -1,4 +1,7 @@
 --!!! very important, cant have spaces in file/folder names for the unity open in greenvim to work
+--my favorite terminal for use here is alacritty - windows command prompt is fine but will not work properly with any font
+--agave NF
+--for this reason (+ config for alacritty and performance) I prefer alacritty
 
 vim.opt.termguicolors = true
 vim.opt.number = true
@@ -27,11 +30,24 @@ require('keymaps')
 vim.g.vscode_style = "dark"
 vim.g.vscode_italic_comment = 1
 
-
+--set the colorscheme
 vim.cmd [[colorscheme vscode]]
+--below changes tabs to four spaces
 vim.cmd [[set tabstop=4]]
 vim.cmd [[set shiftwidth=4]]
 vim.cmd [[set expandtab]]
+
+--x-term 256 colors
+vim.cmd [[set t_Co=256]]
+
+--below line of code prevent screen tearing
+vim.cmd [[
+    augroup test_group
+        autocmd!
+        autocmd BufEnter * highlight Normal guibg=0
+    augroup END
+    ]]
+
 
 --i use the below guide for unity
 --https://chrislabarge.com/posts/neovim-unity-engine/
