@@ -1,7 +1,8 @@
 --!!! very important, cant have spaces in file/folder names for the unity open in greenvim to work
 --my favorite terminal for use here is alacritty - windows command prompt is fine but will not work properly with any font
---agave NF
+--execpt for agave NF (which i dont like)
 --for this reason (+ config for alacritty and performance) I prefer alacritty
+--I use the Anonymice Mono NF
 
 vim.opt.termguicolors = true
 vim.opt.number = true
@@ -58,6 +59,7 @@ vim.cmd [[
 --need to have vs 2019 installed
 --if clang errors cant find vs, follow the steps here: https://stackoverflow.com/questions/66692772/nvim-treesitter-installation-on-windows (!!Must run in nvim-qt)
 
+--here is tutorial for java: https://www.chrisatmachine.com/Neovim/24-neovim-and-java/
 
 --below code goes in coc-settings.json
 --[[{
