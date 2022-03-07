@@ -8,6 +8,14 @@ vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.encoding = 'UTF-8'
 
+--below line of code prevent screen tearing
+vim.cmd [[
+    augroup test_group
+        autocmd!
+        autocmd BufEnter * highlight Normal guibg=0
+    augroup END
+]]
+
 require('plugins/paq')
 
 require('plugins/treesitter')
@@ -37,18 +45,6 @@ vim.cmd [[colorscheme vscode]]
 vim.cmd [[set tabstop=4]]
 vim.cmd [[set shiftwidth=4]]
 vim.cmd [[set expandtab]]
-
---x-term 256 colors
-vim.cmd [[set t_Co=256]]
-
---below line of code prevent screen tearing
-vim.cmd [[
-    augroup test_group
-        autocmd!
-        autocmd BufEnter * highlight Normal guibg=0
-    augroup END
-    ]]
-
 
 --i use the below guide for unity
 --https://chrislabarge.com/posts/neovim-unity-engine/

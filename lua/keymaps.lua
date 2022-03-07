@@ -19,7 +19,11 @@ map("n", "<leader>t", ":ToggleTerm<CR>", { silent = true })
 map("n", "ff", ":Telescope find_files<CR>", { silent = true })
 
 map("n", "<C-v>", ":NvimTreeFocus<CR>", { silent = true })
-map("n", "<C-b>", ":NvimTreeClose<CR>", { silent = true })
+map("n", "<C-b>", ":NvimTreeClose<CR>", { leader })
+
+map("n", "gd", "<Plug>(coc-definition)", { silent = true })
+map("n", "rn", "<Plug>(coc-rename)", { silent = true })
+
 --[[
 var io = require('socket.io')(http, { 
     cors: {
