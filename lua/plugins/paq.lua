@@ -10,7 +10,7 @@ return require('paq') {
   {'Mofiqul/vscode.nvim'};
   --completion
   --need to run this in powershell for java to work  curl https://projectlombok.org/downloads/lombok.jar -O E:\Coding\lombok\lombok.jar
-   {'neoclide/coc.nvim', branch = 'release'};  
+  {'neoclide/coc.nvim', branch = 'release'};  
   --need to install glow withchoco
   --markdown viewer
   {"ellisonleao/glow.nvim"};

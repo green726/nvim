@@ -64,5 +64,6 @@ vim.cmd [[set expandtab]]
     "java.jdt.ls.vmargs": "-javaagent:C:\\code\\lombok\\lombok.jar",
     "coc.preferences.formatOnSaveFiletypes": ["css", "markdown"]
     "coc.source.OmniSharp.enable" : true,
-    "coc.source.OmniSharp.triggerCharacters": "."
+    "coc.source.OmniSharp.triggerCharacters": ".",
+    "coc.preferences.hoverTarget": "float"
 }]]
