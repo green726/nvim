@@ -20,6 +20,13 @@ map("n", "ff", ":Telescope find_files<CR>", { silent = true })
 
 map("n", "<C-v>", ":NvimTreeFocus<CR>", { silent = true })
 map("n", "<C-b>", ":NvimTreeClose<CR>", { silent = true })
+
+--coc stuff
+vim.api.nvim_set_keymap("n", "gd", "<Plug>(coc-definition)", {silent = true})
+vim.api.nvim_set_keymap("n", "<leader>rn", "<Plug>(coc-rename)", {})
+
+
+
 --[[
 var io = require('socket.io')(http, { 
     cors: {
