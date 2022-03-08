@@ -7,14 +7,17 @@
 vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.encoding = 'UTF-8'
+vim.g.OmniSharp_highlighting = 0
 
 --below line of code prevent screen tearing
 vim.cmd [[
-    augroup test_group
+    augroup nvim
         autocmd!
-        autocmd BufEnter * highlight Normal guibg=0
+        autocmd BufEnter *.java, *.cs highlight Normal guibg=0
     augroup END
 ]]
+
+--        autocmd CursorHold *.java :call CocAction('doHover') <silent>
 
 require('plugins/paq')
 
@@ -46,6 +49,10 @@ vim.cmd [[set tabstop=4]]
 vim.cmd [[set shiftwidth=4]]
 vim.cmd [[set expandtab]]
 
+--lower vim update time from 4000ms to 1000ms which will decrease cursorhold time
+vim.cmd [[set updatetime=800]]
+
+
 --i use the below guide for unity
 --https://chrislabarge.com/posts/neovim-unity-engine/
 --https://www.youtube.com/watch?v=FlhNSNMNYOo
@@ -62,8 +69,14 @@ vim.cmd [[set expandtab]]
     "codeLens.enable": true,
     "java.referencesCodeLens.enabled": true,
     "java.jdt.ls.vmargs": "-javaagent:C:\\code\\lombok\\lombok.jar",
-    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown"]
+    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "java"],
     "coc.source.OmniSharp.enable" : true,
     "coc.source.OmniSharp.triggerCharacters": ".",
-    "coc.preferences.hoverTarget": "float"
+    "coc.preferences.hoverTarget": "float",
+    "java.configuration.runtimes": [
+        {
+          "name": "JavaSE-1.8",
+          "path": "C:\\Program Files\\Java\\jre1.8.0_321"
+        }
+      ]
 }]]
