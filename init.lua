@@ -13,7 +13,7 @@ vim.g.OmniSharp_highlighting = 0
 vim.cmd [[
     augroup nvim
         autocmd!
-        autocmd BufEnter *.java, *.cs highlight Normal guibg=0
+        autocmd BufEnter *.java,*.cs highlight Normal guibg=0
     augroup END
 ]]
 
