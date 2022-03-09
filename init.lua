@@ -7,17 +7,12 @@
 vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.encoding = 'UTF-8'
-vim.g.OmniSharp_highlighting = 0
 
 --below line of code prevent screen tearing
 vim.cmd [[
-    augroup nvim
-        autocmd!
-        autocmd BufEnter *.java,*.cs highlight Normal guibg=0
-    augroup END
+    autocmd BufEnter * highlight Normal guibg=0
+    autocmd CursorHold *.java,*.cs :call CocAction('doHover')"
 ]]
-
---        autocmd CursorHold *.java :call CocAction('doHover') <silent>
 
 require('plugins/paq')
 

@@ -1,4 +1,4 @@
---vim.g["OmniSharp_highlighting"] = 0;
+vim.g["OmniSharp_highlighting"] = 0;
 --[[
 vim.g["OmniSharp_highlighting_groups"] = {
     'ExcludedCode': 'NonText',
