@@ -24,6 +24,8 @@ map("n", "<C-b>", ":NvimTreeClose<CR>", { silent = true })
 --coc stuff
 vim.api.nvim_set_keymap("n", "gd", "<Plug>(coc-definition)", {silent = true})
 vim.api.nvim_set_keymap("n", "<leader>rn", "<Plug>(coc-rename)", {})
+vim.api.nvim_set_keymap("n", "<leader>osrn", "<Plug>(omnisharp_rename)", {})
+
 --map("n", "<C-d>", ":call CocAction('doHover')<CR>", {silent = true})
 
 
