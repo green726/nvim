@@ -11,7 +11,8 @@ vim.opt.encoding = 'UTF-8'
 --below line of code prevent screen tearing
 vim.cmd [[
     autocmd BufEnter * highlight Normal guibg=0
-    autocmd CursorHold *.java,*.cs :call CocAction('doHover')"
+    autocmd CursorHold *.java :call CocAction('doHover')
+    autocmd CursorHold *.cs :OmniSharpDocumentation
 ]]
 
 require('plugins/paq')
