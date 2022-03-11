@@ -19,3 +19,16 @@ vim.cmd [[
     autocmd BufWrite *.cs :OmniSharpCodeFormat
     autocmd CursorHold *.cs :call CsDocs()
 ]]
+
+
+--vim.cmd[[colorscheme tokyonight]]
+
+--set the colorscheme
+vim.cmd [[colorscheme vscode]]
+--below changes tabs to four spaces
+vim.cmd [[set tabstop=4]]
+vim.cmd [[set shiftwidth=4]]
+vim.cmd [[set expandtab]]
+
+--lower vim update time from 4000ms to 1000ms which will decrease cursorhold time
+vim.cmd [[set updatetime=800]]
