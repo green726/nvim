@@ -4,14 +4,21 @@
 --autocmd CursorHold *.cs :echo matchstr(getline('.'), '\%' . col('.') . 'c.')
 vim.cmd [[
     func CsDocs()
-      let wordsIgnore = ['', ' ', '(', ')', '{', '}', ';', 'public', 'static', 'private', 'void']
-      let word = expand("<cword>")
+      let wordsIgnore = ['', ' ', '(', ')', '{', '}', ';', 'public', 'static', 'private', 'void', 'for', 'foreach', 'if', 'else', 'true', 'false', '&&', '[', ']', 'class', 'using']
+      let word = expand("<cword>") "get cursor word, above is a list of words to ignore
+      let char =  matchstr(getline('.'), '\%' . col('.') . 'c.') "get char under cursor
+      let line = matchstr(getline('.'), '^\s*\/') "check if first char of line is a comment (/)
+      if line != ''
+        return
+      endif
       for i in wordsIgnore
         if word == i
           return
         endif
       endfor
-      :OmniSharpDocumentation
+        if char != '' && char != ' '
+          :OmniSharpDocumentation
+        endif
     endfunc
 
     autocmd BufEnter * highlight Normal guibg=0
