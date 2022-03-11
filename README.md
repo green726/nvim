@@ -18,7 +18,7 @@ greenvim is my attempt to make neovim as similar to an IDE as possible. I use lu
 * [full Unity support](#unity-support)
 * [full Java support](#java-support)
 
-###Java support:
+### Java support:
 
 
-###Unity Support:
+### Unity Support:
