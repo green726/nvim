@@ -26,11 +26,22 @@ require('plugins/omnisharp')
 require('plugins/neo-scroll')
 
 require('keymaps')
-require('vimscript')
+require('autocommands')
 
 vim.g.vscode_style = "dark"
 vim.g.vscode_italic_comment = 1
 
+--vim.cmd[[colorscheme tokyonight]]
+
+--set the colorscheme
+vim.cmd [[colorscheme vscode]]
+--below changes tabs to four spaces
+vim.cmd [[set tabstop=4]]
+vim.cmd [[set shiftwidth=4]]
+vim.cmd [[set expandtab]]
+
+--lower vim update time from 4000ms to 1000ms which will decrease cursorhold time
+vim.cmd [[set updatetime=800]]
 
 --i use the below guide for unity
 --https://chrislabarge.com/posts/neovim-unity-engine/
