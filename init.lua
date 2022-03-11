@@ -13,6 +13,7 @@ vim.cmd [[
     autocmd BufEnter * highlight Normal guibg=0
     autocmd CursorHold *.java :call CocAction('doHover')
     autocmd CursorHold *.cs :OmniSharpDocumentation
+    autocmd BufWrite *.cs :OmniSharpCodeFormat
 ]]
 
 require('plugins/paq')
