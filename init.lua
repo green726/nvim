@@ -8,12 +8,14 @@ vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.encoding = 'UTF-8'
 
---below line of code prevent screen tearing
+--first line of code below is to prevent screen tearing
+--below comment can be added for highlight on cursor hold
+--autocmd CursorHold *.cs :OmniSharpDocumentation
 vim.cmd [[
     autocmd BufEnter * highlight Normal guibg=0
     autocmd CursorHold *.java :call CocAction('doHover')
-    autocmd CursorHold *.cs :OmniSharpDocumentation
     autocmd BufWrite *.cs :OmniSharpCodeFormat
+
 ]]
 
 require('plugins/paq')
