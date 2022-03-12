@@ -22,7 +22,7 @@ vim.cmd [[
     endfunc
 
     autocmd BufEnter * highlight Normal guibg=0
-    autocmd CursorHold *.java :call CocAction('doHover')
+    autocmd CursorHold *.java silent! :call CocAction('doHover')
     autocmd BufWrite *.cs :OmniSharpCodeFormat
     autocmd CursorHold *.cs :call CsDocs()
 ]]

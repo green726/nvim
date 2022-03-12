@@ -19,14 +19,27 @@ map("n", "<leader>t", ":ToggleTerm<CR>", { silent = true })
 map("n", "ff", ":Telescope find_files<CR>", { silent = true })
 
 map("n", "<C-v>", ":NvimTreeFocus<CR>", { silent = true })
-map("n", "<C-b>", ":NvimTreeClose<CR>", { silent = true })
+map("n", "<C-j>", ":NvimTreeClose<CR>", { silent = true })
 
+map("n", "cf", ":CocFix", { silent = true })
 --coc stuff
 vim.api.nvim_set_keymap("n", "gd", "<Plug>(coc-definition)", {silent = true})
 vim.api.nvim_set_keymap("n", "<leader>rn", "<Plug>(coc-rename)", {})
 vim.api.nvim_set_keymap("n", "<leader>osrn", "<Plug>(omnisharp_rename)", {})
-vim.api.nvim_set_keymap("n", "oh", "<Plug>(omnisharp_documentation)", {})
+vim.api.nvim_set_keymap("n", "oh", "<Plug>(omnisharp_do<C-k>mentation)", {})
 
+
+vim.cmd [[
+  if has('nvim-0.4.0') || has('patch-8.2.0750')
+  echo 'hi'
+  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+  endif
+]]
 
 --map("n", "<C-d>", ":call CocAction('doHover')<CR>", {silent = true})
 
