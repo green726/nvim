@@ -29,7 +29,8 @@ greenvim is my attempt to make neovim as similar to an IDE as possible. I use lu
 ### Important info:
 #### C# hover documentation:
   * This is done through a vimscript function I wrote
-      * Due to the nature of omnisharp's documentation command (will open a blank popup if no docs are present ie hovering on a bracket) it is necessary to check the hovered word against a list of ignored words. This list can be found in the autocommands.lua file.  
-  
+      * Due to the nature of omnisharp's documentation command (will open a blank popup if no docs are present ie hovering on a bracket) it is necessary to check the hovered word against a list of ignored words. This list can be found in the autocommands.lua file. Please add any desired words to ignore hover-documentation to this list. The command also ignores all lines that begin with a "/" (comments)
+#### Unity open in greenvim:
+
 
 ## Java support:
