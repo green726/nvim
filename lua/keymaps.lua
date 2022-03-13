@@ -21,7 +21,7 @@ map("n", "ff", ":Telescope find_files<CR>", { silent = true })
 map("n", "<C-t>", ":NvimTreeFocus<CR>", { silent = true })
 map("n", "<C-j>", ":NvimTreeClose<CR>", { silent = true })
 
-map("n", "cf", ":CocFix", { silent = true })
+map("n", "cf", ":CocFix<CR>", { silent = true })
 --coc stuff
 vim.api.nvim_set_keymap("n", "gd", "<Plug>(coc-definition)", {silent = true})
 vim.api.nvim_set_keymap("n", "<leader>rn", "<Plug>(coc-rename)", {})
