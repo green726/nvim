@@ -18,7 +18,7 @@ map("n", "<leader>t", ":ToggleTerm<CR>", { silent = true })
 
 map("n", "ff", ":Telescope find_files<CR>", { silent = true })
 
-map("n", "<C-v>", ":NvimTreeFocus<CR>", { silent = true })
+map("n", "<C-t>", ":NvimTreeFocus<CR>", { silent = true })
 map("n", "<C-j>", ":NvimTreeClose<CR>", { silent = true })
 
 map("n", "cf", ":CocFix", { silent = true })
