@@ -31,7 +31,7 @@ return require('paq') {
   --git suff
   {'lewis6991/gitsigns.nvim'};
   --file tree 
-  {'kyazdani42/nvim-tree.lua'};
+  {'ms-jpq/chadtree'};
   --home menu/start
   {'goolord/alpha-nvim'};
   --terminal
