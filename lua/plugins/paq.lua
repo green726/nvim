@@ -47,5 +47,7 @@ return require('paq') {
   --scrolling
   {'karb94/neoscroll.nvim'};
   --toggle comments
-  {    'numToStr/Comment.nvim'};
+  {'numToStr/Comment.nvim'};
+  --highlight cursor
+  {'yamatsum/nvim-cursorline'};
 }
