@@ -27,7 +27,7 @@ require('plugins/todo-comments')
 require('plugins/omnisharp')
 require('plugins/neo-scroll')
 require('plugins/comment-nvim')
-require('plugins/CHADtree')
+require('plugins/nvim-tree')
 
 require('keymaps')
 require('autocommands')
