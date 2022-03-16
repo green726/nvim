@@ -20,8 +20,8 @@ return require('paq') {
   {'nvim-telescope/telescope.nvim'};
   --icons
   {'kyazdani42/nvim-web-devicons'};
-  -- bufferline
-  {'akinsho/bufferline.nvim'};
+  -- tabline
+  {'romgrk/barbar.nvim'};
   --statusline
   {'feline-nvim/feline.nvim'};
   --indents

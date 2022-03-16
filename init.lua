@@ -19,7 +19,7 @@ require('plugins/feline')
 require('plugins/indent-blanklines')
 require('plugins/git-signs')
 require('plugins/alpha')
-require('plugins/bufferline')
+--require('plugins/bufferline')
 require('plugins/web-devicons')
 require('plugins/telescope')
 require('plugins/toggle-term')
@@ -28,6 +28,7 @@ require('plugins/omnisharp')
 require('plugins/neo-scroll')
 require('plugins/comment-nvim')
 require('plugins/nvim-tree')
+require('plugins/barbar')
 
 require('keymaps')
 require('autocommands')
@@ -47,6 +48,8 @@ vim.cmd [[set expandtab]]
 --lower vim update time from 4000ms to 1000ms which will decrease cursorhold time
 vim.cmd [[set updatetime=800]]
 
+--enables mouse
+vim.cmd [[set mouse=a]]
 
 --i use the below guide for unity
 --https://chrislabarge.com/posts/neovim-unity-engine/
