@@ -44,6 +44,8 @@ vim.cmd [[set expandtab]]
 --lower vim update time from 4000ms to 1000ms which will decrease cursorhold time
 vim.cmd [[set updatetime=800]]
 
+vim.cmd [[set guifont=JetBransMono NF]]
+
 --i use the below guide for unity
 --https://chrislabarge.com/posts/neovim-unity-engine/
 --https://www.youtube.com/watch?v=FlhNSNMNYOo
