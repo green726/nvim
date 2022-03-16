@@ -4,6 +4,9 @@
 --for this reason (+ config for alacritty and performance) I prefer alacritty
 --I use the Anonymice Mono NF
 
+vim.o.guifont = "JetBrainsMono NF"
+
+
 vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.encoding = 'UTF-8'
@@ -44,7 +47,6 @@ vim.cmd [[set expandtab]]
 --lower vim update time from 4000ms to 1000ms which will decrease cursorhold time
 vim.cmd [[set updatetime=800]]
 
-vim.cmd [[set guifont=JetBransMono NF]]
 
 --i use the below guide for unity
 --https://chrislabarge.com/posts/neovim-unity-engine/
