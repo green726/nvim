@@ -2,6 +2,7 @@
 --below comments are to remember stuff - first is call docs on cursor hold, second is echo char under cursor
 --autocmd CursorHold *.cs :OmniSharpDocumentation
 --autocmd CursorHold *.cs :echo matchstr(getline('.'), '\%' . col('.') . 'c.')
+--autocmd BufEnter * highlight Normal guibg=0
 vim.cmd [[
     func CsDocs()
       let wordsIgnore = ['', ' ', '(', ')', '{', '}', ';', 'public', 'static', 'private', 'void', 'for', 'foreach', 'if', 'else', 'true', 'false', '&&', '[', ']', 'class', 'using']
@@ -21,7 +22,6 @@ vim.cmd [[
         endif
     endfunc
 
-    autocmd BufEnter * highlight Normal guibg=0
     autocmd CursorHold *.java silent! :call CocAction('doHover')
     autocmd BufWrite *.cs :OmniSharpCodeFormat
     autocmd CursorHold *.cs :call CsDocs()
