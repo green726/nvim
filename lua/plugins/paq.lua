@@ -46,4 +46,6 @@ return require('paq') {
   {'github/copilot.vim'};
   --scrolling
   {'karb94/neoscroll.nvim'};
+  --toggle comments
+  {    'numToStr/Comment.nvim'};
 }

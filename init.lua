@@ -24,6 +24,7 @@ require('plugins/toggle-term')
 require('plugins/todo-comments')
 require('plugins/omnisharp')
 require('plugins/neo-scroll')
+require('plugins/comment-nvim')
 
 require('keymaps')
 require('autocommands')
