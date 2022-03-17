@@ -13,7 +13,6 @@ vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.encoding = 'UTF-8'
 
-
 require('plugins/paq')
 
 require('plugins/treesitter')

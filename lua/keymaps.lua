@@ -12,7 +12,7 @@ map("n", "[b", ":BufferLineCyclePrev<CR>", { silent = true })
 map("n", "}b", ":BufferLineMoveNext<CR>", { silent = true })
 map("n", "{b", ":BufferLineMovePrev<CR>", { silent = true })
 
-map("n", "<leader>bcp", ":BufferLinePickClose<CR>", { silent = true })
+map("n", "<leader>bp", ":BufferLinePickClose<CR>", { silent = true })
 map("n", "bc", ":bd", { silent = true })
 
 local map = vim.api.nvim_set_keymap
