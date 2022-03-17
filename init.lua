@@ -6,6 +6,8 @@
 
 vim.o.guifont = "JetBrainsMono NF"
 
+vim.g.cursorword_highlight = false
+vim.g.cursorline_timeout = 0
 
 vim.opt.termguicolors = true
 vim.opt.number = true

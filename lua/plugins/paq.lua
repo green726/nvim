@@ -50,4 +50,6 @@ return require('paq') {
   {'numToStr/Comment.nvim'};
   --highlight cursor
   {'yamatsum/nvim-cursorline'};
+  --context menu
+  {'meznaric/conmenu'}
 }

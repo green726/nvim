@@ -9,7 +9,7 @@ local indent_blankline_styles = {
     "|",
 }
 
-vim.g.indent_blankline_char = indent_blankline_styles[1]
+vim.g.indent_blankline_char = indent_blankline_styles[3]
 
 -- Disable indent-blankline on these pages.
 vim.g.indent_blankline_filetype_exclude = {
@@ -29,3 +29,9 @@ vim.g.indent_blankline_show_first_indent_level = true
 vim.g.indent_blankline_show_current_context = true
 vim.g.indent_blankline_context_char = indent_blankline_styles[indent_blankline_style]
 vim.cmd("autocmd CursorMoved * IndentBlanklineRefresh")
+
+
+require("indent_blankline").setup {
+    show_current_context = true,
+    show_current_context_start = true,
+}
