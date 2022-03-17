@@ -21,7 +21,7 @@ return require('paq') {
   --icons
   {'kyazdani42/nvim-web-devicons'};
   -- tabline
-  {'romgrk/barbar.nvim'};
+  {'akinsho/bufferline.nvim'};
   --statusline
   {'feline-nvim/feline.nvim'};
   --indents

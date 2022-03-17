@@ -22,7 +22,7 @@ vim.cmd [[
         endif
     endfunc
 
-    autocmd CursorHold *.java silent! :call CocAction('doHover')
+    autocmd CursorHold *.java silent! :call CocActionAsync('doHover')
     autocmd BufWrite *.cs :OmniSharpCodeFormat
     autocmd CursorHold *.cs :call CsDocs()
 ]]
