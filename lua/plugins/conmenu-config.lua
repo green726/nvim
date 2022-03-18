@@ -9,7 +9,7 @@ end
     -- onlyWorkingDirectories = { path3, path4 },
     filter = 'AlwaysShow',
   }
-  local fuzzyCurrentWord = {'Telescope grep-string', ":lua require'telescope.builtin'.grep_string{}"}--, options}
+  local fuzzyCurrentWord = {'Telescope grep-string', ":lua require'telescope.builtin'.grep_string{}", options}
 --   local nestedMenu = {name, {menuItem, menuItem}, options}
 --   local divider = {'──────────────────────────', nil, options}
   
