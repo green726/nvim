@@ -29,6 +29,7 @@ require('plugins/neo-scroll')
 require('plugins/comment-nvim')
 require('plugins/nvim-tree')
 require('plugins/bufferline')
+require('plugins/treesitter-context')
 
 require('keymaps')
 require('autocommands')
