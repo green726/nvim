@@ -60,4 +60,8 @@ return require('paq') {
   {'folke/twilight.nvim'};
   --dim inactive code
   {'narutoxy/dim.lua'};
+  --window management
+  {'sindrets/winshift.nvim'};
+  --bettwen window creation
+  {"beauwilliams/focus.nvim"};
 }
