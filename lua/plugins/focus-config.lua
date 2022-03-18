@@ -1,1 +1,1 @@
-require("focus").setup({hybridnumber = true, excluded_filetypes = {"toggleterm"}})
+require("focus").setup({excluded_filetypes = {"toggleterm", "NvimTree"}})

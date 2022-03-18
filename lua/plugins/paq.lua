@@ -66,4 +66,6 @@ return require('paq') {
   {"beauwilliams/focus.nvim"};
   --collaborative editing
   {'jbyuki/instant.nvim'};
+  --browse
+  {'lalitmee/browse.nvim'};
 }

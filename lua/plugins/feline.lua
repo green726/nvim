@@ -231,7 +231,8 @@ require('feline').setup {
     filetypes = {
       'NvimTree',
       'vista',
-      'term'
+      'term',
+      'ToggleTerm'
     },
     buftypes = {},
     bufnames = {},
