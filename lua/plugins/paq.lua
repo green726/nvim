@@ -64,4 +64,6 @@ return require('paq') {
   {'sindrets/winshift.nvim'};
   --bettwen window creation
   {"beauwilliams/focus.nvim"};
+  --collaborative editing
+  {'jbyuki/instant.nvim'};
 }

@@ -33,9 +33,14 @@ require('plugins/treesitter-context')
 require('plugins/twilight-config')
 require('plugins/dim-config')
 require('plugins/conmenu-config')
+require('plugins/focus-config')
+require('plugins/winshift-config')
 
 require('keymaps')
 require('autocommands')
+
+--setup for instant collab
+vim.g.instant_username = "green726"
 
 vim.g.vscode_style = "dark"
 vim.g.vscode_italic_comment = 1
