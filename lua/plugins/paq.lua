@@ -68,4 +68,6 @@ return require('paq') {
   {'jbyuki/instant.nvim'};
   --browse
   {'lalitmee/browse.nvim'};
+  --git
+  {'tpope/vim-fugitive'};
 }

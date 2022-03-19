@@ -4,6 +4,7 @@ vim.cmd("highlight IndentBlanklineContextChar guifg=#000000 gui=nocombine")
 vim.cmd("highlight IndentBlanklineContextStart guisp=#000000 gui=underline")
 
 local indent_blankline_styles = {
+    "│",
     "▏",
     "¦",
     "┆",
@@ -12,7 +13,7 @@ local indent_blankline_styles = {
     "|",
 }
 
-vim.g.indent_blankline_char = indent_blankline_styles[4]
+vim.g.indent_blankline_char = indent_blankline_styles[1]
 
 -- Disable indent-blankline on these pages.
 vim.g.indent_blankline_filetype_exclude = {

@@ -30,6 +30,11 @@ map("n", "cf", ":CocFix<CR>", { silent = true })
 --context menu
 map("n", "<C-m>", ":ConMenu<CR>", { silent = true })
 
+vim.api.nvim_set_keymap("n", "<leader>gu", ':lua dofile("C:/Users/mguin/AppData/Local/nvim/lua/plugins/toggleTermConfig.lua")() <CR>', {silent = true})
+vim.api.nvim_set_keymap("n", "tt", ":ToggleTerm <CR>", {silent = true})
+vim.api.nvim_set_keymap("n", "<leader>set", ":e C:/Users/mguin/AppData/Local/nvim <CR>", {silent = true})
+
+
 --coc stuff
 vim.api.nvim_set_keymap("n", "gd", "<Plug>(coc-definition)", {silent = true})
 vim.api.nvim_set_keymap("n", "<leader>rn", "<Plug>(coc-rename)", {})

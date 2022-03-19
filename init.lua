@@ -4,7 +4,10 @@
 --for this reason (+ config for alacritty and performance) I prefer alacritty
 --I use the Anonymice Mono NF
 
-vim.o.guifont = "JetBrainsMono NF"
+vim.o.guifont = "ShureTechMono NF"
+vim.g.neovide_cursor_vfx_mode = "railgun"
+
+
 
 vim.g.cursorword_highlight = false
 vim.g.cursorline_timeout = 0
@@ -16,10 +19,6 @@ vim.cmd[[autocmd TermOpen * setlocal nonumber norelativenumber]]
 
 vim.opt.encoding = 'UTF-8'
 
-bookmarks = {
-  'google.com'
-}
-
 require('plugins/paq')
 
 require('plugins/treesitter')
@@ -29,7 +28,7 @@ require('plugins/git-signs')
 require('plugins/alpha')
 require('plugins/web-devicons')
 require('plugins/telescope')
-require('plugins/toggle-term')
+require('plugins/toggleTermConfig')
 require('plugins/todo-comments')
 require('plugins/omnisharp')
 require('plugins/neo-scroll')
@@ -39,7 +38,7 @@ require('plugins/bufferline')
 require('plugins/treesitter-context')
 require('plugins/twilight-config')
 require('plugins/dim-config')
-require('plugins/conmenu-config')
+require('plugins/conmenuConfig')
 require('plugins/focus-config')
 require('plugins/winshift-config')
 
