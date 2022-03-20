@@ -7,43 +7,43 @@
 vim.o.guifont = "ShureTechMono NF"
 vim.g.neovide_cursor_vfx_mode = "railgun"
 
-
-
 vim.g.cursorword_highlight = false
 vim.g.cursorline_timeout = 0
+
+vim.cmd([[set number relativenumber]])
 
 vim.opt.termguicolors = true
 vim.opt.number = true
 --autocmd to turn off line numbers in terminal
-vim.cmd[[autocmd TermOpen * setlocal nonumber norelativenumber]]
+vim.cmd([[autocmd TermOpen * setlocal nonumber norelativenumber]])
 
-vim.opt.encoding = 'UTF-8'
+vim.opt.encoding = "UTF-8"
 
-require('plugins/paq')
+require("plugins/paq")
 
-require('plugins/treesitter')
-require('plugins/feline')
-require('plugins/indent-blanklines')
-require('plugins/git-signs')
-require('plugins/alpha')
-require('plugins/web-devicons')
-require('plugins/telescope')
-require('plugins/toggleTermConfig')
-require('plugins/todo-comments')
-require('plugins/omnisharp')
-require('plugins/neo-scroll')
-require('plugins/comment-nvim')
-require('plugins/nvim-tree')
-require('plugins/bufferline')
-require('plugins/treesitter-context')
-require('plugins/twilight-config')
-require('plugins/dim-config')
-require('plugins/conmenuConfig')
-require('plugins/focus-config')
-require('plugins/winshift-config')
+require("plugins/treesitter")
+require("plugins/feline")
+require("plugins/indent-blanklines")
+require("plugins/git-signs")
+require("plugins/alpha")
+require("plugins/web-devicons")
+require("plugins/telescope")
+require("plugins/toggleTermConfig")
+require("plugins/todo-comments")
+require("plugins/omnisharp")
+require("plugins/neo-scroll")
+require("plugins/comment-nvim")
+require("plugins/nvim-treeConfig")
+require("plugins/bufferline")
+require("plugins/treesitter-context")
+require("plugins/twilight-config")
+require("plugins/dim-config")
+require("plugins/conmenuConfig")
+-- require("plugins/focus-config")
+require("plugins/winshift-config")
 
-require('keymaps')
-require('autocommands')
+require("keymaps")
+require("autocommands")
 
 --setup for instant collab
 vim.g.instant_username = "green726"
@@ -54,17 +54,17 @@ vim.g.vscode_italic_comment = 1
 --vim.cmd[[colorscheme tokyonight]]
 
 --set the colorscheme
-vim.cmd [[colorscheme vscode]]
+vim.cmd([[colorscheme vscode]])
 --below changes tabs to four spaces
-vim.cmd [[set tabstop=4]]
-vim.cmd [[set shiftwidth=4]]
-vim.cmd [[set expandtab]]
+vim.cmd([[set tabstop=4]])
+vim.cmd([[set shiftwidth=4]])
+vim.cmd([[set expandtab]])
 
 --lower vim update time from 4000ms to 1000ms which will decrease cursorhold time
-vim.cmd [[set updatetime=800]]
+vim.cmd([[set updatetime=800]])
 
 --enables mouse
-vim.cmd [[set mouse=a]]
+vim.cmd([[set mouse=a]])
 
 --i use the below guide for unity
 --https://chrislabarge.com/posts/neovim-unity-engine/
