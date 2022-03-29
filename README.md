@@ -5,8 +5,10 @@ greenvim is my attempt to make neovim as similar to an IDE as possible. I use lu
 
 ## features:
 * Completion using Coc.nvim
+* greeter
 * Fuzzysearch
 * bufferline
+* statusline
 * theme
 * tabnine
 * github copilot
@@ -18,6 +20,7 @@ greenvim is my attempt to make neovim as similar to an IDE as possible. I use lu
 * browsing
 * Context menus
 * LSP support with coc
+* better terminal integration
 * [full Unity and C# support](#unity-support)
 * [full Java support](#java-support)
 
