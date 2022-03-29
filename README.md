@@ -33,6 +33,8 @@ greenvim is my attempt to make neovim as similar to an IDE as possible. I use lu
 #### Unity open in greenvim: 
    * Unity can open any file/error in greenvim through the use of a neovim-remote and an exe I wrote in c#.
       * The exe can be found in the folder custom-exe\external-script-editor-exe. To set it up you can go into unity -> preferences -> external script editor and in the dropdown select browse and select the .exe file. In the external script editor args you then need to place "+$(Line) $(File)"
+ ## Java support:
+
  
 ### Requirements:
    * [Neovim-remote](https://github.com/mhinz/neovim-remote) installed
@@ -40,4 +42,3 @@ greenvim is my attempt to make neovim as similar to an IDE as possible. I use lu
  
 
 
-## Java support:
