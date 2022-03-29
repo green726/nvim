@@ -70,6 +70,4 @@ return require("paq")({
 	{ "lalitmee/browse.nvim" },
 	--git
 	{ "tpope/vim-fugitive" },
-	--file explorer
-	{ "tamago324/lir.nvim" },
 })

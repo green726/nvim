@@ -16,6 +16,8 @@ vim.opt.termguicolors = true
 vim.opt.number = true
 --autocmd to turn off line numbers in terminal
 vim.cmd([[autocmd TermOpen * setlocal nonumber norelativenumber]])
+--autocmd to close neovim if nvim-tree is last thing open
+vim.cmd([[autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif]])
 
 vim.opt.encoding = "UTF-8"
 
@@ -41,7 +43,6 @@ require("plugins/dim-config")
 require("plugins/conmenuConfig")
 -- require("plugins/focus-config")
 require("plugins/winshift-config")
-require("plugins/lir-config")
 
 require("keymaps")
 require("autocommands")

@@ -17,6 +17,7 @@ vim.cmd([[
     endfunction
 
     function Startup()
+		:set splitright
         :echo "Hello There!"
     endfunction
 ]])
