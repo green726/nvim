@@ -1,13 +1,13 @@
-need to run coc and treesitter install commands for all features to work
-coc-javascript
-treesitter-tsserver
-treesitter java
-treesitter javascript
-coc-tabnine
-coc-snippets
-coc-omnisharp
-coc-prettier
-coc-java
+Treesitter installs:
+TSInstall c#
+TSInstall java
+
+Coc installs:
+CocInstall coc-tabnine
+CocInstall coc-snippets
+CocInstall coc-omnisharp
+CocInstall coc-prettier
+CocInstall coc-java
 
 Other commands
 Copilot setup
