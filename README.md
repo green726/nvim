@@ -40,8 +40,16 @@ greenvim is my attempt to make neovim as similar to an IDE as possible. I use lu
 
  
 ### Requirements:
+#### General:
+   * Neovim >= v6.0
+   * Have [Paq](https://github.com/savq/paq-nvim) installed
+   * [Neovide](https://github.com/neovide/neovide) (for UI)
+   * [NerdFonts](https://github.com/ryanoasis/nerd-fonts) (for icons), I use ShureTechMonoNF
+   * I recomment the use of [Alacirtty](https://github.com/alacritty/alacritty) it was the only terminal I could get all NerdFonts to 100% work with (if using windows cmd you will need to use the Agave Nerd Font for all glyphs/icons to work)
+#### Unity support:
    * [Neovim-remote](https://github.com/mhinz/neovim-remote) installed
    * Neovim server/instance running on the IP 127.0.0.1:7777 (instructions can be found [here](neovim-server-address-instructions)) 
+#### Java support:
  
 
 
