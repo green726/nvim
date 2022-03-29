@@ -41,6 +41,7 @@ require("plugins/dim-config")
 require("plugins/conmenuConfig")
 -- require("plugins/focus-config")
 require("plugins/winshift-config")
+require("plugins/lir-config")
 
 require("keymaps")
 require("autocommands")
