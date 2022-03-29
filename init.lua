@@ -18,6 +18,8 @@ vim.opt.number = true
 vim.cmd([[autocmd TermOpen * setlocal nonumber norelativenumber]])
 --autocmd to close neovim if nvim-tree is last thing open
 vim.cmd([[autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif]])
+--autocmd to set nvim-tree size on file open
+vim.cmd([[]])
 
 vim.opt.encoding = "UTF-8"
 
