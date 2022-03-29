@@ -15,7 +15,10 @@ greenvim is my attempt to make neovim as similar to an IDE as possible. I use lu
 * file tree
 * snippets
 * better scrolling
-* [full Unity support](#unity-support)
+* browsing
+* Context menus
+* LSP support with coc
+* [full Unity and C# support](#unity-support)
 * [full Java support](#java-support)
 
 ## Unity Support:
