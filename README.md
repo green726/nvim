@@ -30,7 +30,13 @@ greenvim is my attempt to make neovim as similar to an IDE as possible. I use lu
 #### C# hover documentation:
   * This is done through a vimscript function I wrote
       * Due to the nature of omnisharp's documentation command (will open a blank popup if no docs are present ie hovering on a bracket) it is necessary to check the hovered word against a list of ignored words. This list can be found in the autocommands.lua file. Please add any desired words to ignore hover-documentation to this list. The command also ignores all lines that begin with a "/" (comments)
-#### Unity open in greenvim:
+#### Unity open in greenvim: 
+   * Unity can open any file/error in greenvim through the use of a neovim-remote and an exe I wrote in c#.
+      * The exe can be found in the folder custom-exe\external-script-editor-exe. To set it up you can go into unity -> preferences -> external script editor and in the dropdown select browse and select the .exe file. In the external script editor args you then need to place "+$(Line) $(File)"
+##### Requirements:
+   * [Neovim-remote](https://github.com/mhinz/neovim-remote) installed
+   * Neovim server/instance running on the IP 127.0.0.1:7777 (instructions can be found [here](neovim-server-address-instructions)) 
+ 
 
 
 ## Java support:
