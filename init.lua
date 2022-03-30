@@ -81,15 +81,20 @@ vim.cmd([[set mouse=a]])
 --here is tutorial for java: https://www.chrisatmachine.com/Neovim/24-neovim-and-java/
 
 --below code goes in coc-settings.json
---[[{
+--[[    "codeLens.enable": false,
     "java.referencesCodeLens.enabled": true,
-    "java.jdt.ls.vmargs": "-javaagent:E:\\Coding\\lombok\\lombok.jar",
-    "java.configuration.runtimes" : [
+    "coc.source.OmniSharp.referencesCodeLens.enabled": false,
+    "java.jdt.ls.vmargs": "-javaagent:C:\\code\\lombok\\lombok.jar",
+    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "java"],
+    "coc.source.OmniSharp.enable" : true,
+    "coc.source.OmniSharp.triggerCharacters": ".",
+    "coc.preferences.hoverTarget": "float",
+    "java.configuration.runtimes": [
         {
-            "name": "JavaSE-14",
-            "path": "C:\\Program Files\\Java\\jdk-14.0.1"
+          "name": "JavaSE-1.8",
+          "path": "C:\\Program Files\\Java\\jre1.8.0_321"
         }
-    ],
-    "coc.preferences.hover.target" : "float"
-}
+      ],
+    "explorer.icon.enableNerdfont": true,
+    "explorer.icon.source": "vim-devicons"
 ]]
