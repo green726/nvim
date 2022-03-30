@@ -62,7 +62,7 @@ greenvim is my attempt to make neovim as similar to an IDE as possible. I use lu
    * [Neovim-remote](https://github.com/mhinz/neovim-remote) installed
    * Neovim server/instance running on the IP 127.0.0.1:7777 (instructions can be found [here](neovim-server-address-instructions)) 
 ### Java support:
-   * [Setup coc-nvim with lombok](coc-nvim-and-lombok)
+   * [lombok](https://projectlombok.org/) (this is optional but strongly recommended)
  
 
 
