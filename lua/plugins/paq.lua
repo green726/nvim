@@ -78,6 +78,4 @@ return require("paq")({
 	{ "rcarriga/nvim-dap-ui" },
 	--debug install manager for nvim-dap
 	{ "Pocco81/DAPInstall.nvim" },
-	--run small pieces of code
-	{ "michaelb/sniprun", run = "bash ./install.sh" },
 })
