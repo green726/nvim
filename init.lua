@@ -17,7 +17,7 @@ vim.opt.number = true
 --autocmd to turn off line numbers in terminal
 vim.cmd([[autocmd TermOpen * setlocal nonumber norelativenumber]])
 --autocmd to close neovim if nvim-tree is last thing open
-vim.cmd([[autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif]])
+-- vim.cmd([[autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif]])
 
 vim.opt.encoding = "UTF-8"
 

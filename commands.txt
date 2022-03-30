@@ -8,6 +8,8 @@ CocInstall coc-snippets
 CocInstall coc-omnisharp
 CocInstall coc-prettier
 CocInstall coc-java
+CocInstall coc-marketplace
+CocInstall coc-json
 
 Other commands
 Copilot setup
