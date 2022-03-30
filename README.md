@@ -31,9 +31,12 @@ greenvim is my attempt to make neovim as similar to an IDE as possible. I use lu
   * Full C#/Unity code completion support (Omnisharp-vim + Coc.nvim + Tabnine)
   * [Hover-documentation using Omnisharp-vim](#c#-hover-documentation)
 ### Setup
-  1. Go to Unity -> preferences -> external script editor and add the exe found [here]() as your external script editor. 
-  2. Add the following quoted text (without the quotes) into the external script editor args box: "+$(Line) $(File)"
-  3. Ensure no files/folder names in your unity project have spaces - if you do have spaces this will not work properly
+  1. Go to Unity -> preferences -> external script editor 
+  2. Select VSCode (if not installed please install it)
+  3. Check all the boxes below and press rebuild solution
+  4. Add the exe in this repository found [here]() as your external script editor
+  5. Add the following quoted text (without the quotes) into the external script editor args box: "+$(Line) $(File)"
+  6. Ensure no files/folder names in your unity project have spaces - if you do have spaces this will not work properly
 
 ### Important info:
 #### C# hover documentation:
