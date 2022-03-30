@@ -24,6 +24,9 @@ greenvim is my attempt to make neovim as similar to an IDE as possible. I use lu
 * [full Unity and C# support](#unity-support)
 * [full Java support](#java-support)
 
+## Setup greenvim (without java or unity support):
+   * Once installed run the commands found [here](https://github.com/green726/greenvim/blob/main/commands.txt)
+
 ## Unity Support:
 ### Features:
   * Double click on file to open in greenvim
@@ -55,12 +58,11 @@ greenvim is my attempt to make neovim as similar to an IDE as possible. I use lu
    * [Neovide](https://github.com/neovide/neovide) for UI (This is optional but I strongly reccommend it)
    * [NerdFonts](https://github.com/ryanoasis/nerd-fonts) (for icons), I use ShureTechMonoNF
    * I recomment the use of [Alacirtty](https://github.com/alacritty/alacritty) it was the only terminal I could get all NerdFonts to 100% work with (if using windows cmd you will need to use the Agave Nerd Font for all glyphs/icons to work)
-   * Once installed run the commands found [here](https://github.com/green726/greenvim/blob/main/commands.txt)
-   * [Setup coc-nvim with lombok](coc-nvim-and-lombok)
 ### Unity support:
    * [Neovim-remote](https://github.com/mhinz/neovim-remote) installed
    * Neovim server/instance running on the IP 127.0.0.1:7777 (instructions can be found [here](neovim-server-address-instructions)) 
 ### Java support:
+   * [Setup coc-nvim with lombok](coc-nvim-and-lombok)
  
 
 
