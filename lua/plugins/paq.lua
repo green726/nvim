@@ -70,4 +70,14 @@ return require("paq")({
 	{ "lalitmee/browse.nvim" },
 	--git
 	{ "tpope/vim-fugitive" },
+	--better UI looks
+	{ "stevearc/dressing.nvim" },
+	--debugging
+	{ "mfussenegger/nvim-dap" },
+	--UI for above debugger
+	{ "rcarriga/nvim-dap-ui" },
+	--debug install manager for nvim-dap
+	{ "Pocco81/DAPInstall.nvim" },
+	--run small pieces of code
+	{ "michaelb/sniprun", run = "bash ./install.sh" },
 })
