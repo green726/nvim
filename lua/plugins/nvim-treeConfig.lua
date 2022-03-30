@@ -32,9 +32,9 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 	update_focused_file = {
 		enable = true,
 		update_cwd = true,
-		ignore_list = {},
+		ignore_list = { "meta" },
 	},
-	ignore_ft_on_setup = {},
+	ignore_ft_on_setup = { "meta" },
 	system_open = {
 		cmd = nil,
 		args = {},
@@ -71,7 +71,7 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 				enable = true,
 				chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
 				exclude = {
-					filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame" },
+					filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame", "meta" },
 					buftype = { "nofile", "terminal", "help" },
 				},
 			},
