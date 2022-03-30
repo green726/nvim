@@ -18,8 +18,6 @@ vim.opt.number = true
 vim.cmd([[autocmd TermOpen * setlocal nonumber norelativenumber]])
 --autocmd to close neovim if nvim-tree is last thing open
 vim.cmd([[autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif]])
---autocmd to set nvim-tree size on file open
-vim.cmd([[]])
 
 vim.opt.encoding = "UTF-8"
 
@@ -83,17 +81,14 @@ vim.cmd([[set mouse=a]])
 
 --below code goes in coc-settings.json
 --[[{
-    "codeLens.enable": true,
     "java.referencesCodeLens.enabled": true,
-    "java.jdt.ls.vmargs": "-javaagent:C:\\code\\lombok\\lombok.jar",
-    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "java"],
-    "coc.source.OmniSharp.enable" : true,
-    "coc.source.OmniSharp.triggerCharacters": ".",
-    "coc.preferences.hoverTarget": "float",
-    "java.configuration.runtimes": [
+    "java.jdt.ls.vmargs": "-javaagent:E:\\Coding\\lombok\\lombok.jar",
+    "java.configuration.runtimes" : [
         {
-          "name": "JavaSE-1.8",
-          "path": "C:\\Program Files\\Java\\jre1.8.0_321"
+            "name": "JavaSE-14",
+            "path": "C:\\Program Files\\Java\\jdk-14.0.1"
         }
-      ]
-}]]
+    ],
+    "coc.preferences.hover.target" : "float"
+}
+]]
