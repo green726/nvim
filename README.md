@@ -31,6 +31,9 @@ greenvim is my attempt to make neovim as similar to an IDE as possible. I use lu
   * Full C#/Unity code completion support (Omnisharp-vim + Coc.nvim + Tabnine)
   * [Hover-documentation using Omnisharp-vim](#c#-hover-documentation)
 ### Setup
+  1. Go to Unity -> preferences -> external script editor and add the exe found [here]() as your external script editor. 
+  2. Add the following quoted text (without the quotes) into the external script editor args box: "+$(Line) $(File)"
+  3. Ensure no files/folder names in your unity project have spaces - if you do have spaces this will not work properly
 
 ### Important info:
 #### C# hover documentation:
@@ -38,7 +41,7 @@ greenvim is my attempt to make neovim as similar to an IDE as possible. I use lu
       * Due to the nature of omnisharp's documentation command (will open a blank popup if no docs are present ie hovering on a bracket) it is necessary to check the hovered word against a list of ignored words. This list can be found in the autocommands.lua file. Please add any desired words to ignore hover-documentation to this list. The command also ignores all lines that begin with a "/" (comments)
 #### Unity open in greenvim: 
    * Unity can open any file/error in greenvim through the use of a neovim-remote and an exe I wrote in c#.
-      * The exe can be found in the folder custom-exe\external-script-editor-exe. To set it up you can go into unity -> preferences -> external script editor and in the dropdown select browse and select the .exe file. In the external script editor args you then need to place "+$(Line) $(File)"
+      * The exe can be found in the folder custom-exe\external-script-editor-exe. To set it up you can go into unity -> preferences -> external script editor and in the dropdown select browse and select the .exe file. In the external script editor args you then need to place 
  ## Java support:
 
  
