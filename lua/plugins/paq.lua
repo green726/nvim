@@ -78,4 +78,8 @@ return require("paq")({
 	{ "rcarriga/nvim-dap-ui" },
 	--debug install manager for nvim-dap
 	{ "Pocco81/DAPInstall.nvim" },
+	--better cursorhold
+	{ "antoinemadec/FixCursorHold.nvim" },
+	--recent used files
+	{ "yegappan/mru" },
 })

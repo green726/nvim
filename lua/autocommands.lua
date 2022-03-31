@@ -2,8 +2,7 @@
 --below comments are to remember stuff - first is call docs on cursor hold, second is echo char under cursor
 --autocmd CursorHold *.cs :OmniSharpDocumentation
 --autocmd CursorHold *.cs :echo matchstr(getline('.'), '\%' . col('.') . 'c.')
---autocmd BufEnter * highlight Normal guibg=0
-vim.cmd [[
+vim.cmd([[
     func CsDocs()
       let wordsIgnore = ['', ' ', '(', ')', '{', '}', ';', 'public', 'static', 'private', 'void', 'for', 'foreach', 'if', 'else', 'true', 'false', '&&', '[', ']', 'class', 'using']
       let word = expand("<cword>") "get cursor word, above is a list of words to ignore
@@ -22,9 +21,16 @@ vim.cmd [[
         endif
     endfunc
 
-    autocmd CursorHold *.java silent! :call CocActionAsync('doHover')
+    let testnum = 0
+    func TestLog()
+        g:testnum = g:testnum + 1
+        echo 'test ' . g:testnum
+    endfunc
+
+    autocmd CursorHold *.cs silent! call CsDocs()
+    autocmd CursorHold *.java silent! call CocActionAsync('doHover')
     autocmd BufWrite *.cs :OmniSharpCodeFormat
-    autocmd CursorHold *.cs :call CsDocs()
-]]
+]])
 
-
+--     autocmd BufEnter * highlight Normal guibg=0
+--need to write CsDocs into a toggle so it doesn't spam refresh b/c it is triggering cursor movement causing cursor hold to spam refresh

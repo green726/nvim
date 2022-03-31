@@ -4,6 +4,8 @@
 --for this reason (+ config for alacritty and performance) I prefer alacritty
 --I use the Anonymice Mono NF
 
+vim.g.cursorhold_updatetime = 800
+
 vim.o.guifont = "ShureTechMono NF"
 vim.g.neovide_cursor_vfx_mode = "railgun"
 
@@ -63,11 +65,8 @@ vim.cmd([[set tabstop=4]])
 vim.cmd([[set shiftwidth=4]])
 vim.cmd([[set expandtab]])
 
---lower vim update time from 4000ms to 1000ms which will decrease cursorhold time
-vim.cmd([[set updatetime=800]])
-
 --enables mouse
-vim.cmd([[set mouse=a]])
+-- vim.cmd([[set mouse=a]])
 
 --i use the below guide for unity
 --https://chrislabarge.com/posts/neovim-unity-engine/
@@ -81,11 +80,12 @@ vim.cmd([[set mouse=a]])
 --here is tutorial for java: https://www.chrisatmachine.com/Neovim/24-neovim-and-java/
 
 --below code goes in coc-settings.json
---[[    "codeLens.enable": false,
+--[[{
+    "codeLens.enable": false,
     "java.referencesCodeLens.enabled": true,
     "coc.source.OmniSharp.referencesCodeLens.enabled": false,
     "java.jdt.ls.vmargs": "-javaagent:C:\\code\\lombok\\lombok.jar",
-    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "java"],
+    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "java", "csharp"],
     "coc.source.OmniSharp.enable" : true,
     "coc.source.OmniSharp.triggerCharacters": ".",
     "coc.preferences.hoverTarget": "float",
@@ -97,4 +97,5 @@ vim.cmd([[set mouse=a]])
       ],
     "explorer.icon.enableNerdfont": true,
     "explorer.icon.source": "vim-devicons"
+}
 ]]
