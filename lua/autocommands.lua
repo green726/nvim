@@ -48,6 +48,7 @@ vim.cmd([[
     autocmd CursorHold *.cs call CsDocs()
     autocmd CursorHold *.java silent! call CocActionAsync('doHover')
     autocmd BufWrite *.cs :OmniSharpCodeFormat
+    autocmd User SessionLoadPost lua require"nvim-tree".toggle(false, true)
 ]])
 
 --     autocmd BufEnter * highlight Normal guibg=0

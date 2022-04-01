@@ -80,6 +80,6 @@ return require("paq")({
 	{ "Pocco81/DAPInstall.nvim" },
 	--better cursorhold
 	{ "antoinemadec/FixCursorHold.nvim" },
-	--recent used files
-	{ "yegappan/mru" },
+	--session manager
+	{ "Shatur/neovim-session-manager" },
 })
