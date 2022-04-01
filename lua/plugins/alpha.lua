@@ -20,13 +20,19 @@ vim.cmd([[
 		:set splitright
         :echo "Hello There!"
     endfunction
+
+	function RecentUsed()
+		:MRU
+		:wincmd k
+		:q
+	endfunction
 ]])
 
 dashboard.section.buttons.val = {
 	dashboard.button("o", " Open File Tree", ":e . <CR>"),
 	dashboard.button("n", "ﱐ New file", ":call NewFile() <CR>"),
 	-- dashboard.button( "f", " New Folder", ":call NewFile() <CR>"),
-	dashboard.button("m", " Recently Used Files", ":tab MRU<CR>"),
+	dashboard.button("m", " Recently Used Files", ":call RecentUsed()<CR>"),
 	dashboard.button("s", "漣Edit NVIM Config", ":e C:\\Users\\mguin\\AppData\\Local\\nvim\\<CR>"),
 	dashboard.button("d", "累Paq Sync", ":PaqSync <CR>"),
 	dashboard.button("q", " Quit NVIM", ":qa <CR>"),
