@@ -3,29 +3,40 @@
 --autocmd CursorHold *.cs :OmniSharpDocumentation
 --autocmd CursorHold *.cs :echo matchstr(getline('.'), '\%' . col('.') . 'c.')
 vim.cmd([[
-    let csDocsToggled = false
+    let g:csDocsToggled = 0
+    let g:cursorWord = ""
     func CsDocs()
       let wordsIgnore = ['', ' ', '(', ')', '{', '}', ';', 'public', 'static', 'private', 'void', 'for', 'foreach', 'if', 'else', 'true', 'false', '&&', '[', ']', 'class', 'using']
-      let word = expand("<cword>") "get cursor word, above is a list of words to ignore
+      let g:cursorWord = expand("<cword>") "get cursor word, above is a list of words to ignore
       let char =  matchstr(getline('.'), '\%' . col('.') . 'c.') "get char under cursor
       let line = matchstr(getline('.'), '^\s*\/') "check if first char of line is a comment (/)
       if line != ''
+        let g:csDocsToggled = 0
         return
       endif
       for i in wordsIgnore
-        if word == i
+        if g:cursorWord == i
+          let g:csDocsToggled = 0
           return
         endif
       endfor
-        if char != '' && char != ' ' && g:csDocsToggled == false
-          g:csDocsToggled = true
+        if char != '' && char != ' ' && g:csDocsToggled == 0
+          let g:csDocsToggled = 1
+          " echo "csDocsToggledPostIf" . g:csDocsToggled
           :OmniSharpDocumentation
         endif
     endfunc
 
-    func CsDocsOff()
-      g:csDocsToggled = false
-    endfunc
+  func CsDocsOff()
+    let l:currentWord = expand("<cword>")
+    if g:cursorWord == l:currentWord && g:csDocsToggled == 1
+      return
+    else 
+      let g:csDocsToggled = 0
+    endif
+    
+  endfunc
+    
 
     let testnum = 0
     func TestLog()
@@ -33,8 +44,8 @@ vim.cmd([[
         echo 'test ' . g:testnum
     endfunc
 
-    autocmd CursorHold *.cs silent! call CsDocs()
-    autocmd CursorMove *.cs silent! call CsDocsOff()
+    autocmd CursorMoved *.cs call CsDocsOff()
+    autocmd CursorHold *.cs call CsDocs()
     autocmd CursorHold *.java silent! call CocActionAsync('doHover')
     autocmd BufWrite *.cs :OmniSharpCodeFormat
 ]])
