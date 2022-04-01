@@ -1,7 +1,7 @@
 # greenvim
 
 ## What is greenvim?
-greenvim is my attempt to make neovim as similar to an IDE as possible. I use lua for the config. 
+greenvim is my attempt to make neovim as close to an IDE as possible.
 
 ## features:
 * Completion using Coc.nvim
