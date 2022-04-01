@@ -3,6 +3,7 @@
 --autocmd CursorHold *.cs :OmniSharpDocumentation
 --autocmd CursorHold *.cs :echo matchstr(getline('.'), '\%' . col('.') . 'c.')
 vim.cmd([[
+    let csDocsToggled = false
     func CsDocs()
       let wordsIgnore = ['', ' ', '(', ')', '{', '}', ';', 'public', 'static', 'private', 'void', 'for', 'foreach', 'if', 'else', 'true', 'false', '&&', '[', ']', 'class', 'using']
       let word = expand("<cword>") "get cursor word, above is a list of words to ignore
@@ -16,9 +17,14 @@ vim.cmd([[
           return
         endif
       endfor
-        if char != '' && char != ' '
+        if char != '' && char != ' ' && g:csDocsToggled == false
+          g:csDocsToggled = true
           :OmniSharpDocumentation
         endif
+    endfunc
+
+    func CsDocsOff()
+      g:csDocsToggled = false
     endfunc
 
     let testnum = 0
@@ -28,6 +34,7 @@ vim.cmd([[
     endfunc
 
     autocmd CursorHold *.cs silent! call CsDocs()
+    autocmd CursorMove *.cs silent! call CsDocsOff()
     autocmd CursorHold *.java silent! call CocActionAsync('doHover')
     autocmd BufWrite *.cs :OmniSharpCodeFormat
 ]])
