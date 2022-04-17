@@ -81,5 +81,5 @@ return require("paq")({
 	--better cursorhold
 	{ "antoinemadec/FixCursorHold.nvim" },
 	--session manager
-	{ "Shatur/neovim-session-manager" },
+--	{ "Shatur/neovim-session-manager" },
 })
