@@ -72,10 +72,14 @@ return require("paq")({
 	{ "tpope/vim-fugitive" },
 	--better UI looks
 	{ "stevearc/dressing.nvim" },
+	--debugging
+	{ "mfussenegger/nvim-dap" },
+	--UI for above debugger
+	{ "rcarriga/nvim-dap-ui" },
+	--debug install manager for nvim-dap
+	{ "Pocco81/DAPInstall.nvim" },
 	--better cursorhold
 	{ "antoinemadec/FixCursorHold.nvim" },
 	--session manager
---	{ "Shatur/neovim-session-manager" },
-    --debug with vimspector 
-    {'puremourning/vimspector'}
+	{ "Shatur/neovim-session-manager" },
 })

@@ -12,7 +12,7 @@ vim.g.neovide_cursor_vfx_mode = "railgun"
 vim.g.cursorword_highlight = false
 vim.g.cursorline_timeout = 0
 
---vim.cmd([[set number relativenumber]])
+vim.cmd([[set number relativenumber]])
 
 vim.opt.termguicolors = true
 vim.opt.number = true
@@ -45,8 +45,8 @@ require("plugins/dim-config")
 require("plugins/conmenuConfig")
 -- require("plugins/focus-config")
 require("plugins/winshift-config")
---require("plugins/session-manager")
-require("plugins/vimspector")
+require("plugins/dap-ui-config")
+require("plugins/session-manager")
 
 require("keymaps")
 require("autocommands")

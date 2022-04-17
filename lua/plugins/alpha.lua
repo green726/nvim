@@ -25,7 +25,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("o", " Open File Tree", ":e . <CR>"),
 	dashboard.button("n", "ﱐ New file", ":call NewFile() <CR>"),
 	-- dashboard.button( "f", " New Folder", ":call NewFile() <CR>"),
---	dashboard.button("u", "累Load Previous Session", ":SessionManager load_last_session<CR>"),
+	dashboard.button("u", "累Load Previous Session", ":SessionManager load_last_session<CR>"),
 	dashboard.button("s", "漣Edit NVIM Config", ":e C:\\Users\\mguin\\AppData\\Local\\nvim\\<CR>"),
 	dashboard.button("d", " Paq Sync", ":PaqSync <CR>"),
 	dashboard.button("q", " Quit NVIM", ":qa <CR>"),
