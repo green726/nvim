@@ -46,15 +46,26 @@ vim.api.nvim_set_keymap("n", "<leader>osrn", "<Plug>(omnisharp_rename)", {})
 vim.api.nvim_set_keymap("n", "oh", "<Plug>(omnisharp_do<C-k>mentation)", {})
 
 vim.cmd([[
-  if has('nvim-0.4.0') || has('patch-8.2.0750')
-  echo 'hi'
-  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-  endif
+    if has('nvim-0.4.0') || has('patch-8.2.0750')
+    echo 'hi'
+    nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+    nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+    inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+    inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+    vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+    vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+    endif
+
+    nnoremap <silent> <F5> :lua require'dap'.continue()<CR>
+    nnoremap <silent> <F10> :lua require'dap'.step_over()<CR>
+    nnoremap <silent> <F11> :lua require'dap'.step_into()<CR>
+    nnoremap <silent> <F12> :lua require'dap'.step_out()<CR>
+    nnoremap <silent> <leader>b :lua require'dap'.toggle_breakpoint()<CR>
+    nnoremap <silent> <leader>B :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
+    nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
+    nnoremap <silent> <leader>dr :lua require'dap'.repl.open()<CR>
+    nnoremap <silent> <leader>dl :lua require'dap'.run_last()<CR>
+
 ]])
 
 --map("n", "<C-d>", ":call CocAction('doHover')<CR>", {silent = true})

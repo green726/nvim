@@ -47,6 +47,7 @@ require("plugins/conmenuConfig")
 require("plugins/winshift-config")
 require("plugins/dap-ui-config")
 --require("plugins/session-manager")
+require("plugins/dap-config")
 
 require("keymaps")
 require("autocommands")
