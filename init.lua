@@ -12,7 +12,6 @@ vim.g.neovide_cursor_vfx_mode = "railgun"
 vim.g.cursorword_highlight = false
 vim.g.cursorline_timeout = 0
 
-vim.cmd([[set number relativenumber]])
 
 vim.opt.termguicolors = true
 vim.opt.number = true
