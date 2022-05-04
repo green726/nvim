@@ -47,6 +47,8 @@ require("plugins/winshift-config")
 require("plugins/dap-ui-config")
 --require("plugins/session-manager")
 require("plugins/dap-config")
+require("plugins/goMove")
+
 
 require("keymaps")
 require("autocommands")
