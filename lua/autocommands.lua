@@ -1,6 +1,6 @@
 vim.cmd([[autocmd User SessionLoadPost lua require"nvim-tree".toggle(false, true)]])
 vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]]
-
+vim.cmd([[autocmd CursorHold * lua vim.lsp.buf.hover()]])
 
 
 
