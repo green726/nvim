@@ -42,8 +42,6 @@ return require("paq")({
 	-- { "OmniSharp/omnisharp-vim" },
 	--github copilot
 	{ "github/copilot.vim" },
-	--scrolling
-	{ "karb94/neoscroll.nvim" },
 	--toggle comments
 	{ "numToStr/Comment.nvim" },
 	--highlight cursor
