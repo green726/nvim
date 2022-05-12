@@ -25,8 +25,6 @@ map("n", "ff", ":Telescope find_files<CR>", { silent = true })
 map("n", "<C-t>", ":NvimTreeToggle<CR>", { silent = true })
 -- map("n", "<C-j>", ":NvimTreeClose<CR>", { silent = true })
 
-map("n", "cf", ":CocFix<CR>", { silent = true })
-
 --context menu
 map("n", "<C-m>", ":ConMenu<CR>", { silent = true })
 
@@ -39,23 +37,38 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap("n", "tt", ":ToggleTerm <CR>", { silent = true })
 vim.api.nvim_set_keymap("n", "<leader>set", ":e C:/Users/mguin/AppData/Local/nvim <CR>", { silent = true })
 
---coc stuff
-vim.api.nvim_set_keymap("n", "gd", "<Plug>(coc-definition)", { silent = true })
-vim.api.nvim_set_keymap("n", "<leader>rn", "<Plug>(coc-rename)", {})
-vim.api.nvim_set_keymap("n", "<leader>osrn", "<Plug>(omnisharp_rename)", {})
-vim.api.nvim_set_keymap("n", "oh", "<Plug>(omnisharp_do<C-k>mentation)", {})
+-- Mappings.
+-- See `:help vim.diagnostic.*` for documentation on any of the below functions
+vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
+vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+
+-- Use an on_attach function to only map the following keys
+-- after the language server attaches to the current buffer
+-- local on_attach = function(client, bufnr)
+  -- Enable completion triggered by <c-x><c-o>
+  -- vim.api.nvim_buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+  -- Mappings.
+  -- See `:help vim.lsp.*` for documentation on any of the below functions
+  vim.api.nvim_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  vim.api.nvim_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  vim.api.nvim_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  vim.api.nvim_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  vim.api.nvim_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+  vim.api.nvim_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
+  vim.api.nvim_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+  vim.api.nvim_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+  vim.api.nvim_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+  vim.api.nvim_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+  vim.api.nvim_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+-- end
+
 
 vim.cmd([[
-    if has('nvim-0.4.0') || has('patch-8.2.0750')
-    echo 'hi'
-    nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-    nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-    inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-    inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-    vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-    vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-    endif
-
     nnoremap <silent> <F5> :lua require'dap'.continue()<CR>
     nnoremap <silent> <F10> :lua require'dap'.step_over()<CR>
     nnoremap <silent> <F11> :lua require'dap'.step_into()<CR>
@@ -67,8 +80,6 @@ vim.cmd([[
     nnoremap <silent> <leader>dl :lua require'dap'.run_last()<CR>
 
 ]])
-
---map("n", "<C-d>", ":call CocAction('doHover')<CR>", {silent = true})
 
 --[[
 var io = require('socket.io')(http, { 

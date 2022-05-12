@@ -10,7 +10,7 @@ return require("paq")({
 	{ "Mofiqul/vscode.nvim" },
 	--completion
 	--need to run this in powershell for java to work  curl https://projectlombok.org/downloads/lombok.jar -O E:\Coding\lombok\lombok.jar
-	{ "neoclide/coc.nvim", branch = "release" },
+	-- { "neoclide/coc.nvim", branch = "release" },
 	--need to install glow withchoco
 	--markdown viewer
 	{ "ellisonleao/glow.nvim" },
@@ -36,12 +36,10 @@ return require("paq")({
 	{ "goolord/alpha-nvim" },
 	--terminal
 	{ "akinsho/toggleterm.nvim" },
-	--snippets for  with coc-snippets
-	{ "honza/vim-snippets" },
 	--better comments
 	{ "folke/todo-comments.nvim" },
 	--c# stuff
-	{ "OmniSharp/omnisharp-vim" },
+	-- { "OmniSharp/omnisharp-vim" },
 	--github copilot
 	{ "github/copilot.vim" },
 	--scrolling
@@ -77,11 +75,32 @@ return require("paq")({
 	--UI for above debugger
 	{ "rcarriga/nvim-dap-ui" },
 	--debug install manager for nvim-dap
-	-- { "Pocco81/dap-buddy.nvim" },
+	{ "Pocco81/dap-buddy.nvim" },
 	--better cursorhold
 	{ "antoinemadec/FixCursorHold.nvim" },
 	--session manager
 	--{ "Shatur/neovim-session-manager" },
 	--move around text and stuff
-    	{'booperlv/nvim-gomove'},   
+    {'booperlv/nvim-gomove'},
+    --nvim lsp-config
+    {"neovim/nvim-lspconfig"},
+    --LSP installer
+    {"williamboman/nvim-lsp-installer"},
+    --auto complete
+    {'hrsh7th/nvim-cmp'},
+    --lsp source for nvim-cmp
+    {'hrsh7th/cmp-nvim-lsp'},
+    -- Snippets source for nvim-cmp
+    {'saadparwaiz1/cmp_luasnip'},
+    --snippets
+    {'L3MON4D3/LuaSnip'},
+    --file path completion for nvim-cmp
+    {'hrsh7th/cmp-path'},
+    --tabnine for nvim-cmp
+    {'tzachar/cmp-tabnine', run = './install.sh' }
+
+
+
+
+
 })

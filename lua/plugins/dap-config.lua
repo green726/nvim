@@ -1,2 +1,2 @@
--- local dap_install = require("dap-install")
--- dap_install.config("dnetcs", {})
+local dap_install = require("dap-install")
+dap_install.config("dnetcs", {})
