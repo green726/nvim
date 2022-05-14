@@ -1,12 +1,16 @@
 vim.cmd([[autocmd User SessionLoadPost lua require"nvim-tree".toggle(false, true)]])
-vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]]
-vim.cmd([[autocmd CursorHold * lua vim.lsp.buf.hover()]])
+
+vim.cmd [[autocmd CursorHold * lua DiagAndDocs()]]
 
 
-
-
-
-
+DiagAndDocs = function()
+    local diagWin = vim.diagnostic.open_float(nil, {focus=true, scope="cursor"})
+    if diagWin ~= nil then
+        return 
+    else 
+        vim.lsp.buf.hover()
+    end
+end
 
 
 --first line of code below is to prevent screen tearing
