@@ -12,6 +12,7 @@ local fmt = string.format
 --
 -- There is an autocmd that regenerates the highlight group colors on
 -- colorscheme change.
+-- I stole this from https://github.com/EdenEast/nyx/blob/573ff3f22da95c00ec71a094b3e1ec166c0afcdd/config/.config/nvim/lua/eden/modules/ui/colors.lua
 
 local M = {}
 
