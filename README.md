@@ -11,13 +11,13 @@ greenvim is my attempt to make neovim as close to an IDE as possible.
 * bufferline
 * statusline
 * theme
+* automatic theme-dependent colorscheme for statusline
 * tabnine
 * github copilot
 * Auto-pairs (brackets)
 * auto indents
 * file tree
 * snippets
-* better scrolling
 * browsing
 * Context menus
 * better terminal integration
