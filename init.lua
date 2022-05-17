@@ -53,6 +53,7 @@ require("plugins/nightfoxConfig")
 
 require("keymaps")
 require("autocommands")
+require("commands")
 
 vim.cmd[[colorscheme terafox]]
 
