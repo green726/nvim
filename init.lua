@@ -6,7 +6,7 @@
 
 vim.g.cursorhold_updatetime = 800
 
-vim.o.guifont = "ShureTechMono NF"
+-- vim.o.guifont = "SpaceMono\ Nerd Font"
 vim.g.neovide_cursor_vfx_mode = "railgun"
 
 vim.g.cursorword_highlight = false
@@ -27,6 +27,7 @@ require("plugins/paq")
 require("plugins/treesitter")
 require("plugins/lsp-install-config")
 require("plugins/lsp-config")
+require("plugins/lsp-status-config")
 require("plugins/indent-blanklines")
 require("plugins/git-signs")
 require("plugins/alpha")
@@ -52,6 +53,8 @@ require("plugins/nightfoxConfig")
 
 require("keymaps")
 require("autocommands")
+
+vim.cmd[[colorscheme terafox]]
 
 --setup for instant collab
 vim.g.instant_username = "green726"
