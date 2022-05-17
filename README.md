@@ -4,7 +4,8 @@
 greenvim is my attempt to make neovim as close to an IDE as possible.
 
 ## features:
-* Completion using Coc.nvim
+* native LSP
+* completion with nvim-cmp
 * greeter
 * Fuzzysearch
 * bufferline
@@ -19,7 +20,6 @@ greenvim is my attempt to make neovim as close to an IDE as possible.
 * better scrolling
 * browsing
 * Context menus
-* LSP support with coc
 * better terminal integration
 * [full Unity and C# support](#unity-support)
 * [full Java support](#java-support)
@@ -57,8 +57,6 @@ greenvim is my attempt to make neovim as close to an IDE as possible.
 ### Unity support:
    * [Neovim-remote](https://github.com/mhinz/neovim-remote) installed
    * Neovim server/instance running on the IP 127.0.0.1:7777 (instructions can be found [here](neovim-server-address-instructions)) 
-### Java support:
-   * [lombok](https://projectlombok.org/) (this is optional but strongly recommended)
  
 
 
