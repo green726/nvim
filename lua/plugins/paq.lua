@@ -7,7 +7,8 @@ return require("paq")({
 	{ "nvim-lua/plenary.nvim" },
 	--theme
 	--{'folke/tokyonight.nvim'};
-	{ "Mofiqul/vscode.nvim" },
+	-- { "Mofiqul/vscode.nvim" },
+    {"EdenEast/nightfox.nvim"}, 
 	--completion
 	--need to run this in powershell for java to work  curl https://projectlombok.org/downloads/lombok.jar -O E:\Coding\lombok\lombok.jar
 	-- { "neoclide/coc.nvim", branch = "release" },
@@ -95,8 +96,9 @@ return require("paq")({
     --file path completion for nvim-cmp
     {'hrsh7th/cmp-path'},
     --tabnine for nvim-cmp
-    {'tzachar/cmp-tabnine', run = './install.sh' }
-
+    {'tzachar/cmp-tabnine', run = './install.sh' },
+    --lsp status plugin used for statusline
+    {'nvim-lua/lsp-status.nvim'},
 
 
 

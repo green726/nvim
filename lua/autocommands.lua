@@ -1,7 +1,8 @@
 vim.cmd([[autocmd User SessionLoadPost lua require"nvim-tree".toggle(false, true)]])
 
 vim.cmd [[autocmd CursorHold * lua DiagAndDocs()]]
-
+vim.cmd [[autocmd CursorHoldI * lua vim.lsp.buf.hover()]]
+vim.cmd [[autocmd BufWrite * lua vim.lsp.buf.formatting()]]
 
 DiagAndDocs = function()
     local diagWin = vim.diagnostic.open_float(nil, {focus=true, scope="cursor"})

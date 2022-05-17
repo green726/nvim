@@ -25,7 +25,8 @@ vim.opt.encoding = "UTF-8"
 require("plugins/paq")
 
 require("plugins/treesitter")
-require("plugins/feline")
+require("plugins/lsp-install-config")
+require("plugins/lsp-config")
 require("plugins/indent-blanklines")
 require("plugins/git-signs")
 require("plugins/alpha")
@@ -39,15 +40,15 @@ require("plugins/bufferline")
 require("plugins/treesitter-context")
 require("plugins/twilight-config")
 require("plugins/dim-config")
-require("plugins/lsp-install-config")
-require("plugins/lsp-config")
 require("plugins/nvim-cmp")
 --require("plugins/conmenuConfig")
 require("plugins/winshift-config")
 require("plugins/dap-ui-config")
 require("plugins/dap-config")
 require("plugins/goMove")
-
+require("plugins/feline/feline-init")
+require("colors")
+require("plugins/nightfoxConfig")
 
 require("keymaps")
 require("autocommands")
@@ -55,13 +56,14 @@ require("autocommands")
 --setup for instant collab
 vim.g.instant_username = "green726"
 
-vim.g.vscode_style = "dark"
-vim.g.vscode_italic_comment = 1
+-- vim.g.vscode_style = "dark"
+-- vim.g.vscode_italic_comment = 1
 
 --vim.cmd[[colorscheme tokyonight]]
 
 --set the colorscheme
-vim.cmd([[colorscheme vscode]])
+-- vim.cmd([[colorscheme vscode]])
+
 --below changes tabs to four spaces
 vim.cmd([[set tabstop=4]])
 vim.cmd([[set shiftwidth=4]])
