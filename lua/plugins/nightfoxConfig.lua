@@ -30,7 +30,18 @@ require('nightfox').setup({
         background = false,
     }
     },
-  }
+  },
+  specs = {
+      all = {
+          syntax = {
+            variable = "green.bright",
+            string = "magenta.dim",
+            func = "yellow.base",
+            type = "red.dim"
+          }
+      }
+  },
+
 })
 
 -- setup must be called before loading

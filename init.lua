@@ -60,8 +60,8 @@ vim.cmd[[colorscheme terafox]]
 --setup for instant collab
 vim.g.instant_username = "green726"
 
--- vim.g.vscode_style = "dark"
--- vim.g.vscode_italic_comment = 1
+vim.g.vscode_style = "dark"
+vim.g.vscode_italic_comment = 1
 
 --vim.cmd[[colorscheme tokyonight]]
 
