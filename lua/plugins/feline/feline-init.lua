@@ -3,6 +3,7 @@
 -- Note: This statusline does not define any colors. Instead the statusline is
 -- built on custom highlight groups that I define. The colors for these
 -- highlight groups are pulled from the current colorscheme applied.
+-- I stole this from https://github.com/EdenEast/nyx/blob/573ff3f22da95c00ec71a094b3e1ec166c0afcdd/config/.config/nvim/lua/eden/modules/ui/feline/init.lua
 
 local u = require("plugins/feline/feline-util")
 local fmt = string.format
