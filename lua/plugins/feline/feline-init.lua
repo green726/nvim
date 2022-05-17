@@ -179,7 +179,6 @@ require("feline").setup({
       "dapui_stacks",
       "dapui_watches",
       "dapui_repl",
-      "LspTrouble",
       "qf",
       "help",
     },

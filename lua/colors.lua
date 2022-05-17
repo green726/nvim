@@ -173,4 +173,6 @@ M.generate_user_config_highlights()
 --   },
 -- }
 
+vim.cmd[[autocmd SessionLoadPost,ColorScheme * lua require("colors").generate_user_config_highlights()]]
+
 return M
