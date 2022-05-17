@@ -1,5 +1,4 @@
 --needed to follow troubleshooting steps found here to get to work https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support#troubleshooting
-
 --enables highlighting
 require("nvim-treesitter.configs").setup({
 	-- One of "all", "maintained" (parsers with maintainers), or a list of languages
