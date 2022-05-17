@@ -8,7 +8,7 @@ return require("paq")({
 	--theme
 	--{'folke/tokyonight.nvim'};
 	-- { "Mofiqul/vscode.nvim" },
-    {"EdenEast/nightfox.nvim"}, 
+    {"EdenEast/nightfox.nvim"},
 	--completion
 	--need to run this in powershell for java to work  curl https://projectlombok.org/downloads/lombok.jar -O E:\Coding\lombok\lombok.jar
 	-- { "neoclide/coc.nvim", branch = "release" },
