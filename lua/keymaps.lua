@@ -31,7 +31,7 @@ map("n", "<C-m>", ":ConMenu<CR>", { silent = true })
 vim.api.nvim_set_keymap(
 	"n",
 	"<leader>gu",
-	':lua dofile("C:/Users/mguin/AppData/Local/nvim/lua/plugins/toggleTermConfig.lua")() <CR>',
+	':lua require("plugins/toggleTermConfig").gitUIToggle() <CR>',
 	{ silent = true }
 )
 vim.api.nvim_set_keymap("n", "tt", ":ToggleTerm <CR>", { silent = true })

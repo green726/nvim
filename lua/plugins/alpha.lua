@@ -19,7 +19,7 @@ vim.cmd([[
 		:wincmd k
 		:q
 	endfunction
-]])
+    ]])
 
 local OS = vim.loop.os_uname().sysname
 local pathToSettings = "C:\\Users\\mguin\\AppData\\Local\\nvim\\"

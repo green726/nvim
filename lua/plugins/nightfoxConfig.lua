@@ -37,7 +37,7 @@ require('nightfox').setup({
             variable = "green.bright",
             string = "magenta.dim",
             func = "yellow.base",
-            type = "red.dim"
+            type = "red.dim",
           }
       }
   },

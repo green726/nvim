@@ -51,12 +51,18 @@ greenvim is my attempt to make neovim as close to an IDE as possible.
 ### General:
    * Neovim >= v6.0
    * Have [Paq](https://github.com/savq/paq-nvim) installed
-   * [Neovide](https://github.com/neovide/neovide) for UI (This is optional but I strongly reccommend it)
+
    * [NerdFonts](https://github.com/ryanoasis/nerd-fonts) (for icons), I use SpaceMono
    * I recomment the use of [Alacirtty](https://github.com/alacritty/alacritty) on windows. it was the only terminal I could get all NerdFonts to 100% work with (if using windows cmd you will need to use the Agave Nerd Font for all glyphs/icons to work)
 ### Unity support:
-   * [Neovim-remote](https://github.com/mhinz/neovim-remote) installed
+   * [Neovim-remote](https://github.com/mhinz/neovim-remote)
    * Neovim server/instance running on the IP 127.0.0.1:7777 (instructions can be found [here](neovim-server-address-instructions)) 
- 
-
+### Optional:
+   * [Neovide](https://github.com/neovide/neovide) for UI (I strongly reccommend it)
+#### Fun terminal tools:
+   * [Asciiquarium](https://github.com/cmatsuoka/asciiquarium) for :Fishes command 
+   * [Hollywood](https://github.com/dustinkirkland/hollywood) for :Hacker command
+   * [Neofetch](https://github.com/dylanaraps/neofetch) for :ShowOff command
+   * [Speedread](https://github.com/pasky/speedread) for :Sppedy command
+   * [Bottom](https://github.com/ClementTsang/bottom) for :Status command
 

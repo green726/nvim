@@ -55,18 +55,18 @@ require("keymaps")
 require("autocommands")
 require("commands")
 
-vim.cmd[[colorscheme terafox]]
 
 --setup for instant collab
 vim.g.instant_username = "green726"
 
-vim.g.vscode_style = "dark"
-vim.g.vscode_italic_comment = 1
-
---vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme terafox]]
 
 --set the colorscheme
+-- vim.g.vscode_style = "dark"
+-- vim.g.vscode_italic_comment = 1
 -- vim.cmd([[colorscheme vscode]])
+
+--vim.cmd[[colorscheme tokyonight]]
 
 --below changes tabs to four spaces
 vim.cmd([[set tabstop=4]])
