@@ -26,13 +26,13 @@ require('nightfox').setup({
     },
     modules = {-- List of various plugins and additional options
     diagnostic = {
-        enable = false,
-        background = false,
+        enable = true,
+        background = true,
     }
     },
   },
   specs = {
-      all = {
+      terafox = {
           syntax = {
             variable = "green.bright",
             string = "magenta.dim",

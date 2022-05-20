@@ -99,8 +99,15 @@ return require("paq")({
     {'tzachar/cmp-tabnine', run = './install.sh' },
     --lsp status plugin used for statusline
     {'nvim-lua/lsp-status.nvim'},
-
-
-
+    --scollbar
+    {'petertriho/nvim-scrollbar'},
+    --cheatsheet
+    {'sudormrfbin/cheatsheet.nvim'},
+    --popup utils required by cheetsheet
+    {'nvim-lua/popup.nvim'},
+    --better search highlighting
+    {'kevinhwang91/nvim-hlslens'},
+    --aerial (like a minimap)
+    {'stevearc/aerial.nvim'},
 
 })

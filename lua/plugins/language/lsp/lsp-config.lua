@@ -4,6 +4,11 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 local lspconfig = require('lspconfig')
 
+local function custom_attach(client, bufnr)
+    
+    require("aerial").on_attach(client, bufnr)
+end
+
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = { 'omnisharp'}
 for _, lsp in ipairs(servers) do
