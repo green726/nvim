@@ -1,10 +1,11 @@
+local M = {}
+
 vim.cmd([[autocmd User SessionLoadPost lua require"nvim-tree".toggle(false, true)]])
 
-vim.cmd [[autocmd CursorHold * lua DiagAndDocs()]]
 -- vim.cmd [[autocmd CursorHoldI * lua vim.lsp.buf.hover()]]
 -- vim.cmd [[autocmd CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=true, scope="cursor"})]]
-vim.cmd [[autocmd BufWrite * lua vim.lsp.buf.formatting()]]
-vim.cmd([[  autocmd CursorHold,BufEnter <buffer> lua require('lsp-status').update_current_function()]])
+
+
 
 DiagAndDocs = function()
     local diagWin = vim.diagnostic.open_float(nil, {focus=true, scope="cursor"})
@@ -14,6 +15,14 @@ DiagAndDocs = function()
         vim.lsp.buf.hover()
     end
 end
+
+M.on_attach = function()
+    vim.cmd [[autocmd BufWrite * lua vim.lsp.buf.formatting()]]
+    vim.cmd([[autocmd CursorHold,BufEnter <buffer> lua require('lsp-status').update_current_function()]])
+    vim.cmd [[autocmd CursorHold * lua DiagAndDocs()]]
+end
+
+return M
 
 
 --first line of code below is to prevent screen tearing
@@ -69,3 +78,4 @@ end
 --     ]])
 --     autocmd BufEnter * highlight Normal guibg=0
 --need to write CsDocs into a toggle so it doesn't spam refresh b/c it is triggering cursor movement causing cursor hold to spam refresh
+--

@@ -13,7 +13,7 @@ local indent_blankline_styles = {
 	"|",
 }
 
-vim.g.indent_blankline_char = indent_blankline_styles[1]
+vim.g.indent_blankline_char = indent_blankline_styles[2]
 
 -- Disable indent-blankline on these pages.
 vim.g.indent_blankline_filetype_exclude = {
@@ -25,16 +25,14 @@ vim.g.indent_blankline_filetype_exclude = {
 	"lspinfo",
 	"vista_kind",
 	"alpha",
+    "nvim-tree",
 }
+
 vim.g.indent_blankline_buftype_exclude = { "terminal" }
+vim.opt.list = true
+vim.opt.listchars:append("space:⋅")
 
-vim.g.indent_blankline_use_treesitter = true
-vim.g.indent_blankline_show_trailing_blankline_indent = true
-vim.g.indent_blankline_show_first_indent_level = true
--- vim.g.indent_blankline_context_char = indent_blankline_styles[1]
-vim.cmd("autocmd CursorMoved * IndentBlanklineRefresh")
-
-require("indent_blankline").setup({
-	--show_current_context = true,
-	--show_current_context_start = true,
-})
+require("indent_blankline").setup {
+    space_char_blankline = " ",
+    -- show_current_context = true,
+}

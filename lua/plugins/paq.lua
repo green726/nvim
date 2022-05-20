@@ -109,5 +109,6 @@ return require("paq")({
     {'kevinhwang91/nvim-hlslens'},
     --aerial (like a minimap)
     {'stevearc/aerial.nvim'},
-
+    --error checking
+    {'folke/trouble.nvim'},
 })
