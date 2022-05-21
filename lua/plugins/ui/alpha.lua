@@ -19,6 +19,11 @@ vim.cmd([[
 		:wincmd k
 		:q
 	endfunction
+
+    function OpenTree()
+        :e .
+        :lua require("plugins/ui/barbar-config").startup()
+    endfunction
     ]])
 
 local OS = vim.loop.os_uname().sysname
@@ -29,7 +34,7 @@ if OS == "Linux" then
 end
 
 dashboard.section.buttons.val = {
-	dashboard.button("o", " Open File Tree", ":e . <CR>"),
+	dashboard.button("o", " Open File Tree", ":e .<CR>"),
 	dashboard.button("n", "ﱐ New file", ":call NewFile() <CR>"),
 	-- dashboard.button( "f", " New Folder", ":call NewFile() <CR>"),
 --	dashboard.button("u", "累Load Previous Session", ":SessionManager load_last_session<CR>"),

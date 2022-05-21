@@ -43,7 +43,7 @@ require("plugins/misc/toggleTermConfig")
 require("plugins/misc/todo-comments")
 require("plugins/language/comment-nvim")
 require("plugins/ui/nvim-treeConfig")
-require("plugins/ui/bufferline")
+-- require("plugins/ui/bufferline")
 require("plugins/language/treesitter-context")
 require("plugins/ui/twilight-config")
 require("plugins/misc/dim-config")
@@ -59,6 +59,8 @@ require("plugins/ui/nightfoxConfig")
 require("plugins/ui/scrollbar-config")
 require("plugins/misc/cheatsheet-config")
 require("plugins/ui/aerial-config")
+require("plugins/misc/whichkey-config")
+require("plugins/ui/cokeline-config")
 
 require("keymaps")
 require("autocommands")
@@ -83,36 +85,11 @@ vim.cmd([[set shiftwidth=4]])
 vim.cmd([[set expandtab]])
 
 --enables mouse
--- vim.cmd([[set mouse=a]])
+vim.cmd([[set mouse=a]])
 
 --i use the below guide for unity
 --https://chrislabarge.com/posts/neovim-unity-engine/
 --https://www.youtube.com/watch?v=FlhNSNMNYOo
 --https://rudism.com/coding-csharp-in-neovim/
 
---need to have clang installed
---need to have vs 2019 installed
---if clang errors cant find vs, follow the steps here: https://stackoverflow.com/questions/66692772/nvim-treesitter-installation-on-windows (!!Must run in nvim-qt)
 
---here is tutorial for java: https://www.chrisatmachine.com/Neovim/24-neovim-and-java/
-
---below code goes in coc-settings.json
---[[{
-    "codeLens.enable": false,
-    "java.referencesCodeLens.enabled": true,
-    "coc.source.OmniSharp.referencesCodeLens.enabled": false,
-    "java.jdt.ls.vmargs": "-javaagent:C:\\code\\lombok\\lombok.jar",
-    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "java", "csharp"],
-    "coc.source.OmniSharp.enable" : true,
-    "coc.source.OmniSharp.triggerCharacters": ".",
-    "coc.preferences.hoverTarget": "float",
-    "java.configuration.runtimes": [
-        {
-          "name": "JavaSE-1.8",
-          "path": "C:\\Program Files\\Java\\jre1.8.0_321"
-        }
-      ],
-    "explorer.icon.enableNerdfont": true,
-    "explorer.icon.source": "vim-devicons"
-}
-]]

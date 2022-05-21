@@ -23,6 +23,8 @@ return require("paq")({
 	{ "kyazdani42/nvim-web-devicons" },
 	-- tabline
 	{ "akinsho/bufferline.nvim" },
+    --tabline but better
+    {'noib3/nvim-cokeline'},
 	--statusline
 	{ "feline-nvim/feline.nvim" },
 	--indents
@@ -111,4 +113,7 @@ return require("paq")({
     {'stevearc/aerial.nvim'},
     --error checking
     {'folke/trouble.nvim'},
+    --command keybind display
+    {'folke/which-key.nvim'},
+
 })

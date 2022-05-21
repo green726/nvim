@@ -1,29 +1,33 @@
 local M = {}
 
+
 vim.cmd([[autocmd User SessionLoadPost lua require"nvim-tree".toggle(false, true)]])
 
 -- vim.cmd [[autocmd CursorHoldI * lua vim.lsp.buf.hover()]]
 -- vim.cmd [[autocmd CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=true, scope="cursor"})]]
 
 
-
 DiagAndDocs = function()
-    local diagWin = vim.diagnostic.open_float(nil, {focus=true, scope="cursor"})
+    local diagWin = vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
     if diagWin ~= nil then
-        return 
-    else 
+        return
+    else
         vim.lsp.buf.hover()
     end
 end
 
-M.on_attach = function()
-    vim.cmd [[autocmd BufWrite * lua vim.lsp.buf.formatting()]]
-    vim.cmd([[autocmd CursorHold,BufEnter <buffer> lua require('lsp-status').update_current_function()]])
-    vim.cmd [[autocmd CursorHold * lua DiagAndDocs()]]
+LSPFormat = function()
+    if (vim.bo.filetype ~= "lua") then
+        vim.lsp.buf.formatting()
+    end
 end
 
-return M
+vim.cmd([[autocmd CursorHold,BufEnter <buffer> lua require('lsp-status').update_current_function()]])
+vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=true, scope="cursor"})]]
 
+vim.cmd [[autocmd BufWrite * lua LSPFormat()]]
+
+return M
 
 --first line of code below is to prevent screen tearing
 --below comments are to remember stuff - first is call docs on cursor hold, second is echo char under cursor
@@ -58,12 +62,12 @@ return M
 --     let l:currentWord = expand("<cword>")
 --     if g:cursorWord == l:currentWord && g:csDocsToggled == 1
 --       return
---     else 
+--     else
 --       let g:csDocsToggled = 0
 --     endif
---     
+--
 --   endfunc
---     
+--
 --
 --     let testnum = 0
 --     func TestLog()

@@ -1,6 +1,6 @@
 require("scrollbar").setup({
     show = true,
-    show_in_active_only = false,
+    show_in_active_only = true,
     set_highlights = true,
     folds = 1000, -- handle folds, set to number to disable folds if no. of lines in buffer exceeds this
     max_lines = false, -- disables if no. of lines in buffer exceeds this
@@ -57,6 +57,7 @@ require("scrollbar").setup({
     },
     excluded_buftypes = {
         "terminal",
+        "nvim-tree",
     },
     excluded_filetypes = {
         "prompt",
@@ -82,6 +83,6 @@ require("scrollbar").setup({
     },
     handlers = {
         diagnostic = true,
-        search = false, -- Requires hlslens to be loaded, will run require("scrollbar.handlers.search").setup() for you
+        search = true, -- Requires hlslens to be loaded, will run require("scrollbar.handlers.search").setup() for you
     },
 })

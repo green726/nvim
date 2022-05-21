@@ -1,22 +1,34 @@
 function map(mode, lhs, rhs, opts)
-	local options = { noremap = true }
-	if opts then
-		options = vim.tbl_extend("force", options, opts)
-	end
-	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+    local options = { noremap = true }
+    if opts then
+        options = vim.tbl_extend("force", options, opts)
+    end
+    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-map("n", "]b", ":BufferLineCycleNext<CR>", { silent = true })
-map("n", "[b", ":BufferLineCyclePrev<CR>", { silent = true })
-
-map("n", "}b", ":BufferLineMoveNext<CR>", { silent = true })
-map("n", "{b", ":BufferLineMovePrev<CR>", { silent = true })
-
-map("n", "<leader>bp", ":BufferLinePickClose<CR>", { silent = true })
-map("n", "bc", ":bd", { silent = true })
+-- map("n", "]b", ":BufferLineCycleNext<CR>", { silent = true })
+-- map("n", "[b", ":BufferLineCyclePrev<CR>", { silent = true })
+--
+-- map("n", "}b", ":BufferLineMoveNext<CR>", { silent = true })
+-- map("n", "{b", ":BufferLineMovePrev<CR>", { silent = true })
+--
 
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
+
+--tabline mappings
+map('n', '<S-Tab>', '<Plug>(cokeline-focus-prev)', { silent = true })
+map('n', '<Tab>', '<Plug>(cokeline-focus-next)', { silent = true })
+map('n', '<Leader>p', '<Plug>(cokeline-switch-prev)', { silent = true })
+map('n', '<Leader>n', '<Plug>(cokeline-switch-next)', { silent = true })
+
+
+map("n", "<leader>bp", "<Plug>(cokeline-pick-close)", { silent = true })
+
+for i = 1, 9 do
+    map('n', ('<F%s>'):format(i), ('<Plug>(cokeline-focus-%s)'):format(i), { silent = true })
+    map('n', ('<Leader>%s'):format(i), ('<Plug>(cokeline-switch-%s)'):format(i), { silent = true })
+end
 
 map("n", "<leader>t", ":ToggleTerm<CR>", { silent = true })
 
@@ -29,10 +41,10 @@ map("n", "<C-t>", ":NvimTreeToggle<CR>", { silent = true })
 map("n", "<C-m>", ":ConMenu<CR>", { silent = true })
 
 vim.api.nvim_set_keymap(
-	"n",
-	"<leader>gu",
-	':lua require("plugins/toggleTermConfig").gitUIToggle() <CR>',
-	{ silent = true }
+    "n",
+    "<leader>gu",
+    ':lua require("plugins/toggleTermConfig").gitUIToggle() <CR>',
+    { silent = true }
 )
 vim.api.nvim_set_keymap("n", "tt", ":ToggleTerm <CR>", { silent = true })
 vim.api.nvim_set_keymap("n", "<leader>set", ":e C:/Users/mguin/AppData/Local/nvim <CR>", { silent = true })
@@ -47,23 +59,24 @@ vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<C
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 -- local on_attach = function(client, bufnr)
-  -- Enable completion triggered by <c-x><c-o>
-  -- vim.api.nvim_buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+-- Enable completion triggered by <c-x><c-o>
+-- vim.api.nvim_buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-  -- Mappings.
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
-  vim.api.nvim_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  vim.api.nvim_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  vim.api.nvim_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-  vim.api.nvim_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
-  vim.api.nvim_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-  vim.api.nvim_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
-  vim.api.nvim_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-  vim.api.nvim_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  vim.api.nvim_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-  vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  -- vim.api.nvim_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+-- Mappings.
+-- See `:help vim.lsp.*` for documentation on any of the below functions
+vim.api.nvim_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+vim.api.nvim_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  vim.api.nvim_set_keymap('n', 'K', '<cmd> lua vim.lsp.buf.hover()<CR>', opts)
 -- end
 
 
@@ -80,7 +93,7 @@ vim.cmd([[
 
 ]])
 
-local kopts = {noremap = true, silent = true}
+local kopts = { noremap = true, silent = true }
 
 vim.api.nvim_set_keymap('n', 'n',
     [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]],
