@@ -1,12 +1,12 @@
--- vim.api.nvim_create_user_command(
---     'B',
---     function(opts)
---         vim.cmd("bd | redrawtabline")
---         vim.cmd[[:NvimTreeToggle]]
---         vim.cmd[[:NvimTreeToggle]]
---     end,
---     { nargs = 0 }
--- )
+vim.api.nvim_create_user_command(
+    'B',
+    function(opts)
+        vim.cmd("bd | redrawtabline")
+        vim.cmd[[:NvimTreeToggle]]
+        vim.cmd[[:NvimTreeToggle]]
+    end,
+    { nargs = 0 }
+)
 
 --below are all random fun command line things
 vim.api.nvim_create_user_command(

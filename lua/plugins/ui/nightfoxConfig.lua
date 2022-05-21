@@ -26,20 +26,20 @@ require('nightfox').setup({
     },
     modules = {-- List of various plugins and additional options
     diagnostic = {
-        enable = true,
+        enable = false,
         background = true,
     }
     },
   },
   specs = {
-      terafox = {
-          syntax = {
-            variable = "green.bright",
-            string = "magenta.dim",
-            func = "yellow.base",
-            type = "red.dim",
-          }
-      }
+      -- terafox = {
+      --     syntax = {
+      --       variable = "green.bright",
+      --       string = "magenta.dim",
+      --       func = "yellow.base",
+      --       type = "red.dim",
+      --     }
+      -- }
   },
 
 })
