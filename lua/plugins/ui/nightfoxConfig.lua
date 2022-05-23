@@ -27,7 +27,7 @@ require('nightfox').setup({
     modules = {-- List of various plugins and additional options
     diagnostic = {
         enable = false,
-        background = true,
+        background = false,
     }
     },
   },

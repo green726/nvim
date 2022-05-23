@@ -42,10 +42,10 @@ local function set_highlights(groups)
     vim.cmd(table.concat(lines, " | "))
 end
 
-local function get_highlight(name)
+function M.get_highlight(name)
     local hl = vim.api.nvim_get_hl_by_name(name, true)
     if hl.link then
-        return get_highlight(hl.link)
+        return M.get_highlight(hl.link)
     end
 
     local hex = function(n)
@@ -97,13 +97,13 @@ local function generate_pallet_from_colorscheme()
     end
 
     for name, value in pairs(diagnostic_map) do
-        pallet[name] = get_highlight(value.hl).fg or value.default
+        pallet[name] = M.get_highlight(value.hl).fg or value.default
     end
 
-    pallet.sl = get_highlight("StatusLine")
-    pallet.tab = get_highlight("TabLine")
-    pallet.sel = get_highlight("TabLineSel")
-    pallet.fill = get_highlight("TabLineFill")
+    pallet.sl = M.get_highlight("StatusLine")
+    pallet.tab = M.get_highlight("TabLine")
+    pallet.sel = M.get_highlight("TabLineSel")
+    pallet.fill = M.get_highlight("TabLineFill")
 
     return pallet
 end

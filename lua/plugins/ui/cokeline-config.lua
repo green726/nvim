@@ -1,10 +1,12 @@
 local get_hex = require('cokeline/utils').get_hex
 local mappings = require('cokeline/mappings')
+local colors = require("colors")
 
 local comments_fg = get_hex('Comment', 'fg')
 local errors_fg = get_hex('DiagnosticError', 'fg')
 local warnings_fg = get_hex('DiagnosticWarn', 'fg')
 
+local white = vim.g.terminal_color_0
 local red = vim.g.terminal_color_1
 local yellow = vim.g.terminal_color_3
 
@@ -115,8 +117,8 @@ require('cokeline').setup({
         components = {
             {
                 text = '  NvimTree',
-                fg = yellow,
-                bg = get_hex('NvimTreeNormal', 'bg'),
+                -- fg = yellow,
+                bg = "NONE",
                 style = 'bold',
             },
         }
@@ -126,7 +128,7 @@ require('cokeline').setup({
         -- filter_valid = function(buffer) return buffer.type ~= 'terminal' end,
         -- filter_visible = function(buffer) return buffer.type ~= 'terminal' end,
         new_buffers_position = 'next',
-        focus_on_delete = 'prev',
+        -- focus_on_delete = 'prev',
     },
 
     rendering = {
@@ -139,7 +141,7 @@ require('cokeline').setup({
                 and get_hex('Normal', 'fg')
                 or get_hex('Comment', 'fg')
         end,
-        bg = get_hex('ColorColumn', 'bg'),
+        bg = 'NONE',
     },
 
     components = {

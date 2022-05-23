@@ -12,7 +12,7 @@ vim.api.nvim_create_user_command(
 vim.api.nvim_create_user_command(
     'Fishes',
     function(opts)
-        require("plugins/toggleTermConfig").asciiquariumToggle()
+        require("plugins/misc/toggleTermConfig").asciiquariumToggle()
     end,
     { nargs = 0 }
 )
@@ -20,7 +20,7 @@ vim.api.nvim_create_user_command(
 vim.api.nvim_create_user_command(
     'Hacker',
     function(opts)
-        require("plugins/toggleTermConfig").hollywoodToggle()
+        require("plugins/misc/toggleTermConfig").hollywoodToggle()
     end,
     { nargs = 0 }
 )
@@ -28,7 +28,7 @@ vim.api.nvim_create_user_command(
 vim.api.nvim_create_user_command(
     'ShowOff',
     function(opts)
-        require("plugins/toggleTermConfig").neofetchToggle()
+        require("plugins/misc/toggleTermConfig").neofetchToggle()
     end,
     { nargs = 0 }
 )
@@ -36,7 +36,7 @@ vim.api.nvim_create_user_command(
 vim.api.nvim_create_user_command(
     'Status',
     function(opts)
-        require("plugins/toggleTermConfig").bottomToggle()
+        require("plugins/misc/toggleTermConfig").bottomToggle()
     end,
     { nargs = 0 }
 )
@@ -48,7 +48,7 @@ vim.api.nvim_create_user_command(
         if speed == nil or speed == "" then
             speed = "400"
         end
-        require("plugins/toggleTermConfig").speedreadToggle(speed)
+        require("plugins/misc/toggleTermConfig").speedreadToggle(speed)
     end,
     { nargs = "?" }
 )

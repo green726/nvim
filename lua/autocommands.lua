@@ -2,7 +2,7 @@ local M = {}
 
 
 vim.cmd([[autocmd User SessionLoadPost lua require"nvim-tree".toggle(false, true)]])
-
+vim.cmd[[autocmd CursorHold,CursorHoldI * lua DiagAndDocs()]]
 -- vim.cmd [[autocmd CursorHoldI * lua vim.lsp.buf.hover()]]
 -- vim.cmd [[autocmd CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=true, scope="cursor"})]]
 
@@ -23,7 +23,7 @@ LSPFormat = function()
 end
 
 vim.cmd([[autocmd CursorHold,BufEnter <buffer> lua require('lsp-status').update_current_function()]])
-vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=true, scope="cursor"})]]
+-- vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=true, scope="cursor"})]]
 
 vim.cmd [[autocmd BufWrite * lua LSPFormat()]]
 

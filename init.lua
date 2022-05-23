@@ -29,6 +29,8 @@ vim.opt.encoding = "UTF-8"
 
 require("plugins/paq")
 
+
+require("colors")
 require("plugins/language/treesitter")
 require("plugins/language/lsp/lsp-install-config")
 require("plugins/language/lsp/lsp-config")
@@ -43,7 +45,6 @@ require("plugins/misc/toggleTermConfig")
 require("plugins/misc/todo-comments")
 require("plugins/language/comment-nvim")
 require("plugins/ui/nvim-treeConfig")
-require("plugins/ui/bufferline")
 require("plugins/language/treesitter-context")
 require("plugins/ui/twilight-config")
 require("plugins/misc/dim-config")
@@ -54,13 +55,13 @@ require("plugins/language/dap-ui-config")
 require("plugins/language/dap-config")
 require("plugins/misc/goMove")
 require("plugins/ui/feline/feline-init")
-require("colors")
 require("plugins/ui/nightfoxConfig")
 require("plugins/ui/scrollbar-config")
 require("plugins/misc/cheatsheet-config")
 require("plugins/ui/aerial-config")
 require("plugins/misc/whichkey-config")
--- require("plugins/ui/cokeline-config")
+require("plugins/ui/cokeline-config")
+-- require("plugins/ui/bufferline")
 
 require("keymaps")
 require("autocommands")
@@ -70,12 +71,12 @@ require("commands")
 --setup for instant collab
 vim.g.instant_username = "green726"
 
-vim.cmd[[colorscheme terafox]]
+-- vim.cmd[[colorscheme terafox]]
 
 --set the colorscheme
 vim.g.vscode_style = "dark"
 vim.g.vscode_italic_comment = 1
--- vim.cmd([[colorscheme vscode]])
+vim.cmd([[colorscheme vscode]])
 
 --vim.cmd[[colorscheme tokyonight]]
 
