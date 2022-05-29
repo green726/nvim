@@ -115,5 +115,6 @@ return require("paq")({
     {'folke/trouble.nvim'},
     --command keybind display
     {'folke/which-key.nvim'},
-
+    --lsp function signature help
+    {'ray-x/lsp_signature.nvim'},
 })

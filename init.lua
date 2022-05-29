@@ -35,6 +35,7 @@ require("plugins/language/treesitter")
 require("plugins/language/lsp/lsp-install-config")
 require("plugins/language/lsp/lsp-config")
 require("plugins/language/lsp/lsp-status-config")
+require("plugins/language/lsp/lsp-signature-config")
 require("plugins/language/trouble-config")
 require("plugins/misc/indent-blanklines")
 require("plugins/util/git-signs")
@@ -71,12 +72,12 @@ require("commands")
 --setup for instant collab
 vim.g.instant_username = "green726"
 
--- vim.cmd[[colorscheme terafox]]
+vim.cmd[[colorscheme terafox]]
 
 --set the colorscheme
 vim.g.vscode_style = "dark"
 vim.g.vscode_italic_comment = 1
-vim.cmd([[colorscheme vscode]])
+-- vim.cmd([[colorscheme vscode]])
 
 --vim.cmd[[colorscheme tokyonight]]
 
