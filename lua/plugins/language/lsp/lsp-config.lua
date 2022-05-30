@@ -9,13 +9,21 @@ local function custom_attach(client)
 end
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'omnisharp', 'sumneko_lua' }
+local servers = { 'omnisharp', 'sumneko_lua'}
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         on_attach = custom_attach,
         capabilities = capabilities,
     }
 end
+
+lspconfig.kotlin_language_server.setup {
+    on_attach = custom_attach,
+    capabilities = capabilities,
+    -- settings = {
+    --     
+    -- }
+}
 
 local signs = { Error = "", Warn = "", Hint = "", Info = "" }
 for type, icon in pairs(signs) do

@@ -2,8 +2,8 @@ local M = {}
 
 
 vim.cmd([[autocmd User SessionLoadPost lua require"nvim-tree".toggle(false, true)]])
-vim.cmd[[autocmd CursorHold * lua DiagAndDocs()]]
-vim.cmd [[autocmd CursorHoldI * lua vim.lsp.buf.hover()]]
+vim.cmd [[autocmd CursorHold * lua DiagAndDocs()]]
+-- vim.cmd [[autocmd CursorHoldI * lua vim.lsp.buf.hover()]]
 -- vim.cmd [[autocmd CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=true, scope="cursor"})]]
 
 
@@ -12,14 +12,16 @@ DiagAndDocs = function()
     if diagWin ~= nil then
         return
     else
-        vim.lsp.buf.hover()
+        if (vim.bo.filetype ~= "kotlin") then
+            vim.lsp.buf.hover()
+        end
     end
 end
 
 LSPFormat = function()
-    if (vim.bo.filetype ~= "lua") then
+    if (vim.bo.filetype ~= "lua" and vim.bo.filetype ~= "kotlin") then
         vim.lsp.buf.formatting()
-        vim.cmd[[write]]
+        vim.cmd [[:w]]
     end
 end
 
