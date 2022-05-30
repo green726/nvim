@@ -120,7 +120,9 @@ return require("paq")({
     --lsp code action lightbulb
     { 'kosayoda/nvim-lightbulb' },
     --code action menu
-    { 'weilbith/nvim-code-action-menu' },
+    -- { 'weilbith/nvim-code-action-menu' },
     --connect to jetbrains
     -- { 'beeender/Comrade' },
+    -- lsp actions
+    {'RishabhRD/lspactions'},
 })
