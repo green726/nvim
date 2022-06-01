@@ -33,7 +33,7 @@ end
 map("n", "<leader>t", ":ToggleTerm<CR>", { silent = true })
 
 map("n", "ff", ":Telescope find_files<CR>", { silent = true })
-map("n", "fs", ":Telescope grep_string<CR>", { silent = true })
+map("n", "fs", ":Telescope live_grep<CR>", { silent = true })
 
 map("n", "<C-t>", ":NvimTreeToggle<CR>", { silent = true })
 -- map("n", "<C-j>", ":NvimTreeClose<CR>", { silent = true })
