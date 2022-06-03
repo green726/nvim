@@ -76,7 +76,7 @@ return require("paq")({
     --UI for above debugger
     { "rcarriga/nvim-dap-ui" },
     --debug install manager for nvim-dap
-    { "Pocco81/dap-buddy.nvim" },
+    { "Pocco81/dap-buddy.nvim", branch="dev"},
     --better cursorhold
     { "antoinemadec/FixCursorHold.nvim" },
     --session manager

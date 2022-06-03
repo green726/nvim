@@ -2,9 +2,12 @@
 set mouse=a
 
 
-" call rpcnotify(1, 'Gui', 'Font', 'SpaceMono Nerd Font 12')
+if (has('win32'))
+    set guifont=SpaceMono\ NF:h11
+else
+    set guifont=SpaceMono\ Nerd\ Font\ Mono:h13
+endif
 
-set guifont=SpaceMono\ Nerd\ Font\ Mono:h13
 set linespace=-6
 
 " Other configuration
@@ -17,7 +20,12 @@ endif
 
 if exists(':GuiFont')
     " Use GuiFont! to ignore font errors
-    GuiFont! SpaceMono Nerd Font Mono:h13
+    if (has ('win32'))
+        GuiFont! SpaceMono NF:h11
+    else
+        GuiFont! SpaceMono Nerd Font Mono:h13
+    endif
+    
 endif
 
 
