@@ -30,8 +30,6 @@ for i = 1, 9 do
     map('n', ('<Leader>%s'):format(i), ('<Plug>(cokeline-switch-%s)'):format(i), { silent = true })
 end
 
-map("n", "<leader>t", ":ToggleTerm<CR>", { silent = true })
-
 map("n", "ff", ":Telescope find_files<CR>", { silent = true })
 map("n", "fs", ":Telescope live_grep<CR>", { silent = true })
 
@@ -47,7 +45,7 @@ vim.api.nvim_set_keymap(
     ':lua require("plugins/toggleTermConfig").gitUIToggle() <CR>',
     { silent = true }
 )
-vim.api.nvim_set_keymap("n", "tt", ":ToggleTerm <CR>", { silent = true })
+vim.api.nvim_set_keymap("n", "tt", ":ToggleTerm direction=float<CR>", { silent = true })
 vim.api.nvim_set_keymap("n", "<leader>set", ":e C:/Users/mguin/AppData/Local/nvim <CR>", { silent = true })
 
 -- Mappings.
