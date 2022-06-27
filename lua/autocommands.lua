@@ -8,14 +8,14 @@ vim.cmd [[autocmd CursorHold * lua DiagAndDocs()]]
 
 
 DiagAndDocs = function()
-    local diagWin = vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
-    if diagWin ~= nil then
-        return
-    else
+    -- local diagWin = vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
+    -- if diagWin ~= nil then
+    --     return
+    -- else
         if (vim.bo.filetype ~= "kotlin") then
             vim.lsp.buf.hover()
         end
-    end
+    -- end
 end
 
 LSPFormat = function()

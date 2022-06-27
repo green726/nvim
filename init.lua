@@ -74,7 +74,7 @@ require("commands")
 --setup for instant collab
 vim.g.instant_username = "green726"
 
-vim.cmd[[colorscheme terafox]]
+vim.cmd[[colorscheme nightfox]]
 
 --set the colorscheme
 vim.g.vscode_style = "dark"

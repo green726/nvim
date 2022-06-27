@@ -22,6 +22,7 @@ map('n', '<Tab>', '<Plug>(cokeline-focus-next)', { silent = true })
 map('n', '<Leader>p', '<Plug>(cokeline-switch-prev)', { silent = true })
 map('n', '<Leader>n', '<Plug>(cokeline-switch-next)', { silent = true })
 
+map("n", "<M-d>", "\"_", opts)
 
 map("n", "<leader>bp", "<Plug>(cokeline-pick-close)", { silent = true })
 

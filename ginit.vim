@@ -4,11 +4,12 @@ set mouse=a
 
 if (has('win32'))
     set guifont=SpaceMono\ NF:h11
+    set linespace=-4
 else
     set guifont=SpaceMono\ Nerd\ Font\ Mono:h13
+    set linespace=-6
 endif
 
-set linespace=-6
 
 " Other configuration
 if exists('g:nvui')
