@@ -1,5 +1,6 @@
 local M = {}
 
+local autoFileTypes = {"cs", "csharp", "python", "py", "javascript", "js", "lua"}
 
 vim.cmd([[autocmd User SessionLoadPost lua require"nvim-tree".toggle(false, true)]])
 vim.cmd [[autocmd CursorHold * lua DiagAndDocs()]]
@@ -12,10 +13,15 @@ DiagAndDocs = function()
     -- if diagWin ~= nil then
     --     return
     -- else
-        if (vim.bo.filetype ~= "kotlin") then
+    print(vim.api.nvim_buf_get_name(0))
+    if vim.api.nvim_buf_get_name(0) == "NvimTree" then
+        return
+    end
+    for i, v in ipairs(autoFileTypes) do 
+        if v == vim.bo.filetype then
             vim.lsp.buf.hover()
         end
-    -- end
+    end
 end
 
 LSPFormat = function()

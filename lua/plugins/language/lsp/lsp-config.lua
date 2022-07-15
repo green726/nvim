@@ -9,7 +9,7 @@ local function custom_attach(client)
 end
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'omnisharp', 'sumneko_lua'}
+local servers = { 'omnisharp', 'sumneko_lua', 'pylsp'}
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         on_attach = custom_attach,
