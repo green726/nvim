@@ -16,6 +16,15 @@ map("n", "{b", ":BufferLineMovePrev<CR>", { silent = true })
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
+-- vim.api.nvim_set_keymap('', 'f', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>", {})
+-- vim.api.nvim_set_keymap('', 'F', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>", {})
+-- vim.api.nvim_set_keymap('', 't', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })<cr>", {})
+-- vim.api.nvim_set_keymap('', 'T', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })<cr>", {})
+map("n", "hw", "<cmd>lua require'hop'.hint_words()<cr>", {silent = true})
+map("n", "hl", "<cmd>lua require'hop'.hint_lines_skip_whitespace()<cr>", {silent = true})
+map("n", "hp", "<cmd>lua require'hop'.hint_patterns()<cr>", {silent = true})
+map("n", "hc", "<cmd>lua require'hop'.hint_char1()<cr>", {silent=true})
+
 --tabline mappings
 map('n', '<S-Tab>', '<Plug>(cokeline-focus-prev)', { silent = true })
 map('n', '<Tab>', '<Plug>(cokeline-focus-next)', { silent = true })

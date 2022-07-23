@@ -60,16 +60,20 @@ require("plugins/misc/goMove")
 require("plugins/ui/feline/feline-init")
 require("plugins/ui/nightfoxConfig")
 require("plugins/ui/scrollbar-config")
-require("plugins/misc/cheatsheet-config")
 require("plugins/ui/aerial-config")
 require("plugins/misc/whichkey-config")
 require("plugins/ui/cokeline-config")
 -- require("plugins/ui/bufferline")
+require("plugins/misc/hop-config")
+-- require("plugins/util/startuptime-config")
+require("plugins/language/prettyfold-config")
+require("plugins/language/lsp/lsp-lines-config")
 
 require("keymaps")
 require("autocommands")
 require("commands")
 
+vim.cmd[[set relativenumber]]
 
 --setup for instant collab
 vim.g.instant_username = "green726"

@@ -76,7 +76,7 @@ return require("paq")({
     --UI for above debugger
     { "rcarriga/nvim-dap-ui" },
     --debug install manager for nvim-dap
-    { "Pocco81/dap-buddy.nvim", branch="dev"},
+    { "Pocco81/dap-buddy.nvim", branch = "dev" },
     --better cursorhold
     { "antoinemadec/FixCursorHold.nvim" },
     --session manager
@@ -103,8 +103,6 @@ return require("paq")({
     { 'nvim-lua/lsp-status.nvim' },
     --scollbar
     { 'petertriho/nvim-scrollbar' },
-    --cheatsheet
-    { 'sudormrfbin/cheatsheet.nvim' },
     --popup utils required by cheetsheet
     { 'nvim-lua/popup.nvim' },
     --better search highlighting
@@ -124,5 +122,13 @@ return require("paq")({
     --connect to jetbrains
     -- { 'beeender/Comrade' },
     -- lsp actions
-    {'RishabhRD/lspactions'},
+    { 'RishabhRD/lspactions' },
+    --movements/motions stuff
+    { 'phaazon/hop.nvim' },
+    --startup time
+    {'henriquehbr/nvim-startup.lua'},
+    --pretty-fold
+    {'anuvyklack/pretty-fold.nvim'},
+    --lines for the lsp diags 
+    {"Maan2003/lsp_lines.nvim"}
 })

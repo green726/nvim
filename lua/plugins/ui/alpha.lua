@@ -11,7 +11,6 @@ vim.cmd([[
 
     function Startup()
 		:set splitright
-        :echo "Hello There!"
     endfunction
 
 	function RecentUsed()
