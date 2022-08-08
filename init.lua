@@ -67,7 +67,7 @@ require("plugins/ui/cokeline-config")
 require("plugins/misc/hop-config")
 -- require("plugins/util/startuptime-config")
 require("plugins/language/prettyfold-config")
-require("plugins/language/lsp/lsp-lines-config")
+-- require("plugins/language/lsp/lsp-lines-config")
 
 require("keymaps")
 require("autocommands")
