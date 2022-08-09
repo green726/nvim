@@ -79,8 +79,6 @@ return require("paq")({
     { "Pocco81/dap-buddy.nvim", branch = "dev" },
     --better cursorhold
     { "antoinemadec/FixCursorHold.nvim" },
-    --session manager
-    --{ "Shatur/neovim-session-manager" },
     --move around text and stuff
     { 'booperlv/nvim-gomove' },
     --nvim lsp-config
@@ -130,5 +128,7 @@ return require("paq")({
     --pretty-fold
     {'anuvyklack/pretty-fold.nvim'},
     --lines for the lsp diags 
-    {"Maan2003/lsp_lines.nvim"}
+    {"Maan2003/lsp_lines.nvim"},
+    --project manager
+    -- {"charludo/projectmgr.nvim"},
 })

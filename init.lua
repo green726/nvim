@@ -29,7 +29,6 @@ vim.opt.encoding = "UTF-8"
 
 require("plugins/paq")
 
-
 require("colors")
 require("plugins/language/treesitter")
 require("plugins/language/lsp/lsp-install-config")
@@ -68,6 +67,7 @@ require("plugins/misc/hop-config")
 -- require("plugins/util/startuptime-config")
 require("plugins/language/prettyfold-config")
 -- require("plugins/language/lsp/lsp-lines-config")
+-- require("plugins/misc/projectmgr-config")
 
 require("keymaps")
 require("autocommands")

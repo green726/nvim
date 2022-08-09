@@ -26,12 +26,12 @@ vim.g.indent_blankline_filetype_exclude = {
 	"lspinfo",
 	"vista_kind",
 	"alpha",
-    "nvim-tree",
+    "NvimTree",
 }
 
 vim.g.indent_blankline_buftype_exclude = { "terminal" }
 vim.opt.list = true
-vim.opt.listchars:append("space:⋅")
+-- vim.opt.listchars:append("space:⋅")
 
 require("indent_blankline").setup {
     space_char_blankline = " ",
