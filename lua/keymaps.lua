@@ -90,6 +90,8 @@ vim.api.nvim_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>'
 -- vim.api.nvim_set_keymap('n', 'ca', ':CodeActionMenu<CR>', opts)
 vim.cmd [[ nnoremap <space>ca :lua require'lspactions'.code_action()<CR> ]]
 
+vim.api.nvim_set_keymap('n', "<Leader>fp", 'lua require("fold-preview").show_preview()<CR>', opts)
+
 vim.cmd([[
     nnoremap <silent> <F5> :lua require'dap'.continue()<CR>
     nnoremap <silent> <F10> :lua require'dap'.step_over()<CR>

@@ -1,6 +1,11 @@
 -- luasnip setup
 local luasnip = require 'luasnip'
 
+local lspkind = require('lspkind')
+
+--load snippets
+require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./lua/plugins/language/lsp/snippets" } })
+
 -- nvim-cmp setup
 local cmp = require 'cmp'
 cmp.setup {
@@ -38,12 +43,54 @@ cmp.setup {
         ['<C-e>'] = cmp.mapping.abort(),
     }),
     sources = {
-        { name = 'nvim_lsp' },
-        { name = 'luasnip' },
-        { name = 'path' },
-        { name = 'cmp_tabnine' }
+        { name = 'nvim_lsp', max_item_count = 5 },
+        { name = 'luasnip', max_item_count = 3 },
+        { name = 'path', max_item_count = 3 },
+        { name = 'cmp_tabnine', max_item_count = 3 }
+    },
+    enabled = function()
+        -- disable completion in comments
+        local context = require 'cmp.config.context'
+        -- keep command mode completion enabled when cursor is in a comment
+        if vim.api.nvim_get_mode().mode == 'c' then
+            return true
+        else
+            return not context.in_treesitter_capture("comment")
+                and not context.in_syntax_group("Comment")
+        end
+    end,
+    formatting = {
+        format = lspkind.cmp_format({
+            mode = 'symbol_text', -- show only symbol annotations
+            maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+            menu = {
+                buffer = "[Buffer]",
+                nvim_lsp = "[LSP]",
+                luasnip = "[LuaSnip]",
+                nvim_lua = "[Lua]",
+                cmp_tabnine = "[Tabnine]",
+            },
+        })
     },
 }
+
+-- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline('/', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = {
+        { name = 'buffer' }
+    }
+})
+
+-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline(':', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({
+        { name = 'path' }
+    }, {
+        { name = 'cmdline' }
+    })
+})
 
 local tabnine = require('cmp_tabnine.config')
 tabnine:setup({
@@ -56,5 +103,5 @@ tabnine:setup({
         -- uncomment to ignore in lua:
         -- lua = true
     };
-    show_prediction_strength = false;
+    show_prediction_strength = true;
 })

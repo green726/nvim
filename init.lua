@@ -95,6 +95,12 @@ vim.cmd([[set expandtab]])
 --enables mouse
 vim.cmd([[set mouse=a]])
 
+--folding for TS
+vim.cmd[[
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+]]
+
 --i use the below guide for unity
 --https://chrislabarge.com/posts/neovim-unity-engine/
 --https://www.youtube.com/watch?v=FlhNSNMNYOo

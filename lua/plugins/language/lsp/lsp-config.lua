@@ -6,6 +6,7 @@ local lspconfig = require('lspconfig')
 
 local function custom_attach(client)
     require("aerial").on_attach(client)
+    -- require('folding').on_attach()
 end
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp

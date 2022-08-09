@@ -57,7 +57,7 @@ require("scrollbar").setup({
     },
     excluded_buftypes = {
         "terminal",
-        "nvim-tree",
+        "NvimTree",
     },
     excluded_filetypes = {
         "prompt",

@@ -3,6 +3,8 @@
 return require("paq")({
     -- Let Paq manage itself
     { "savq/paq-nvim" },
+    --startuptime
+    {'dstein64/vim-startuptime'},
     --bunch of stuff requires this
     { "nvim-lua/plenary.nvim" },
     --theme
@@ -44,7 +46,7 @@ return require("paq")({
     --c# stuff
     -- { "OmniSharp/omnisharp-vim" },
     --github copilot
-    { "github/copilot.vim" },
+    -- { "github/copilot.vim" },
     --toggle comments
     { "numToStr/Comment.nvim" },
     --highlight cursor
@@ -127,8 +129,14 @@ return require("paq")({
     {'henriquehbr/nvim-startup.lua'},
     --pretty-fold
     {'anuvyklack/pretty-fold.nvim'},
+    --pretty fold preview
+    {'anuvyklack/fold-preview.nvim'},
     --lines for the lsp diags 
     {"Maan2003/lsp_lines.nvim"},
+    --folding 
+    {"pierreglaser/folding-nvim"},
+    --lsp signs stuff 
+    {"onsails/lspkind.nvim"},
     --project manager
     -- {"charludo/projectmgr.nvim"},
 })
