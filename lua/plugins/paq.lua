@@ -23,10 +23,8 @@ return require("paq")({
     { "nvim-telescope/telescope.nvim" },
     --icons
     { "kyazdani42/nvim-web-devicons" },
-    -- tabline
-    { "akinsho/bufferline.nvim" },
     --tabline but better
-    { 'noib3/nvim-cokeline' },
+    -- { 'noib3/nvim-cokeline' },
     --statusline
     { "feline-nvim/feline.nvim" },
     --indents
@@ -43,10 +41,6 @@ return require("paq")({
     { "akinsho/toggleterm.nvim" },
     --better comments
     { "folke/todo-comments.nvim" },
-    --c# stuff
-    -- { "OmniSharp/omnisharp-vim" },
-    --github copilot
-    -- { "github/copilot.vim" },
     --toggle comments
     { "numToStr/Comment.nvim" },
     --highlight cursor
@@ -119,8 +113,6 @@ return require("paq")({
     { 'kosayoda/nvim-lightbulb' },
     --code action menu
     -- { 'weilbith/nvim-code-action-menu' },
-    --connect to jetbrains
-    -- { 'beeender/Comrade' },
     -- lsp actions
     { 'RishabhRD/lspactions' },
     --movements/motions stuff
@@ -137,6 +129,15 @@ return require("paq")({
     {"pierreglaser/folding-nvim"},
     --lsp signs stuff 
     {"onsails/lspkind.nvim"},
-    --project manager
-    -- {"charludo/projectmgr.nvim"},
+    --buffer switcher
+    {'matbme/JABS.nvim'},
+    --better buffer deletion
+    {'kazhala/close-buffers.nvim'},
+    --project management
+    {'ahmedkhalf/project.nvim'},
+    --find and replace
+    {'windwp/nvim-spectre'},
+    --cut and delete seperate
+    {'gbprod/cutlass.nvim'},
+
 })

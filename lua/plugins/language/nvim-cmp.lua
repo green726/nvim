@@ -43,7 +43,7 @@ cmp.setup {
         ['<C-e>'] = cmp.mapping.abort(),
     }),
     sources = {
-        { name = 'nvim_lsp', max_item_count = 5 },
+        { name = 'nvim_lsp', max_item_count = 20 },
         { name = 'luasnip', max_item_count = 3 },
         { name = 'path', max_item_count = 3 },
         { name = 'cmp_tabnine', max_item_count = 3 }

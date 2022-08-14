@@ -1,9 +1,15 @@
 vim.api.nvim_create_user_command(
     'B',
     function(opts)
-        vim.cmd("bd | redrawtabline")
-        vim.cmd[[:NvimTreeToggle]]
-        vim.cmd[[:NvimTreeToggle]]
+        require('close_buffers').delete({ type = 'this', force = true })
+    end,
+    { nargs = 0 }
+)
+
+vim.api.nvim_create_user_command(
+    'Bo',
+    function(opts)
+        require('close_buffers').delete({ type = 'others', force = true })
     end,
     { nargs = 0 }
 )

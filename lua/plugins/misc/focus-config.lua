@@ -1,1 +1,1 @@
-require("focus").setup({excluded_filetypes = {"toggleterm", "NvimTree"}})
+require("focus").setup({cursorline = false}, {excluded_filetypes = {"toggleterm", "NvimTree"}})

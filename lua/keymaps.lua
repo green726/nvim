@@ -6,11 +6,45 @@ function map(mode, lhs, rhs, opts)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-map("n", "]b", ":BufferLineCycleNext<CR>", { silent = true })
-map("n", "[b", ":BufferLineCyclePrev<CR>", { silent = true })
+-- map("n", "]b", ":BufferLineCycleNext<CR>", { silent = true })
+-- map("n", "[b", ":BufferLineCyclePrev<CR>", { silent = true })
 
-map("n", "}b", ":BufferLineMoveNext<CR>", { silent = true })
-map("n", "{b", ":BufferLineMovePrev<CR>", { silent = true })
+-- map("n", "}b", ":BufferLineMoveNext<CR>", { silent = true })
+-- map("n", "{b", ":BufferLineMovePrev<CR>", { silent = true })
+
+map("n", "<Tab>", ":JABSOpen<CR>", {silent = true})
+
+for _, keymap in pairs({
+    'zo',
+    'zO',
+    'zc',
+    'zC',
+    'za',
+    'zA',
+    'zv',
+    'zx',
+    'zX',
+    'zm',
+    'zM',
+    'zr',
+    'zR',
+}) do
+    vim.api.nvim_set_keymap('n', keymap,  keymap .. '<CMD>IndentBlanklineRefresh<CR>', { noremap=true, silent=true })
+end
+
+
+map("n", "<Leader>S", "<cmd>lua require('spectre').open()<CR>", {silent = true})
+vim.cmd[[
+vnoremap <leader>s <esc>:lua require('spectre').open_visual()<CR>
+"  search in current file
+nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
+]]
+
+
+vim.cmd[[imap <M-UP> <esc><S-{>i]]
+vim.cmd[[imap <M-DOWN> <esc><S-}>i]]
+
+
 --
 
 local map = vim.api.nvim_set_keymap
@@ -26,10 +60,10 @@ map("n", "<Leader>hp", "<cmd>lua require'hop'.hint_patterns()<cr>", {silent = tr
 map("n", "<Leader>hc", "<cmd>lua require'hop'.hint_char1()<cr>", {silent=true})
 
 --tabline mappings
-map('n', '<S-Tab>', '<Plug>(cokeline-focus-prev)', { silent = true })
-map('n', '<Tab>', '<Plug>(cokeline-focus-next)', { silent = true })
-map('n', '<Leader>p', '<Plug>(cokeline-switch-prev)', { silent = true })
-map('n', '<Leader>n', '<Plug>(cokeline-switch-next)', { silent = true })
+-- map('n', '<S-Tab>', '<Plug>(cokeline-focus-prev)', { silent = true })
+-- map('n', '<Tab>', '<Plug>(cokeline-focus-next)', { silent = true })
+-- map('n', '<Leader>p', '<Plug>(cokeline-switch-prev)', { silent = true })
+-- map('n', '<Leader>n', '<Plug>(cokeline-switch-next)', { silent = true })
 
 map("n", "<M-d>", "\"_", opts)
 
