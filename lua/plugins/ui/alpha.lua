@@ -33,6 +33,7 @@ if OS == "Linux" then
 end
 
 dashboard.section.buttons.val = {
+    dashboard.button("f", " Telescope Files ", ":Telescope find_files<CR>"),
 	dashboard.button("o", " Open File Tree", ":e .<CR>"),
 	dashboard.button("n", "ﱐ New file", ":call NewFile() <CR>"),
 	-- dashboard.button( "f", " New Folder", ":call NewFile() <CR>"),

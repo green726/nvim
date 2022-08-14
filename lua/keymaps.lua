@@ -74,6 +74,7 @@ for i = 1, 9 do
     map('n', ('<Leader>%s'):format(i), ('<Plug>(cokeline-switch-%s)'):format(i), { silent = true })
 end
 
+map("n", "to", ":Telescope<CR>", {silent = true})
 map("n", "ff", ":Telescope find_files<CR>", { silent = true })
 map("n", "fs", ":Telescope live_grep<CR>", { silent = true })
 
