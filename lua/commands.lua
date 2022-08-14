@@ -1,7 +1,7 @@
 vim.api.nvim_create_user_command(
     'B',
     function(opts)
-        require('close_buffers').delete({ type = 'this', force = true })
+        require('close_buffers').delete({ type = 'this'})
     end,
     { nargs = 0 }
 )
@@ -9,7 +9,7 @@ vim.api.nvim_create_user_command(
 vim.api.nvim_create_user_command(
     'Bo',
     function(opts)
-        require('close_buffers').delete({ type = 'others', force = true })
+        require('close_buffers').delete({ type = 'other'})
     end,
     { nargs = 0 }
 )

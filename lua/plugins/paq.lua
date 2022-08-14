@@ -7,6 +7,7 @@ return require("paq")({
     {'dstein64/vim-startuptime'},
     --bunch of stuff requires this
     { "nvim-lua/plenary.nvim" },
+    {'kevinhwang91/promise-async'},
     --theme
     --{'folke/tokyonight.nvim'};
     { "Mofiqul/vscode.nvim" },
@@ -139,5 +140,7 @@ return require("paq")({
     {'windwp/nvim-spectre'},
     --cut and delete seperate
     {'gbprod/cutlass.nvim'},
+    --folds
+    {'kevinhwang91/nvim-ufo'},
 
 })
