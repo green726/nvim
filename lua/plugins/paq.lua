@@ -8,6 +8,7 @@ return require("paq")({
     --bunch of stuff requires this
     { "nvim-lua/plenary.nvim" },
     {'kevinhwang91/promise-async'},
+    {'MunifTanjim/nui.nvim'},
     --theme
     --{'folke/tokyonight.nvim'};
     { "Mofiqul/vscode.nvim" },
@@ -34,8 +35,9 @@ return require("paq")({
     { "jiangmiao/auto-pairs" },
     --git suff
     { "lewis6991/gitsigns.nvim" },
-    --file tree
-    { "kyazdani42/nvim-tree.lua" },
+    --file tre
+    {"nvim-neo-tree/neo-tree.nvim"},
+    -- { "kyazdani42/nvim-tree.lua" },
     --home menu/start
     { "goolord/alpha-nvim" },
     --terminal
@@ -119,15 +121,15 @@ return require("paq")({
     --movements/motions stuff
     { 'phaazon/hop.nvim' },
     --startup time
-    {'henriquehbr/nvim-startup.lua'},
+    -- {'henriquehbr/nvim-startup.lua'},
     --pretty-fold
-    {'anuvyklack/pretty-fold.nvim'},
+    -- {'anuvyklack/pretty-fold.nvim'},
     --pretty fold preview
-    {'anuvyklack/fold-preview.nvim'},
+    -- {'anuvyklack/fold-preview.nvim'},
     --lines for the lsp diags 
-    {"Maan2003/lsp_lines.nvim"},
+    -- {"Maan2003/lsp_lines.nvim"},
     --folding 
-    {"pierreglaser/folding-nvim"},
+    -- {"pierreglaser/folding-nvim"},
     --lsp signs stuff 
     {"onsails/lspkind.nvim"},
     --buffer switcher
