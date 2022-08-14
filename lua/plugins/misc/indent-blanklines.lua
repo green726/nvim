@@ -27,6 +27,7 @@ vim.g.indent_blankline_filetype_exclude = {
 	"vista_kind",
 	"alpha",
     "NvimTree",
+    "neo-tree",
 }
 
 vim.g.indent_blankline_buftype_exclude = { "terminal" }
