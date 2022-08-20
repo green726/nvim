@@ -1,7 +1,7 @@
 # greenvim
 
 ## What is greenvim?
-greenvim is my attempt to make neovim as close to an IDE as possible.
+greenvim is my attempt to make neovim as feature complete as an IDE while maintaining a minimalist and code focused 
 
 ## features:
 * native LSP
