@@ -1,7 +1,7 @@
 # greenvim
 
 ## What is greenvim?
-greenvim is my attempt to make neovim as close to an IDE as possible.
+greenvim is my attempt to make neovim as feature complete as an IDE while maintaining a minimalist and code focused aesthetic
 
 ## features:
 * native LSP
@@ -22,7 +22,6 @@ greenvim is my attempt to make neovim as close to an IDE as possible.
 * Context menus
 * better terminal integration
 * [full Unity and C# support](#unity-support)
-* [full Java support](#java-support)
 
 ## Setup greenvim (without java or unity support):
    * Once installed run the commands found [here](https://github.com/green726/greenvim/blob/main/commands.txt)
@@ -44,9 +43,6 @@ greenvim is my attempt to make neovim as close to an IDE as possible.
 #### Unity open in greenvim: 
    * Unity can open any file/error in greenvim through the use of a neovim-remote and an exe I wrote in c#.
       * The exe can be found in the folder custom-exe\external-script-editor-exe. To set it up you can go into unity -> preferences -> external script editor and in the dropdown select browse and select the .exe file. In the external script editor args you then need to place 
- ## Java support:
-
- 
 ## Requirements:
 ### General:
    * Neovim >= v6.0
@@ -58,7 +54,6 @@ greenvim is my attempt to make neovim as close to an IDE as possible.
    * [Neovim-remote](https://github.com/mhinz/neovim-remote)
    * Neovim server/instance running on the IP 127.0.0.1:7777 (instructions can be found [here](neovim-server-address-instructions)) 
 ### Optional:
-   * [Neovide](https://github.com/neovide/neovide) for UI (I strongly reccommend it)
 #### Fun terminal tools:
    * [Asciiquarium](https://github.com/cmatsuoka/asciiquarium) for :Fishes command 
    * [Hollywood](https://github.com/dustinkirkland/hollywood) for :Hacker command
