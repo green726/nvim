@@ -126,7 +126,7 @@ require("neo-tree").setup({
                 --"node_modules"
             },
             hide_by_pattern = { -- uses glob style patterns
-                --"*.meta"
+                "*.meta",
             },
             always_show = { -- remains visible even if other settings would normally hide it
                 --".gitignored",
