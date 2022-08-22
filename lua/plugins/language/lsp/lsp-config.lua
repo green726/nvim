@@ -6,25 +6,30 @@ capabilities.textDocument.foldingRange = {
     lineFoldingOnly = true
 }
 
-
 local lspconfig = require('lspconfig')
+
+
 
 local function custom_attach(client)
     require("aerial").on_attach(client)
     -- require('folding').on_attach()
 end
 
-
+lspconfig.omnisharp.setup {
+    root_dir = lspconfig.util.root_pattern("*.sln"),
+    on_attach = custom_attach,
+    capabilities = capabilities,
+    cmd = {"D:\\coding\\omnisharp\\OmniSharp.exe"},
+}
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { --[[ 'omnisharp', ]] 'sumneko_lua', 'pylsp', --[[ 'csharp_ls' ]] }
-for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup {
-        on_attach = custom_attach,
-        capabilities = capabilities,
-    }
-end
-
+-- local servers = { --[[  'omnisharp', ]] 'sumneko_lua', --[[  'pylsp', ]] --[[ 'csharp_ls' ]] }
+-- for _, lsp in ipairs(servers) do
+--     lspconfig[lsp].setup {
+--         on_attach = custom_attach,
+--         capabilities = capabilities,
+--     }
+-- end
 
 
 lspconfig.kotlin_language_server.setup {
@@ -50,13 +55,5 @@ vim.diagnostic.config({
     severity_sort = true,
 })
 
-local pid = vim.fn.getpid()
-local omnisharp_bin = "/home/green726/Omnisharp/run"
 
-lspconfig.omnisharp.setup {
-    use_mono = true,
-    on_attach = custom_attach,
-    capabilities = capabilities,
-    cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) },
-    root_dir = lspconfig.util.root_pattern(--[[ "*.csproj", ]]"*.sln"),
-}
+
