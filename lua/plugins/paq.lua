@@ -75,7 +75,7 @@ return require("paq")({
     --UI for above debugger
     { "rcarriga/nvim-dap-ui" },
     --debug install manager for nvim-dap
-    { "Pocco81/dap-buddy.nvim", branch = "dev" },
+    -- { "Pocco81/dap-buddy.nvim", branch = "dev" },
     --better cursorhold
     { "antoinemadec/FixCursorHold.nvim" },
     --move around text and stuff
@@ -83,7 +83,11 @@ return require("paq")({
     --nvim lsp-config
     { "neovim/nvim-lspconfig" },
     --LSP installer
-    { "williamboman/nvim-lsp-installer" },
+    -- { "williamboman/nvim-lsp-installer" },
+    --INSTALLER FOR EVERYTHING
+    { "williamboman/mason.nvim" },
+    --plugin for mason for nvim-config
+    {'williamboman/mason-lspconfig.nvim'},
     --auto complete
     { 'hrsh7th/nvim-cmp' },
     --lsp source for nvim-cmp
