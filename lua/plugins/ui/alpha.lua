@@ -43,8 +43,8 @@ dashboard.section.buttons.val = {
 	dashboard.button("q", " Quit NVIM", ":qa <CR>"),
 }
 
-dashboard.config.opts.noautocmd = true
+dashboard.config.opts.noautocmd = false
 
-vim.cmd([[autocmd User AlphaReady call Startup()]])
+-- vim.cmd([[autocmd User AlphaReady call Startup()]])
 
 alpha.setup(dashboard.config)

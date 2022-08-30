@@ -1,5 +1,5 @@
 require("plugins/language/treesitter")
-require("plugins/language/lsp/lsp-install-config")
+require("plugins/language/lsp/mason-config")
 require("plugins/language/lsp/lsp-config")
 require("plugins/language/lsp/lsp-status-config")
 require("plugins/language/lsp/lsp-signature-config")
