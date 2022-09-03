@@ -13,6 +13,7 @@ end
 -- map("n", "{b", ":BufferLineMovePrev<CR>", { silent = true })
 
 map("n", "<Tab>", ":JABSOpen<CR>", {silent = true})
+map("n", "<C-a>", ":AerialToggle<CR>", {silent = true})
 
 for _, keymap in pairs({
     'zo',
