@@ -58,8 +58,8 @@ vim.cmd([[set tabstop=4]])
 vim.cmd([[set shiftwidth=4]])
 vim.cmd([[set expandtab]])
 
---enables mouse
-vim.cmd([[set mouse=a]])
+--disables mouse
+vim.cmd([[set mouse=]])
 
 --folding for TS
 -- vim.cmd[[

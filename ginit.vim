@@ -1,5 +1,5 @@
-" Enable Mouse
-set mouse=a
+" Disable Mouse
+set mouse=
 
 
 if (has('win32'))
