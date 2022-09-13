@@ -148,5 +148,7 @@ return require("paq")({
     {'gbprod/cutlass.nvim'},
     --folds
     {'kevinhwang91/nvim-ufo'},
+    --jdtls
+    -- {"mfussenegger/nvim-jdtls"},
 
 })
