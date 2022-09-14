@@ -3,28 +3,19 @@ set mouse=
 
 
 if (has('win32'))
-    set guifont=SpaceMono\ NF:h11
-    set linespace=-4
+    set guifont=FiraCode\ NF:h11
+    " set linespace=-4
 else
-    set guifont=SpaceMono\ Nerd\ Font\ Mono:h13
-    set linespace=-6
-endif
-
-
-" Other configuration
-if exists('g:nvui')
-  " Configure nvui
-  NvuiCmdFontFamily SpaceMono Nerd Font
-  NvuiCmdFontSize 14
-  NvuiScrollAnimationDuration 0.2
+    set guifont=FiraCode\ Nerd\ Font\ Mono:h13
+    " set linespace=-6
 endif
 
 if exists(':GuiFont')
     " Use GuiFont! to ignore font errors
     if (has ('win32'))
-        GuiFont! SpaceMono NF:h11
+        GuiFont! FiraCode NF:h11
     else
-        GuiFont! SpaceMono Nerd Font Mono:h13
+        GuiFont! FiraCode Nerd Font Mono:h13
     endif
     
 endif
