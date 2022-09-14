@@ -1,2 +1,9 @@
 
-require 'jabs'.setup {}
+require 'jabs'.setup {
+    position = 'center',
+
+    preview = {
+        border = 'solid'
+    },
+
+}
