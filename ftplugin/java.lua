@@ -1,6 +1,21 @@
 -- Data directory - change it to your liking
 local HOME = os.getenv "HOME"
-local WORKSPACE_PATH = HOME .. "/workspace/java/"local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
+-- local USERPROFILE = os.getenv("%USERPROFILE%")
+local USERPROFILE = "C:/users/mguin/"
+local WORKSPACE_PATH = ""
+local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
+local lspInstallPath = vim.fn.stdpath "data" .. "/mason/packages/jdtls/"
+
+local configPath = lspInstallPath .. "config_win/"
+
+if vim.fn.has("win32") then
+    WORKSPACE_PATH = USERPROFILE .. "/nvim-workspace/java/"
+    configPath = lspInstallPath .. "config_win/" 
+else
+    WORKSPACE_PATH = HOME .. "/workspace/java/"
+    configPath = lspInstallPath .. "config_linux/"
+end
+
 local workspace_dir = WORKSPACE_PATH .. project_name
 
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
@@ -22,15 +37,15 @@ local config = {
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
 
     -- 💀
-    '-jar', '/home/green726/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
-    '-configuration', '/home/green726/.local/share/nvim/mason/packages/jdtls/config_linux/',
+    '-jar', lspInstallPath .. 'plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
+    '-configuration', configPath,
     '-data', workspace_dir,
   },
 
   -- 💀
   -- This is the default if not provided, you can remove it. Or adjust as needed.
   -- One dedicated LSP server & client will be started per unique root_dir
-  root_dir = require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew', 'build.gradle', 'settings.gradle'}),
+  root_dir = require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew', 'settings.gradle'}),
 
   -- Here you can configure eclipse.jdt.ls specific settings
   -- See https://github.com/eclipse/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request

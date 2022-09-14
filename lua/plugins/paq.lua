@@ -82,8 +82,6 @@ return require("paq")({
     { 'booperlv/nvim-gomove' },
     --nvim lsp-config
     { "neovim/nvim-lspconfig" },
-    --LSP installer
-    -- { "williamboman/nvim-lsp-installer" },
     --INSTALLER FOR EVERYTHING
     { "williamboman/mason.nvim" },
     --plugin for mason for nvim-config
@@ -117,11 +115,11 @@ return require("paq")({
     --lsp function signature help
     { 'ray-x/lsp_signature.nvim' },
     --lsp code action lightbulb
-    { 'kosayoda/nvim-lightbulb' },
+    -- { 'kosayoda/nvim-lightbulb' },
     --code action menu
     -- { 'weilbith/nvim-code-action-menu' },
     -- lsp actions
-    { 'RishabhRD/lspactions' },
+    -- { 'RishabhRD/lspactions' },
     --movements/motions stuff
     { 'phaazon/hop.nvim' },
     --startup time
@@ -136,6 +134,8 @@ return require("paq")({
     -- {"pierreglaser/folding-nvim"},
     --lsp signs stuff 
     {"onsails/lspkind.nvim"},
+    -- various lsp extensions (pretty much all the above commented out stuff for lsp)
+    {'glepnir/lspsaga.nvim'},
     --buffer switcher
     {'matbme/JABS.nvim'},
     --better buffer deletion
@@ -149,6 +149,6 @@ return require("paq")({
     --folds
     {'kevinhwang91/nvim-ufo'},
     --jdtls
-    -- {"mfussenegger/nvim-jdtls"},
+    {"mfussenegger/nvim-jdtls"},
 
 })
