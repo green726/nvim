@@ -1,4 +1,4 @@
-require("plugins/misc/focus-config")
+-- require("plugins/misc/focus-config")
 require("plugins/misc/indent-blanklines")
 require("plugins/misc/telescope")
 require("plugins/misc/toggleTermConfig")

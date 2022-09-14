@@ -3,7 +3,7 @@ require("scrollbar").setup({
     show_in_active_only = true,
     set_highlights = true,
     folds = 1000, -- handle folds, set to number to disable folds if no. of lines in buffer exceeds this
-    max_lines = false, -- disables if no. of lines in buffer exceeds this
+    max_lines = 9000, -- disables if no. of lines in buffer exceeds this
     handle = {
         text = " ",
         color = vim.g.terminal_color_8,

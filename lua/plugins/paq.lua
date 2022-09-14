@@ -61,7 +61,7 @@ return require("paq")({
     --window management
     { "sindrets/winshift.nvim" },
     --bettwen window creation
-    { "beauwilliams/focus.nvim" },
+    -- { "beauwilliams/focus.nvim" },
     --collaborative editing
     { "jbyuki/instant.nvim" },
     --browse
