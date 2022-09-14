@@ -122,14 +122,14 @@ function M.generate_user_config_highlights()
         Cyan    = { fg = pal.cyan, bg = pal.sl.bg },
         White   = { fg = pal.white, bg = pal.black },
     }
-
     local colors = {}
     for name, value in pairs(sl_colors) do
         colors["" .. name] = { fg = value.fg, bg = value.bg, style = "bold" }
         colors["Rv" .. name] = { fg = value.bg, bg = value.fg, style = "bold" }
     end
 
-    local status = vim.o.background == "dark" and { fg = pal.black, bg = pal.white } or { fg = pal.white, bg = pal.black }
+    local status = vim.o.background == "dark" and { fg = pal.black, bg = pal.white } or
+        { fg = pal.white, bg = pal.black }
 
     local groups = {
         SLHint = { fg = pal.sl.bg, bg = pal.hint, style = "bold" },
@@ -156,6 +156,62 @@ function M.generate_user_config_highlights()
         TLActiveSep = { fg = pal.sel.bg, bg = pal.fill.bg },
         TLBoldLine = { fg = pal.tab.fg, bg = pal.tab.bg, style = "bold" },
         TLLineSep = { fg = pal.tab.bg, bg = pal.fill.bg },
+
+        TelescopeBorder = {
+            fg = pal.tab.bg,
+            bg = pal.tab.bg,
+        },
+
+        TelescopePromptBorder = {
+            fg = pal.black,
+            bg = pal.black,
+        },
+
+        TelescopePromptNormal = {
+            fg = pal.white,
+            bg = pal.black,
+        },
+
+        TelescopePromptPrefix = {
+            fg = pal.blue,
+            bg = pal.black,
+        },
+
+        TelescopeNormal = { bg = pal.tab.bg },
+
+        TelescopePreviewTitle = {
+            fg = pal.black,
+            bg = pal.blue,
+        },
+
+        TelescopePromptTitle = {
+            fg = pal.black,
+            bg = pal.blue,
+        },
+
+        TelescopeResultsTitle = {
+            fg = pal.black,
+            bg = pal.blue,
+        },
+
+        TelescopeSelection = { bg = pal.blue, fg = pal.sel.fg },
+
+        TelescopeResultsDiffAdd = {
+            fg = pal.green,
+        },
+
+        TelescopeResultsDiffChange = {
+            fg = pal.yellow,
+        },
+
+        TelescopeResultsDiffDelete = {
+            fg = pal.red,
+        },
+
+        TelescopeMatching = {
+            fg = pal.red,
+            style = "bold",
+        }
     }
 
     set_highlights(vim.tbl_extend("force", colors, groups))

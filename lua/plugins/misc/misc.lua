@@ -1,6 +1,6 @@
 -- require("plugins/misc/focus-config")
 require("plugins/misc/indent-blanklines")
-require("plugins/misc/telescope")
+require("plugins/misc/telescope-config")
 require("plugins/misc/toggleTermConfig")
 require("plugins/misc/todo-comments")
 require("plugins/misc/dim-config")

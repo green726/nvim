@@ -1,5 +1,4 @@
 local tele = require("telescope")
-
 tele.setup({
     defaults = {
         -- Default configuration for telescope goes here:
@@ -14,7 +13,10 @@ tele.setup({
         },
         file_ignore_patterns = {
             "%.cs.meta",
-        }
+        },
+        winblend = 0,
+        border = {},
+        borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
     },
     pickers = {
         -- Default configuration for builtin pickers goes here:
@@ -31,7 +33,8 @@ tele.setup({
         --   extension_config_key = value,
         -- }
         -- please take a look at the readme of the extension you want to configure
-    }
+    },
+
 })
 
 tele.load_extension("projects")

@@ -1,9 +1,9 @@
-
 require 'jabs'.setup {
     position = 'center',
+    border ='single',
 
     preview = {
-        border = 'solid'
+        border = 'single'
     },
 
 }

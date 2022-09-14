@@ -18,7 +18,7 @@ vim.g.cursorword_highlight = false
 vim.g.cursorline_timeout = 0
 
 
-vim.opt.termguicolors = true
+-- vim.opt.termguicolors = true
 vim.opt.number = true
 --autocmd to turn off line numbers in terminal
 vim.cmd([[autocmd TermOpen * setlocal nonumber norelativenumber]])
@@ -29,7 +29,6 @@ vim.opt.encoding = "UTF-8"
 
 require("plugins/paq")
 
-require("colors")
 require("plugins/util/util")
 require("plugins/ui/ui")
 require("plugins/misc/misc")
@@ -44,9 +43,10 @@ vim.cmd[[set relativenumber]]
 --setup for instant collab
 vim.g.instant_username = "green726"
 
+--set the colorscheme
 vim.cmd[[colorscheme nightfox]]
 
---set the colorscheme
+--setup vscode theme incase i want to use it
 vim.g.vscode_style = "dark"
 vim.g.vscode_italic_comment = 1
 -- vim.cmd([[colorscheme vscode]])
@@ -60,6 +60,33 @@ vim.cmd([[set expandtab]])
 
 --disables mouse
 vim.cmd([[set mouse=]])
+
+
+require("colors")
+
+-- local TelescopePrompt = {
+--     TelescopePromptNormal = {
+--         bg = '#2d3149',
+--     },
+--     TelescopePromptBorder = {
+--         bg = '#2d3149',
+--     },
+--     TelescopePromptTitle = {
+--         fg = '#2d3149',
+--         bg = '#2d3149',
+--     },
+--     TelescopePreviewTitle = {
+--         fg = '#1F2335',
+--         bg = '#1F2335',
+--     },
+--     TelescopeResultsTitle = {
+--         fg = '#1F2335',
+--         bg = '#1F2335',
+--     },
+-- }
+-- for hl, col in pairs(TelescopePrompt) do
+--     vim.api.nvim_set_hl(0, hl, col)
+-- end
 
 --folding for TS
 -- vim.cmd[[
