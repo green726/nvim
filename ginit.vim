@@ -6,7 +6,7 @@ if (has('win32'))
     set guifont=FiraCode\ NF:h11
     " set linespace=-4
 else
-    set guifont=FiraCode\ Nerd\ Font\ Mono:h13
+    set guifont=FiraCode\ Nerd\ Font:h13
     " set linespace=-6
 endif
 
@@ -15,7 +15,7 @@ if exists(':GuiFont')
     if (has ('win32'))
         GuiFont! FiraCode NF:h11
     else
-        GuiFont! FiraCode Nerd Font Mono:h13
+        GuiFont! FiraCode Nerd Font:h13
     endif
     
 endif
