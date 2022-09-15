@@ -194,7 +194,7 @@ function M.generate_user_config_highlights()
             bg = pal.blue,
         },
 
-        TelescopeSelection = { bg = pal.blue, fg = pal.sel.fg },
+        TelescopeSelection = { bg = pal.sl.bg, fg = pal.sl.fg },
 
         TelescopeResultsDiffAdd = {
             fg = pal.green,

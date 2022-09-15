@@ -49,9 +49,6 @@ nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
 vim.cmd[[imap <M-UP> <esc><S-{>i]]
 vim.cmd[[imap <M-DOWN> <esc><S-}>i]]
 
-
---
-
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
@@ -102,10 +99,10 @@ vim.api.nvim_set_keymap("n", "<leader>set", ":e C:/Users/mguin/AppData/Local/nvi
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
-vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
-vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+-- vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
+-- vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+-- vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+-- vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -131,7 +128,7 @@ vim.api.nvim_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>'
 -- vim.api.nvim_set_keymap('n', 'K', '<cmd> lua vim.lsp.buf.hover()<CR>', opts)
 -- end
 -- vim.api.nvim_set_keymap('n', 'ca', ':CodeActionMenu<CR>', opts)
-vim.cmd [[ nnoremap <space>ca :lua require'lspactions'.code_action()<CR> ]]
+-- vim.cmd [[ nnoremap <space>ca :lua require'lspactions'.code_action()<CR> ]]
 
 --start of lsp saga
 -- Lsp finder find the symbol definition implement reference
@@ -149,9 +146,9 @@ keymap("n", "<space>rn", "<cmd>Lspsaga rename<CR>", { silent = true })
 -- support tagstack C-t jump back
 keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
 -- Show line diagnostics
-keymap("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
+keymap("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
 -- Show cursor diagnostic
-keymap("n", "<leader>cd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { silent = true })
+keymap("n", "<space>e", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { silent = true })
 -- Diagnsotic jump can use `<c-o>` to jump back
 keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
 keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
@@ -200,7 +197,7 @@ vim.api.nvim_set_keymap('n', '#', [[#<Cmd>lua require('hlslens').start()<CR>]], 
 vim.api.nvim_set_keymap('n', 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]], kopts)
 vim.api.nvim_set_keymap('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]], kopts)
 
-vim.api.nvim_set_keymap('n', '<Leader>l', ':noh<CR>', kopts)
+vim.api.nvim_set_keymap('n', '<space>h', ':noh<CR>', kopts)
 
 --[[
 var io = require('socket.io')(http, { 
