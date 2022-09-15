@@ -14,6 +14,9 @@ tele.setup({
         file_ignore_patterns = {
             "%.cs.meta",
         },
+        prompt_prefix = "   ",
+        selection_caret = "  ",
+        entry_prefix = "  ",
         winblend = 0,
         border = {},
         borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
