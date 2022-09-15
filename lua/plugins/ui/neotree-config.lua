@@ -135,6 +135,8 @@ require("neo-tree").setup({
             ["?"] = "show_help",
             ["<"] = "prev_source",
             [">"] = "next_source",
+            -- ["ff"] = "telescope_find",
+            -- ["fs"] = "telescope_grep",
         }
     },
     nesting_rules = {},
@@ -173,9 +175,7 @@ require("neo-tree").setup({
                 ["<bs>"] = "navigate_up",
                 ["."] = "set_root",
                 ["H"] = "toggle_hidden",
-                ["ff"] = "telescope_finder",
-                ["fs"] = "telescope_grep",
-                ["f"] = "",
+                ["f"] = false,
                 ["D"] = "fuzzy_finder_directory",
                 ["/"] = "filter_on_submit",
                 ["<c-x>"] = "clear_filter",
@@ -185,6 +185,8 @@ require("neo-tree").setup({
         }
     },
     commands = {
+        do_nothing = function(state)
+        end,
         telescope_find = function(state)
             local node = state.tree:get_node()
             local path = node:get_id()

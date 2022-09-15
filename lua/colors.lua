@@ -211,6 +211,10 @@ function M.generate_user_config_highlights()
         TelescopeMatching = {
             fg = pal.red,
             style = "bold",
+        },
+
+        NeoTreeFloatBorder = {
+            link = "TelescopeBorder"
         }
     }
 
