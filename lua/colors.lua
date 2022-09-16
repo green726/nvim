@@ -215,7 +215,13 @@ function M.generate_user_config_highlights()
 
         NeoTreeFloatBorder = {
             link = "TelescopeBorder"
-        }
+        },
+
+        -- AerialGuide = {
+        --     link = "TelescopeBorder"
+        -- }
+
+
     }
 
     set_highlights(vim.tbl_extend("force", colors, groups))

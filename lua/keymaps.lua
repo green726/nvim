@@ -17,6 +17,7 @@ local keymap = vim.keymap.set
 -- map("n", "{b", ":BufferLineMovePrev<CR>", { silent = true })
 
 map("n", "<Tab>", ":JABSOpen<CR>", {silent = true})
+-- map("n", "<Tab>", ":Telescope buffers<CR>", {silent = true})
 map("n", "<C-a>", ":AerialToggle<CR>", {silent = true})
 
 for _, keymap in pairs({
@@ -77,9 +78,11 @@ for i = 1, 9 do
     map('n', ('<Leader>%s'):format(i), ('<Plug>(cokeline-switch-%s)'):format(i), { silent = true })
 end
 
-map("n", "fo", ":Telescope<CR>", {silent = true})
-map("n", "ff", ":Telescope find_files<CR>", { silent = true })
-map("n", "fs", ":Telescope live_grep<CR>", { silent = true })
+map("n", "to", ":Telescope<CR>", {silent = true})
+map("n", "tf", ":Telescope find_files<CR>", { silent = true })
+map("n", "ts", ":Telescope live_grep<CR>", { silent = true })
+map("n", "ta", ":Telescope aerial<CR>", { silent = true })
+map("n", "tb", ":Telescope buffers<CR>", { silent = true })
 
 map("n", "<C-t>", ":Neotree toggle<CR>", {silent = true})
 -- map("n", "<C-t>", ":NvimTreeToggle<CR>", { silent = true })

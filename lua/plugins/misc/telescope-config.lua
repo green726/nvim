@@ -1,4 +1,5 @@
 local tele = require("telescope")
+local sorters = require("telescope.sorters")
 tele.setup({
     defaults = {
         -- Default configuration for telescope goes here:
@@ -20,7 +21,14 @@ tele.setup({
         winblend = 0,
         border = {},
         borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+        layout_config = {
+            horizontal = {
+            },
+            vertical = {
+            }
+        },
     },
+
     pickers = {
         -- Default configuration for builtin pickers goes here:
         -- picker_name = {
@@ -29,6 +37,17 @@ tele.setup({
         -- }
         -- Now the picker_config_key will be applied every time you call this
         -- builtin picker
+
+        buffers = {
+            layout_config = {
+                vertical = {
+                    height = .4,
+                    width = .2,
+                }
+            },
+            layout_strategy = 'vertical',
+            previewer = false,
+        },
     },
     extensions = {
         -- Your extension configuration goes here:
@@ -41,3 +60,4 @@ tele.setup({
 })
 
 tele.load_extension("projects")
+tele.load_extension("aerial")
