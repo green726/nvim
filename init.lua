@@ -18,7 +18,7 @@ vim.g.cursorword_highlight = false
 vim.g.cursorline_timeout = 0
 
 
--- vim.opt.termguicolors = true
+vim.opt.termguicolors = true
 vim.opt.number = true
 --autocmd to turn off line numbers in terminal
 vim.cmd([[autocmd TermOpen * setlocal nonumber norelativenumber]])

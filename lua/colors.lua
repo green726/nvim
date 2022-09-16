@@ -217,6 +217,14 @@ function M.generate_user_config_highlights()
             link = "TelescopeBorder"
         },
 
+        NormalFloat = {
+            link = "TelescopeNormal"
+        },
+
+        FloatBorder = {
+            link = "TelescopeBorder"
+        },
+
         -- AerialGuide = {
         --     link = "TelescopeBorder"
         -- }
