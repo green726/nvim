@@ -1,11 +1,11 @@
 require 'jabs'.setup {
     position = 'center',
-    border = 'none',
+    border = 'solid',
     width = 40, -- default 50
     height = 10, -- default 10
 
     preview = {
-        border = 'none'
+        border = 'solid'
     },
 
     highlight = {
