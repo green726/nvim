@@ -60,6 +60,7 @@ vim.cmd([[set expandtab]])
 
 --disables mouse
 vim.cmd([[set mouse=]])
+vim.cmd[[set signcolumn=yes:1]]
 
 
 require("colors")
