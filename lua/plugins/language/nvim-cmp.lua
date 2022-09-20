@@ -1,7 +1,9 @@
--- luasnip setup
+-- addons
 local luasnip = require 'luasnip'
 
 local lspkind = require('lspkind')
+
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 
 --load snippets
 require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./lua/plugins/language/lsp/snippets" } })
@@ -73,6 +75,12 @@ cmp.setup {
         })
     },
 }
+
+-- autopairs
+cmp.event:on(
+  'confirm_done',
+  cmp_autopairs.on_confirm_done()
+)
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline('/', {

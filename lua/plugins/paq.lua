@@ -32,7 +32,7 @@ return require("paq")({
     --indents
     { "lukas-reineke/indent-blankline.nvim" },
     --auto pairs
-    { "jiangmiao/auto-pairs" },
+    { "windwp/nvim-autopairs"},
     --git suff
     { "lewis6991/gitsigns.nvim" },
     --file tre
