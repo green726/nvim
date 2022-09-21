@@ -1,7 +1,6 @@
 " Disable Mouse
 set mouse=
 
-
 if (has('win32'))
     set guifont=FiraCode\ NF:h11
     " set linespace=-4
