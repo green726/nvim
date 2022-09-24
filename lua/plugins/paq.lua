@@ -4,11 +4,11 @@ return require("paq")({
     -- Let Paq manage itself
     { "savq/paq-nvim" },
     --startuptime
-    {'dstein64/vim-startuptime'},
+    { 'dstein64/vim-startuptime' },
     --bunch of stuff requires this
     { "nvim-lua/plenary.nvim" },
-    {'kevinhwang91/promise-async'},
-    {'MunifTanjim/nui.nvim'},
+    { 'kevinhwang91/promise-async' },
+    { 'MunifTanjim/nui.nvim' },
     --theme
     --{'folke/tokyonight.nvim'};
     { "Mofiqul/vscode.nvim" },
@@ -32,11 +32,11 @@ return require("paq")({
     --indents
     { "lukas-reineke/indent-blankline.nvim" },
     --auto pairs
-    { "windwp/nvim-autopairs"},
+    { "windwp/nvim-autopairs" },
     --git suff
     { "lewis6991/gitsigns.nvim" },
     --file tre
-    {"nvim-neo-tree/neo-tree.nvim"},
+    { "nvim-neo-tree/neo-tree.nvim" },
     -- { "kyazdani42/nvim-tree.lua" },
     --home menu/start
     { "goolord/alpha-nvim" },
@@ -85,7 +85,7 @@ return require("paq")({
     --INSTALLER FOR EVERYTHING
     { "williamboman/mason.nvim" },
     --plugin for mason for nvim-config
-    {'williamboman/mason-lspconfig.nvim'},
+    { 'williamboman/mason-lspconfig.nvim' },
     --auto complete
     { 'hrsh7th/nvim-cmp' },
     --lsp source for nvim-cmp
@@ -97,7 +97,7 @@ return require("paq")({
     --file path completion for nvim-cmp
     { 'hrsh7th/cmp-path' },
     --tabnine for nvim-cmp
-    { 'tzachar/cmp-tabnine', run = './install.sh' },
+    -- { 'tzachar/cmp-tabnine', run = './install.sh' },
     --lsp status plugin used for statusline
     { 'nvim-lua/lsp-status.nvim' },
     --scollbar
@@ -128,27 +128,29 @@ return require("paq")({
     -- {'anuvyklack/pretty-fold.nvim'},
     --pretty fold preview
     -- {'anuvyklack/fold-preview.nvim'},
-    --lines for the lsp diags 
+    --lines for the lsp diags
     -- {"Maan2003/lsp_lines.nvim"},
-    --folding 
+    --folding
     -- {"pierreglaser/folding-nvim"},
-    --lsp signs stuff 
-    {"onsails/lspkind.nvim"},
+    --lsp signs stuff
+    { "onsails/lspkind.nvim" },
     -- various lsp extensions (pretty much all the above commented out stuff for lsp)
-    {'glepnir/lspsaga.nvim'},
+    { 'glepnir/lspsaga.nvim' },
     --buffer switcher
-    {'matbme/JABS.nvim'},
+    { 'matbme/JABS.nvim' },
     --better buffer deletion
-    {'kazhala/close-buffers.nvim'},
+    { 'kazhala/close-buffers.nvim' },
     --project management
-    {'ahmedkhalf/project.nvim'},
+    { 'ahmedkhalf/project.nvim' },
     --find and replace
-    {'windwp/nvim-spectre'},
+    { 'windwp/nvim-spectre' },
     --cut and delete seperate
-    {'gbprod/cutlass.nvim'},
+    { 'gbprod/cutlass.nvim' },
     --folds
-    {'kevinhwang91/nvim-ufo'},
+    { 'kevinhwang91/nvim-ufo' },
     --jdtls
-    {"mfussenegger/nvim-jdtls"},
+    { "mfussenegger/nvim-jdtls" },
+    --scrolling
+    {'karb94/neoscroll.nvim'},
 
 })
