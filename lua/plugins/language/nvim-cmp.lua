@@ -57,6 +57,7 @@ cmp.setup {
         if vim.api.nvim_get_mode().mode == 'c' then
             return true
         else
+            if vim.bo.filetype == "TelescopePrompt" then return end
             return not context.in_treesitter_capture("comment")
                 and not context.in_syntax_group("Comment")
         end
@@ -78,8 +79,8 @@ cmp.setup {
 
 -- autopairs
 cmp.event:on(
-  'confirm_done',
-  cmp_autopairs.on_confirm_done()
+    'confirm_done',
+    cmp_autopairs.on_confirm_done()
 )
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).

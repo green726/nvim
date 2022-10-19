@@ -152,5 +152,7 @@ return require("paq")({
     { "mfussenegger/nvim-jdtls" },
     --scrolling
     {'karb94/neoscroll.nvim'},
+    --syntax tree surfer
+    {"ziontee113/syntax-tree-surfer"}
 
 })
