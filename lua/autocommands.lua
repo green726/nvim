@@ -2,7 +2,7 @@ local M = {}
 
 local autoFileTypes = {"cs", "csharp", "python", "py", "javascript", "js", "lua"}
 
-vim.cmd([[autocmd User SessionLoadPost lua require"nvim-tree".toggle(false, true)]])
+-- vim.cmd([[autocmd User SessionLoadPost lua require"nvim-tree".toggle(false, true)]])
 -- vim.cmd [[autocmd CursorHold * lua DiagAndDocs()]]
 -- vim.cmd [[autocmd CursorHoldI * lua vim.lsp.buf.hover()]]
 -- vim.cmd [[autocmd CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=true, scope="cursor"})]]
@@ -27,13 +27,12 @@ end
 LSPFormat = function()
     if (vim.bo.filetype ~= "lua" and vim.bo.filetype ~= "kotlin") then
         vim.lsp.buf.formatting()
-        vim.cmd [[:w]]
     end
 end
 
 vim.cmd([[autocmd CursorHold,BufEnter <buffer> lua require('lsp-status').update_current_function()]])
 -- vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=true, scope="cursor"})]]
 
-vim.cmd [[autocmd BufWrite * lua LSPFormat()]]
+vim.cmd [[autocmd BufWritePre * lua LSPFormat()]]
 
 return M
