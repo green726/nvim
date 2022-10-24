@@ -151,8 +151,10 @@ return require("paq")({
     --jdtls
     { "mfussenegger/nvim-jdtls" },
     --scrolling
-    {'karb94/neoscroll.nvim'},
+    { 'karb94/neoscroll.nvim' },
     --syntax tree surfer
-    {"ziontee113/syntax-tree-surfer"}
+    { "ziontee113/syntax-tree-surfer" },
+    --syntax tree explorer
+    { 'nvim-treesitter/playground' }
 
 })
