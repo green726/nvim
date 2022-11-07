@@ -53,6 +53,7 @@ vim.g.vscode_italic_comment = 1
 
 --vim.cmd[[colorscheme tokyonight]]
 
+
 --below changes tabs to four spaces
 vim.cmd([[set tabstop=4]])
 vim.cmd([[set shiftwidth=4]])
@@ -63,7 +64,7 @@ vim.cmd([[set mouse=]])
 vim.cmd[[set signcolumn=yes:1]]
 
 vim.g.do_filetype_lua = 1
-vim.g.did_load_filetypes = 0
+-- vim.g.did_load_filetypes = 0
 
 
 require("colors")
@@ -93,10 +94,8 @@ require("colors")
 -- end
 
 --folding for TS
--- vim.cmd[[
--- set foldmethod=expr
--- set foldexpr=nvim_treesitter#foldexpr()
--- ]]
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
 
 --i use the below guide for unity
 --https://chrislabarge.com/posts/neovim-unity-engine/
