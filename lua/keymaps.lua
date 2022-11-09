@@ -89,7 +89,7 @@ map("n", "<C-t>", ":Neotree toggle<CR>", {silent = true})
 -- map("n", "<C-j>", ":NvimTreeClose<CR>", { silent = true })
 
 --context menu
-map("n", "<C-m>", ":ConMenu<CR>", { silent = true })
+-- map("n", "<C-m>", ":ConMenu<CR>", { silent = true })
 
 vim.api.nvim_set_keymap(
     "n",
