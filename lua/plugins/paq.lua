@@ -49,7 +49,7 @@ return require("paq")({
     --highlight cursor
     { "yamatsum/nvim-cursorline" },
     --context menu
-    { "meznaric/conmenu" },
+    -- { "meznaric/conmenu" },
     --highlight context with treesitter
     { "romgrk/nvim-treesitter-context" },
     --treesitter rainbow
