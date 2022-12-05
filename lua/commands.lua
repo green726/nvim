@@ -1,7 +1,7 @@
 vim.api.nvim_create_user_command(
     'B',
     function(opts)
-        require('close_buffers').delete({ type = 'this'})
+        require('close_buffers').delete({ type = 'this' })
     end,
     { nargs = 0 }
 )
@@ -9,7 +9,7 @@ vim.api.nvim_create_user_command(
 vim.api.nvim_create_user_command(
     'Bo',
     function(opts)
-        require('close_buffers').delete({ type = 'other'})
+        require('close_buffers').delete({ type = 'other' })
     end,
     { nargs = 0 }
 )
@@ -22,6 +22,10 @@ vim.api.nvim_create_user_command(
     end,
     { nargs = 0 }
 )
+
+vim.api.nvim_create_user_command('StackOverflow', function(opts)
+    require("plugins/misc/toggleTermConfig").stackOverflowToggle(opts)
+end, { nargs = 0 })
 
 vim.api.nvim_create_user_command(
     'Hacker',
