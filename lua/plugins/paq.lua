@@ -155,6 +155,8 @@ return require("paq")({
     --syntax tree surfer
     { "ziontee113/syntax-tree-surfer" },
     --syntax tree explorer
-    { 'nvim-treesitter/playground' }
+    { 'nvim-treesitter/playground' },
+    --haskell
+    {'MrcJkb/haskell-tools.nvim'},
 
 })
