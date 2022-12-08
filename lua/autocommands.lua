@@ -30,7 +30,8 @@ LSPFormat = function()
     end
 end
 
-vim.cmd([[autocmd CursorHold,BufEnter <buffer> lua require('lsp-status').update_current_function()]])
+--BUG: below autocmd didnt work in random file - threw errors - uncomment to fix lsp ststus issues
+-- vim.cmd([[autocmd CursorHold,BufEnter <buffer> lua require('lsp-status').update_current_function()]])
 -- vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=true, scope="cursor"})]]
 
 vim.cmd [[autocmd BufWritePre * lua LSPFormat()]]

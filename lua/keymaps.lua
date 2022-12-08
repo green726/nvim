@@ -47,6 +47,8 @@ nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
 ]]
 
 
+--paste without overwriting the buffer
+vim.cmd[[vnoremap <leader>p "_dP]]
 vim.cmd[[imap <M-UP> <esc><S-{>i]]
 vim.cmd[[imap <M-DOWN> <esc><S-}>i]]
 
@@ -94,7 +96,7 @@ map("n", "<C-t>", ":Neotree toggle<CR>", {silent = true})
 vim.api.nvim_set_keymap(
     "n",
     "<leader>gu",
-    ':lua require("plugins/toggleTermConfig").gitUIToggle() <CR>',
+    ':lua require("plugins/misc/toggleTermConfig").gitUIToggle() <CR>',
     { silent = true }
 )
 vim.api.nvim_set_keymap("n", "tt", ":ToggleTerm direction=float<CR>", { silent = true })
@@ -117,7 +119,7 @@ vim.api.nvim_set_keymap("n", "<leader>set", ":e C:/Users/mguin/AppData/Local/nvi
 -- See `:help vim.lsp.*` for documentation on any of the below functions
 -- if ft ~= "java" then
 vim.api.nvim_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
--- vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 vim.api.nvim_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
@@ -127,7 +129,7 @@ vim.api.nvim_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.bu
 -- vim.api.nvim_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 -- vim.api.nvim_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, opts)
 -- vim.api.nvim_set_keymap('n', 'K', '<cmd> lua vim.lsp.buf.hover()<CR>', opts)
 -- end
 -- vim.api.nvim_set_keymap('n', 'ca', ':CodeActionMenu<CR>', opts)
@@ -147,7 +149,7 @@ keymap("n", "<space>rn", "<cmd>Lspsaga rename<CR>", { silent = true })
 -- you can edit the definition file in this flaotwindow
 -- also support open/vsplit/etc operation check definition_action_keys
 -- support tagstack C-t jump back
-keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
+keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
 -- Show line diagnostics
 keymap("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
 -- Show cursor diagnostic
@@ -167,10 +169,6 @@ keymap("n","<leader>o", "<cmd>LSoutlineToggle<CR>",{ silent = true })
 -- Hover Doc
 keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
 --end of lspsaga
-
--- elseif ft == "java" then
---    --TODO: add java keybinds 
--- end
 
 vim.api.nvim_set_keymap('n', "<Leader>fp", 'lua require("fold-preview").show_preview()<CR>', opts)
 
@@ -201,11 +199,3 @@ vim.api.nvim_set_keymap('n', 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]]
 vim.api.nvim_set_keymap('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]], kopts)
 
 vim.api.nvim_set_keymap('n', '<space>h', ':noh<CR>', kopts)
-
---[[
-var io = require('socket.io')(http, { 
-    cors: {
-      origin: "*"
-    }
-    });
-  ]]
