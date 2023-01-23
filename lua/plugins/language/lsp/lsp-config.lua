@@ -25,6 +25,33 @@ end
 
 local clangCapabilities = capabilities
 clangCapabilities.offsetEncoding = { "utf-16" }
+-- require'lspconfig'.hls.setup {
+--     root_dir = lspconfig.util.root_pattern(
+--         'stack.yaml'
+--     ),
+--     on_attach = custom_attach,
+--     capabilities = capabilities,
+--
+-- }
+--
+
+local ht = require('haskell-tools')
+local def_opts = { noremap = true, silent = true, }
+ht.setup {
+  hls = {
+    -- See nvim-lspconfig's  suggested configuration for keymaps, etc.
+    on_attach = custom_attach,
+    capabilities = capabilities
+  },
+}
+-- Suggested keymaps that do not depend on haskell-language-server
+-- Toggle a GHCi repl for the current package
+vim.keymap.set('n', '<leader>rr', ht.repl.toggle, def_opts)
+-- Toggle a GHCi repl for the current buffer
+vim.keymap.set('n', '<leader>rf', function()
+  ht.repl.toggle(vim.api.nvim_buf_get_name(0))
+end, def_opts)
+vim.keymap.set('n', '<leader>rq', ht.repl.quit, def_opts)
 
 require 'lspconfig'.clangd.setup {
     root_dir = lspconfig.util.root_pattern(

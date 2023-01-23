@@ -162,5 +162,7 @@ return require("paq")({
     {'cljoly/telescope-repo.nvim'},
     {'reasonml-editor/vim-reason-plus'},
 
+    --haskell
+    {'MrcJkb/haskell-tools.nvim'},
 
 })
