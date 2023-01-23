@@ -14,13 +14,17 @@ local function custom_attach(client)
 end
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'omnisharp', 'sumneko_lua', 'rust_analyzer', 'ltex', 'kotlin_language_server', 'jsonls', 'hls' }
+local servers = { 'omnisharp', 'sumneko_lua', 'rust_analyzer', 'ltex', 'kotlin_language_server', 'jsonls', 'hls', 'pylsp',
+    'tsserver', 'ocamllsp' }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         on_attach = custom_attach,
         capabilities = capabilities,
     }
 end
+
+local clangCapabilities = capabilities
+clangCapabilities.offsetEncoding = { "utf-16" }
 
 require 'lspconfig'.clangd.setup {
     root_dir = lspconfig.util.root_pattern(
@@ -31,7 +35,7 @@ require 'lspconfig'.clangd.setup {
         'compile_flags.txt',
         'configure.ac'
     ),
-    capabilities = capabilities,
+    capabilities = clangCapabilities,
     on_attach = custom_attach,
 }
 

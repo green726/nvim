@@ -225,11 +225,16 @@ function M.generate_user_config_highlights()
             link = "TelescopeBorder"
         },
 
+        --lspsaga below
+        SagaBorder = { link = "TelescopeNormal" },
+
+
+
+
+
         -- AerialGuide = {
         --     link = "TelescopeBorder"
         -- }
-
-
     }
 
     set_highlights(vim.tbl_extend("force", colors, groups))

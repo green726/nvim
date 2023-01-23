@@ -115,7 +115,7 @@ return require("paq")({
     --lsp function signature help
     { 'ray-x/lsp_signature.nvim' },
     --lsp code action lightbulb
-    -- { 'kosayoda/nvim-lightbulb' },
+    { 'kosayoda/nvim-lightbulb' },
     --code action menu
     -- { 'weilbith/nvim-code-action-menu' },
     -- lsp actions
@@ -157,6 +157,10 @@ return require("paq")({
     --syntax tree explorer
     { 'nvim-treesitter/playground' },
     --github copilot
-    {'github/copilot.vim'}
+    {'github/copilot.vim'},
+    --telescope repo searching
+    {'cljoly/telescope-repo.nvim'},
+    {'reasonml-editor/vim-reason-plus'},
+
 
 })

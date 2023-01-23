@@ -25,9 +25,9 @@ DiagAndDocs = function()
 end
 
 LSPFormat = function()
-    if (vim.bo.filetype ~= "lua" and vim.bo.filetype ~= "kotlin") then
-        vim.lsp.buf.formatting()
-    end
+    -- if (vim.bo.filetype ~= "lua" and vim.bo.filetype ~= "kotlin" and vim.bo.filetype ~= "reason") then
+    --     vim.lsp.buf.formatting()
+    -- end
 end
 
 --BUG: below autocmd didnt work in random file - threw errors - uncomment to fix lsp ststus issues

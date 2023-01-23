@@ -1,8 +1,10 @@
+-- require('nvim-lightbulb').setup({autocmd = {enabled = true}})
+
 -- Showing defaults
 require('nvim-lightbulb').setup({
     -- LSP client names to ignore
     -- Example: {"sumneko_lua", "null-ls"}
-    ignore = {},
+    ignore = {'ocamllsp', ""},
     sign = {
         enabled = true,
         -- Priority of the gutter sign
@@ -47,7 +49,7 @@ require('nvim-lightbulb').setup({
         -- see :help autocmd-pattern
         pattern = {"*"},
         -- see :help autocmd-events
-        events = {"CursorHold", "CursorHoldI"}
+        events = {"CursorMoved", "CursorMovedI", "BufEnter"},
     }
 })
 
