@@ -15,7 +15,7 @@ end
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = { 'omnisharp', 'sumneko_lua', 'rust_analyzer', 'ltex', 'kotlin_language_server', 'jsonls', 'hls', 'pylsp',
-    'tsserver', 'ocamllsp' }
+    'tsserver'--[[ , 'ocamllsp' ]]}
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         on_attach = custom_attach,
@@ -25,6 +25,27 @@ end
 
 local clangCapabilities = capabilities
 clangCapabilities.offsetEncoding = { "utf-16" }
+
+require 'lspconfig'.clangd.setup {
+    root_dir = lspconfig.util.root_pattern(
+        'meson.build',
+        '.clangd',
+        '.clang-tidy',
+        'compile_commands.json',
+        'compile_flags.txt',
+        'configure.ac'
+    ),
+    capabilities = clangCapabilities,
+    on_attach = custom_attach,
+}
+
+lspconfig.ocamlls.setup({
+    on_attach = custom_attach,
+    capabilities = capabilities,
+    root_dir = lspconfig.util.root_pattern("*.opam", "esy.json", "package.json", ".ocamlformat"),
+})
+
+
 -- require'lspconfig'.hls.setup {
 --     root_dir = lspconfig.util.root_pattern(
 --         'stack.yaml'
@@ -53,18 +74,7 @@ vim.keymap.set('n', '<leader>rf', function()
 end, def_opts)
 vim.keymap.set('n', '<leader>rq', ht.repl.quit, def_opts)
 
-require 'lspconfig'.clangd.setup {
-    root_dir = lspconfig.util.root_pattern(
-        'meson.build',
-        '.clangd',
-        '.clang-tidy',
-        'compile_commands.json',
-        'compile_flags.txt',
-        'configure.ac'
-    ),
-    capabilities = clangCapabilities,
-    on_attach = custom_attach,
-}
+
 
 
 local signs = { Error = "", Warn = "", Hint = "", Info = "" }
