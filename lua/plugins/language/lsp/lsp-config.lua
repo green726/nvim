@@ -15,7 +15,7 @@ end
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = { 'omnisharp', 'sumneko_lua', 'rust_analyzer', 'ltex', 'kotlin_language_server', 'jsonls', 'hls', 'pylsp',
-    'tsserver'--[[ , 'ocamllsp' ]]}
+    'tsserver', 'ocamllsp'}
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         on_attach = custom_attach,
@@ -38,13 +38,6 @@ require 'lspconfig'.clangd.setup {
     capabilities = clangCapabilities,
     on_attach = custom_attach,
 }
-
-lspconfig.ocamlls.setup({
-    on_attach = custom_attach,
-    capabilities = capabilities,
-    root_dir = lspconfig.util.root_pattern("*.opam", "esy.json", "package.json", ".ocamlformat"),
-})
-
 
 -- require'lspconfig'.hls.setup {
 --     root_dir = lspconfig.util.root_pattern(
