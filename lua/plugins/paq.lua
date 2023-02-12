@@ -157,12 +157,13 @@ return require("paq")({
     --syntax tree explorer
     { 'nvim-treesitter/playground' },
     --github copilot
-    {'github/copilot.vim'},
+    { 'github/copilot.vim' },
     --telescope repo searching
-    {'cljoly/telescope-repo.nvim'},
-    {'reasonml-editor/vim-reason-plus'},
-
+    { 'cljoly/telescope-repo.nvim' },
+    { 'reasonml-editor/vim-reason-plus' },
     --haskell
-    {'MrcJkb/haskell-tools.nvim'},
+    { 'MrcJkb/haskell-tools.nvim' },
+    --dart ls
+    { 'akinsho/flutter-tools.nvim' },
 
 })
