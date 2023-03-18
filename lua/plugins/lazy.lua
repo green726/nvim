@@ -33,7 +33,7 @@ require("lazy").setup({
     --statusline
     { "feline-nvim/feline.nvim" },
     --indents
-    { "lukas-reineke/indent-blankline.nvim", lazy = false},
+    { "lukas-reineke/indent-blankline.nvim", lazy = false },
     --auto pairs
     { "windwp/nvim-autopairs" },
     --git suff
@@ -171,7 +171,8 @@ require("lazy").setup({
     -- { 'akinsho/flutter-tools.nvim' },
     --allows to pass in args to ripgrep in telescope
     { "nvim-telescope/telescope-live-grep-args.nvim" },
-
+    --keymaps stuff
+    { "FeiyouG/command_center.nvim" },
 },
     {
         defaults = {

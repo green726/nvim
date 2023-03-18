@@ -237,6 +237,17 @@ function M.generate_user_config_highlights()
             -- bg = pal.tab.bg,
         },
 
+        IndentBlanklineSpaceChar = {
+            fg = pal.tab.bg,
+            -- bg = pal.tab.bg,
+        },
+
+        IndentBlanklineSpaceCharBlankline = {
+            fg = pal.tab.bg,
+            -- bg = pal.tab.bg,
+        },
+
+
     }
 
     set_highlights(vim.tbl_extend("force", colors, groups))
