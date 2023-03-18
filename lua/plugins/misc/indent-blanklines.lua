@@ -1,7 +1,5 @@
 -- indent-blankline character.
 
--- vim.cmd("highlight IndentBlanklineContextChar guifg=#000000 gui=nocombine")
--- vim.cmd("highlight IndentBlanklineContextStart guisp=#000000 gui=underline")
 
 local indent_blankline_styles = {
     "▕",

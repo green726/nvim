@@ -1,4 +1,4 @@
-return require("paq")({
+require("lazy").setup({
     -- Let Paq manage itself
     { "savq/paq-nvim" },
     --startuptime
@@ -20,21 +20,27 @@ return require("paq")({
     --syntax highlighting
     { "nvim-treesitter/nvim-treesitter" },
     --file finder
-    { "nvim-telescope/telescope.nvim" },
+    { "nvim-telescope/telescope.nvim", lazy = false },
     --icons
     { "kyazdani42/nvim-web-devicons" },
     --tabline but better
     -- { 'noib3/nvim-cokeline' },
+    -- better ui stuff
+    { "folke/noice.nvim", dependencies = {
+        "MunifTanjim/nui.nvim",
+        "rcarriga/nvim-notify",
+    } },
     --statusline
     { "feline-nvim/feline.nvim" },
     --indents
-    { "lukas-reineke/indent-blankline.nvim" },
+    { "lukas-reineke/indent-blankline.nvim", lazy = false},
     --auto pairs
     { "windwp/nvim-autopairs" },
     --git suff
     { "lewis6991/gitsigns.nvim" },
     --file tre
-    { "nvim-neo-tree/neo-tree.nvim" },
+    { "nvim-telescope/telescope-file-browser.nvim" },
+    -- { "nvim-neo-tree/neo-tree.nvim" },
     -- { "kyazdani42/nvim-tree.lua" },
     --home menu/start
     { "goolord/alpha-nvim" },
@@ -95,7 +101,7 @@ return require("paq")({
     --file path completion for nvim-cmp
     { 'hrsh7th/cmp-path' },
     --tabnine for nvim-cmp
-    -- { 'tzachar/cmp-tabnine', run = './install.sh' },
+    -- { 'tzachar/cmp-tabnine', build = './install.sh' },
     --lsp status plugin used for statusline
     { 'nvim-lua/lsp-status.nvim' },
     --scollbar
@@ -135,7 +141,7 @@ return require("paq")({
     -- various lsp extensions (pretty much all the above commented out stuff for lsp)
     { 'glepnir/lspsaga.nvim' },
     --buffer switcher
-    { 'matbme/JABS.nvim' },
+    { 'matbme/JABS.nvim', lazy = false },
     --better buffer deletion
     { 'kazhala/close-buffers.nvim' },
     --project management
@@ -166,4 +172,9 @@ return require("paq")({
     --allows to pass in args to ripgrep in telescope
     { "nvim-telescope/telescope-live-grep-args.nvim" },
 
-})
+},
+    {
+        defaults = {
+            lazy = false
+        }
+    })

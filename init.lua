@@ -27,7 +27,22 @@ vim.cmd([[autocmd TermOpen * setlocal nonumber norelativenumber]])
 
 vim.opt.encoding = "UTF-8"
 
-require("plugins/paq")
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
+end
+vim.opt.rtp:prepend(lazypath)
+
+-- require("plugins/paq")
+require("plugins/lazy")
 
 require("plugins/util/util")
 require("plugins/ui/ui")
@@ -38,13 +53,13 @@ require("keymaps")
 require("autocommands")
 require("commands")
 
-vim.cmd[[set relativenumber]]
+vim.cmd [[set relativenumber]]
 
 --setup for instant collab
 vim.g.instant_username = "green726"
 
 --set the colorscheme
-vim.cmd[[colorscheme nightfox]]
+vim.cmd [[colorscheme nightfox]]
 
 --setup vscode theme incase i want to use it
 vim.g.vscode_style = "dark"
@@ -61,45 +76,13 @@ vim.cmd([[set expandtab]])
 
 --disables mouse
 vim.cmd([[set mouse=]])
-vim.cmd[[set signcolumn=yes:1]]
+vim.cmd [[set signcolumn=yes:1]]
 
 vim.g.do_filetype_lua = 1
--- vim.g.did_load_filetypes = 0
 
 
 require("colors")
 
--- local TelescopePrompt = {
---     TelescopePromptNormal = {
---         bg = '#2d3149',
---     },
---     TelescopePromptBorder = {
---         bg = '#2d3149',
---     },
---     TelescopePromptTitle = {
---         fg = '#2d3149',
---         bg = '#2d3149',
---     },
---     TelescopePreviewTitle = {
---         fg = '#1F2335',
---         bg = '#1F2335',
---     },
---     TelescopeResultsTitle = {
---         fg = '#1F2335',
---         bg = '#1F2335',
---     },
--- }
--- for hl, col in pairs(TelescopePrompt) do
---     vim.api.nvim_set_hl(0, hl, col)
--- end
-
 --folding for TS
 vim.o.foldmethod = "expr"
 vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
-
---i use the below guide for unity
---https://chrislabarge.com/posts/neovim-unity-engine/
---https://www.youtube.com/watch?v=FlhNSNMNYOo
---https://rudism.com/coding-csharp-in-neovim/
-
-

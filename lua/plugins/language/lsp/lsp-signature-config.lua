@@ -52,4 +52,4 @@ local cfg = {
     move_cursor_key = nil, -- imap, use nvim_set_current_win to move cursor between current win and floating
 }
 
-require 'lsp_signature'.setup(cfg) -- no need to specify bufnr if you don't use toggle_key
+-- require 'lsp_signature'.setup(cfg) -- no need to specify bufnr if you don't use toggle_key

@@ -86,9 +86,20 @@ map("n", "ts", ":Telescope live_grep<CR>", { silent = true })
 map("n", "ta", ":Telescope aerial<CR>", { silent = true })
 map("n", "tb", ":Telescope buffers<CR>", { silent = true })
 
-map("n", "<C-t>", ":Neotree toggle<CR>", {silent = true})
--- map("n", "<C-t>", ":NvimTreeToggle<CR>", { silent = true })
--- map("n", "<C-j>", ":NvimTreeClose<CR>", { silent = true })
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<C-t>",
+--   ":Telescope file_browser",
+--   { noremap = true }
+-- )
+
+-- open file_browser with the path of the current buffer
+vim.api.nvim_set_keymap(
+  "n",
+  "<C-t>",
+  ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
+  { noremap = true }
+)
 
 --context menu
 -- map("n", "<C-m>", ":ConMenu<CR>", { silent = true })

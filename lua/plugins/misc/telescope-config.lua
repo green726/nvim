@@ -55,6 +55,9 @@ tele.setup({
         --   extension_config_key = value,
         -- }
         -- please take a look at the readme of the extension you want to configure
+        file_browser = {
+            hijack_netrw = true
+        }
     },
 
 })
@@ -62,3 +65,6 @@ tele.setup({
 tele.load_extension('repo')
 tele.load_extension("projects")
 tele.load_extension("aerial")
+tele.load_extension("live_grep_args")
+tele.load_extension("file_browser")
+tele.load_extension("noice")

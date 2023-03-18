@@ -104,7 +104,7 @@ require("neo-tree").setup({
             ["s"] = "open_vsplit",
             -- ["S"] = "split_with_window_picker",
             -- ["s"] = "vsplit_with_window_picker",
-            ["t"] = "open_tabnew",
+            ["-"] = "open_tabnew",
             ["w"] = "open_with_window_picker",
             ["C"] = "close_node",
             ["z"] = "close_all_nodes",
@@ -135,8 +135,8 @@ require("neo-tree").setup({
             ["?"] = "show_help",
             ["<"] = "prev_source",
             [">"] = "next_source",
-            -- ["ff"] = "telescope_find",
-            -- ["fs"] = "telescope_grep",
+            ["tf"] = "telescope_find",
+            ["ts"] = "telescope_grep",
         }
     },
     nesting_rules = {},
@@ -181,6 +181,7 @@ require("neo-tree").setup({
                 ["<c-x>"] = "clear_filter",
                 ["[g"] = "prev_git_modified",
                 ["]g"] = "next_git_modified",
+                ["tf"] = "telescope_find",
             }
         }
     },

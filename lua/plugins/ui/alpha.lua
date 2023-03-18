@@ -1,7 +1,9 @@
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 
-dashboard.section.header.val = require("random-headers")
+local header = require("random-headers")
+
+dashboard.section.header.val = header
 
 vim.cmd([[
     function NewFile()
@@ -21,7 +23,6 @@ vim.cmd([[
 
     function OpenTree()
         :e .
-        :lua require("plugins/ui/barbar-config").startup()
     endfunction
     ]])
 

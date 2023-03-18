@@ -3573,19 +3573,10 @@ local headers = {
 -- 	end,
 -- })
 
-return function()
-	local keys = {}
+local keys = {}
 	for k, _ in pairs(headers) do
 		table.insert(keys, k)
-	end
-	return headers[keys[math.random(#keys)]]
-end
+    end
+local selected_header = headers[keys[math.random(#keys)]]
 
-
-
-
-
-
-
-
-
+return selected_header
