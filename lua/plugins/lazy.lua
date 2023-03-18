@@ -173,6 +173,13 @@ require("lazy").setup({
     { "nvim-telescope/telescope-live-grep-args.nvim" },
     --keymaps stuff
     { "FeiyouG/command_center.nvim" },
+    --blackjack
+    { 'alanfortlink/blackjack.nvim' },
+    --killer sheep
+    { 'seandewar/killersheep.nvim' },
+    { 'seandewar/nvimesweeper' },
+
+
 },
     {
         defaults = {

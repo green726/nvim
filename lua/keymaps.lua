@@ -5,6 +5,21 @@ local noremap_silent = { noremap = true, silent = true }
 com_cent.add(
     {
         {
+            desc = "Play Killer Sheep",
+            cmd = "<cmd>KillKillKill<CR>",
+            keys = { { "n", "<leader>ks", noremap } }
+        },
+        {
+            desc = "Play Blackjack",
+            cmd = "<cmd>BlackJackNewGame<CR>",
+            keys = { { "n", "<leader>bj", noremap } }
+        },
+        {
+            desc = "Play Minesweeper",
+            cmd = "<cmd>Nvimesweeper<CR>",
+            keys = { { "n", "<leader>ms", noremap } }
+        },
+        {
             desc = "Open Command Center",
             cmd = "<cmd>Telescope command_center<CR>",
             keys = { { "n", "tc", noremap } }
