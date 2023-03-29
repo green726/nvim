@@ -12,6 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 
+require("plugins/lazy")
+
 --set the colorscheme
 vim.cmd [[colorscheme nightfox]]
 
@@ -38,7 +40,6 @@ vim.opt.encoding = "UTF-8"
 
 
 -- require("plugins/paq")
-require("plugins/lazy")
 
 require("plugins/util/util")
 require("plugins/ui/ui")
