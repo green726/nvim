@@ -15,13 +15,22 @@ end
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = { 'omnisharp', 'lua_ls', 'rust_analyzer', 'ltex', 'kotlin_language_server', 'jsonls', 'hls', 'pylsp',
-    'tsserver', 'ocamllsp' }
+    'tsserver', 'ocamllsp', 'clangd' }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         on_attach = custom_attach,
         capabilities = capabilities,
     }
 end
+
+
+lspconfig.jdtls.setup {
+	capabilities = capabilities,
+	on_attach = custom_attach,
+	settings = {
+		      java = {signatureHelp = {enabled = true}, contentProvider = {preferred = 'fernflower'}}
+	}
+}
 
 local clangCapabilities = capabilities
 clangCapabilities.offsetEncoding = { "utf-16" }

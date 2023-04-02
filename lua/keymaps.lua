@@ -5,6 +5,16 @@ local noremap_silent = { noremap = true, silent = true }
 com_cent.add(
     {
         {
+            desc = "Paste Wihtout Yank",
+            cmd = "P",
+            keys = { { "n", "p", noremap } }
+        },
+        {
+            desc = "LSPSaga Finder",
+            cmd = "<cmd>Lspsaga lsp_finder<CR>",
+            keys = { { "n", "<leader>lf", noremap } }
+        },
+        {
             desc = "Play Killer Sheep",
             cmd = "<cmd>KillKillKill<CR>",
             keys = { { "n", "<leader>ks", noremap } }
@@ -53,7 +63,7 @@ com_cent.add(
         },
         {
             desc = "Open Telescope File Tree",
-            cmd = "<cmd>Telescope file_browser<CR>",
+            cmd = "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>",
             keys = { { "n", "<C-t>", noremap } }
         },
         {

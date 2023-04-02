@@ -1,5 +1,8 @@
 local tele = require("telescope")
 local sorters = require("telescope.sorters")
+local fb_actions = require "telescope".extensions.file_browser.actions
+
+
 tele.setup({
     defaults = {
         -- Default configuration for telescope goes here:
@@ -28,7 +31,6 @@ tele.setup({
             }
         },
     },
-
     pickers = {
         -- Default configuration for builtin pickers goes here:
         -- picker_name = {
@@ -56,10 +58,15 @@ tele.setup({
         -- }
         -- please take a look at the readme of the extension you want to configure
         file_browser = {
-            hijack_netrw = true
+            hijack_netrw = true,
+            mappings = {
+                ["n"] = {
+                    ["<bs>/"] = false,
+                    ["<Left>"] = fb_actions.goto_parent_dir,
+                }
+            }
         }
     },
-
 })
 
 tele.load_extension('repo')
