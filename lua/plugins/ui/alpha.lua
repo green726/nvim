@@ -24,6 +24,15 @@ vim.cmd([[
     function OpenTree()
         :e .
     endfunction
+
+    function Projects()
+        :Telescope projects
+    endfunction
+
+    function Sessions()
+        :Telescope possession list
+    endfunction
+
     ]])
 
 local OS = vim.loop.os_uname().sysname
@@ -37,6 +46,8 @@ dashboard.section.buttons.val = {
     dashboard.button("f", " Telescope Files ", ":Telescope find_files<CR>"),
 	dashboard.button("o", " Open File Tree", ":e .<CR>"),
 	dashboard.button("n", "ﱐ New file", ":call NewFile() <CR>"),
+	dashboard.button("n", "󰠮 View Projects", ":call Projects() <CR>"),
+	dashboard.button("n", "累View Sessions", ":call Sessions() <CR>"),
 	-- dashboard.button( "f", " New Folder", ":call NewFile() <CR>"),
 --	dashboard.button("u", "累Load Previous Session", ":SessionManager load_last_session<CR>"),
 	dashboard.button("s", "漣Edit NVIM Config", ":e " .. pathToSettings .. "<CR>"),

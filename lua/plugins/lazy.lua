@@ -28,7 +28,7 @@ require("lazy").setup({
     -- better ui stuff
     { "folke/noice.nvim", dependencies = {
         "MunifTanjim/nui.nvim",
-        "rcarriga/nvim-notify",
+        -- "rcarriga/nvim-notify",
     } },
     --statusline
     { "feline-nvim/feline.nvim" },
@@ -178,7 +178,8 @@ require("lazy").setup({
     --killer sheep
     { 'seandewar/killersheep.nvim' },
     { 'seandewar/nvimesweeper' },
-
+    --session management
+    {'jedrzejboczar/possession.nvim'},
 
 },
     {

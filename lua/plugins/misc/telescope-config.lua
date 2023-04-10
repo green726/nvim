@@ -69,6 +69,7 @@ tele.setup({
     },
 })
 
+tele.load_extension('possession')
 tele.load_extension('repo')
 tele.load_extension("projects")
 tele.load_extension("aerial")
