@@ -4,7 +4,7 @@
 require('nvim-lightbulb').setup({
     -- LSP client names to ignore
     -- Example: {"sumneko_lua", "null-ls"}
-    ignore = {},
+    ignore = {"ocamllsp"},
     sign = {
         enabled = true,
         -- Priority of the gutter sign

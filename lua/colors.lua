@@ -231,7 +231,6 @@ function M.generate_user_config_highlights()
         -- AerialGuide = {
         --     link = "TelescopeBorder"
         -- }
-        
         IndentBlanklineChar = {
             fg = pal.tab.bg,
             -- bg = pal.tab.bg,
@@ -247,7 +246,13 @@ function M.generate_user_config_highlights()
             -- bg = pal.tab.bg,
         },
 
+        NoiceCmdlimePopup = {
+            link = "TelescopeNormal"
+        },
 
+        NoiceCmdlimePopupBorder = {
+            link = "TelescopeBorder"
+        },
     }
 
     set_highlights(vim.tbl_extend("force", colors, groups))

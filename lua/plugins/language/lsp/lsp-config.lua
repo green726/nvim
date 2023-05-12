@@ -14,8 +14,8 @@ local function custom_attach(client)
 end
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'omnisharp', 'lua_ls', 'rust_analyzer', 'ltex', 'kotlin_language_server', 'jsonls', 'hls', 'pylsp',
-    'tsserver', 'ocamllsp', 'clangd' }
+local servers = { 'omnisharp', 'lua_ls', 'rust_analyzer', 'kotlin_language_server', 'jsonls', 'hls', 'pyright',
+    'tsserver', 'clangd', "ocamllsp", "texlab" }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         on_attach = custom_attach,

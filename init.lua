@@ -70,8 +70,9 @@ vim.cmd [[set signcolumn=yes:1]]
 vim.g.do_filetype_lua = 1
 
 
-require("colors")
 
 --folding for TS
 vim.o.foldmethod = "expr"
 vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
+
+require("colors")

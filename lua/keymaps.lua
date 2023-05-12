@@ -10,12 +10,12 @@ com_cent.add({
     },
     {
         desc = "Paste Wihtout Yank (Visual)",
-        cmd = "P",
+        cmd = "p",
         keys = { { "v", "p", noremap } }
     },
     {
         desc = "Paste Wihtout Yank",
-        cmd = "P",
+        cmd = "p",
         keys = { { "n", "p", noremap } }
     },
     {

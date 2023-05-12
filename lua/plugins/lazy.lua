@@ -119,7 +119,7 @@ require("lazy").setup({
     --lsp function signature help
     { 'ray-x/lsp_signature.nvim' },
     --lsp code action lightbulb
-    { 'kosayoda/nvim-lightbulb' },
+    -- { 'kosayoda/nvim-lightbulb' },
     --code action menu
     -- { 'weilbith/nvim-code-action-menu' },
     -- lsp actions
