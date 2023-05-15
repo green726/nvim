@@ -26,10 +26,10 @@ require("lazy").setup({
     --tabline but better
     -- { 'noib3/nvim-cokeline' },
     -- better ui stuff
-    { "folke/noice.nvim", dependencies = {
-        "MunifTanjim/nui.nvim",
-        -- "rcarriga/nvim-notify",
-    } },
+    -- { "folke/noice.nvim", dependencies = {
+    --     "MunifTanjim/nui.nvim",
+    --     -- "rcarriga/nvim-notify",
+    -- } },
     --statusline
     { "feline-nvim/feline.nvim" },
     --indents

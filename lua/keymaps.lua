@@ -137,7 +137,7 @@ com_cent.add({
     },
     {
         desc = "Format",
-        cmd = "<cmd>lua vim.lsp.buf.formatting()<CR>",
+        cmd = "<cmd>lua vim.lsp.buf.format { async = true }<CR>",
         keys = { { "n", "<space>f", noremap } }
     },
     {
