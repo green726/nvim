@@ -1,52 +1,33 @@
--- Add additional capabilities supported by nvim-cmp
--- local capabilities = vim.lsp.protocol.make_client_capabilities()
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
--- capabilities.textDocument.foldingRange = {
---     dynamicRegistration = false,
---     lineFoldingOnly = true
+--
+--
+-- -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
+-- local servers = { 'omnisharp', 'lua_ls', 'rust_analyzer', 'kotlin_language_server', 'jsonls', 'hls', 'pyright',
+--     'tsserver', 'clangd', "ocamllsp", "texlab" }
+-- for _, lsp in ipairs(servers) do
+--     lspconfig[lsp].setup {
+--         on_attach = custom_attach,
+--         capabilities = capabilities,
+--     }
+-- end
+
+
+
+
+-- local clangCapabilities = capabilities
+-- clangCapabilities.offsetEncoding = { "utf-16" }
+--
+-- require 'lspconfig'.clangd.setup {
+--     root_dir = lspconfig.util.root_pattern(
+--         'meson.build',
+--         '.clangd',
+--         '.clang-tidy',
+--         'compile_commands.json',
+--         'compile_flags.txt',
+--         'configure.ac'
+--     ),
+--     capabilities = clangCapabilities,
+--     on_attach = custom_attach,
 -- }
-
-local lspconfig = require('lspconfig')
-
-local function custom_attach(client)
-    -- require("aerial").on_attach(client)
-    -- require('folding').on_attach()
-end
-
--- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'omnisharp', 'lua_ls', 'rust_analyzer', 'kotlin_language_server', 'jsonls', 'hls', 'pyright',
-    'tsserver', 'clangd', "ocamllsp", "texlab" }
-for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup {
-        on_attach = custom_attach,
-        capabilities = capabilities,
-    }
-end
-
-
-lspconfig.jdtls.setup {
-	capabilities = capabilities,
-	on_attach = custom_attach,
-	settings = {
-		      java = {signatureHelp = {enabled = true}, contentProvider = {preferred = 'fernflower'}}
-	}
-}
-
-local clangCapabilities = capabilities
-clangCapabilities.offsetEncoding = { "utf-16" }
-
-require 'lspconfig'.clangd.setup {
-    root_dir = lspconfig.util.root_pattern(
-        'meson.build',
-        '.clangd',
-        '.clang-tidy',
-        'compile_commands.json',
-        'compile_flags.txt',
-        'configure.ac'
-    ),
-    capabilities = clangCapabilities,
-    on_attach = custom_attach,
-}
 
 -- require("flutter-tools").setup {}
 

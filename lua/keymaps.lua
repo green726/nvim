@@ -4,6 +4,11 @@ local noremap_silent = { noremap = true, silent = true }
 
 com_cent.add({
     {
+        desc = "Toggle Term Open Float",
+        cmd = "<cmd>ToggleTerm direction=float<CR>",
+        keys = { { "n", "tt", noremap } }
+    },
+    {
         desc = "Activate WinShift",
         cmd = "<cmd>WinShift<CR>",
         keys = { { "n", "<leader>ws", noremap } }

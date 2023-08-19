@@ -76,3 +76,14 @@ vim.o.foldmethod = "expr"
 vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
 
 require("colors")
+
+
+vim.cmd([[autocmd BufNewFile,BufRead *.hazel setfiletype hazel]])
+
+--BUG: below no worky :( WHYY?
+
+-- vim.filetype.add({
+--   pattern = {
+--     ['*.hazel'] = 'hazel',
+--   },
+-- })
