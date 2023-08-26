@@ -88,12 +88,12 @@ com_cent.add({
     {
         desc = "Hop Words",
         cmd = "<cmd>lua require'hop'.hint_words()<cr>",
-        keys = { { "n", "<C-h>", noremap } }
+        keys = { { "n", "<C-h>", noremap },  { "v", "<C-h>", noremap }}
     },
     {
         desc = "Hop Lines",
         cmd = "<cmd>lua require'hop'.hint_lines_skip_whitespace()<cr>",
-        keys = { { "n", "<Leader>hl", noremap } }
+        keys = { { "n", "<Leader>hl", noremap }, { "v", "<Leader>hl", noremap } }
     },
     {
         desc = "Toggle GitUI",

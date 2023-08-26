@@ -48,7 +48,7 @@ saga.setup({
         -- black = '#1c1c19',
     },
     ui = {
-        code_action = "ﯦ"
+        code_action = "󰛨"
     }
 })
 

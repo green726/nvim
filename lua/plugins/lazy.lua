@@ -180,6 +180,8 @@ require("lazy").setup({
     { 'seandewar/nvimesweeper' },
     --session management
     {'jedrzejboczar/possession.nvim'},
+    --stop using basic movement keys
+    {'ja-ford/delaytrain.nvim'},
 
 },
     {
