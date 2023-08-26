@@ -45,14 +45,14 @@ end
 dashboard.section.buttons.val = {
     dashboard.button("f", " Telescope Files ", ":Telescope find_files<CR>"),
 	dashboard.button("o", " Open File Tree", ":e .<CR>"),
-	dashboard.button("n", "ﱐ New file", ":call NewFile() <CR>"),
+	dashboard.button("n", "󰝒 New file", ":call NewFile() <CR>"),
 	dashboard.button("n", "󰠮 View Projects", ":call Projects() <CR>"),
-	dashboard.button("n", "累View Sessions", ":call Sessions() <CR>"),
+	dashboard.button("n", "󰑓 View Sessions", ":call Sessions() <CR>"),
 	-- dashboard.button( "f", " New Folder", ":call NewFile() <CR>"),
 --	dashboard.button("u", "累Load Previous Session", ":SessionManager load_last_session<CR>"),
-	dashboard.button("s", "漣Edit NVIM Config", ":e " .. pathToSettings .. "<CR>"),
-	dashboard.button("d", " Paq Sync", ":PaqSync <CR>"),
-	dashboard.button("q", " Quit NVIM", ":qa <CR>"),
+	dashboard.button("s", " Edit NVIM Config", ":e " .. pathToSettings .. "<CR>"),
+	dashboard.button("d", "󰇚 Paq Sync", ":PaqSync <CR>"),
+	dashboard.button("q", "󰅚 Quit NVIM", ":qa <CR>"),
 }
 
 dashboard.config.opts.noautocmd = false
