@@ -1,3 +1,7 @@
+vim.cmd([[let g:copilot_assume_mapped = v:true]])
+vim.cmd("let g:copilot_no_tab_map = v:true")
+
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
@@ -79,10 +83,3 @@ require("colors")
 
 vim.cmd([[autocmd BufNewFile,BufRead *.hazel setfiletype hazel]])
 
---BUG: below no worky :( WHYY?
-
--- vim.filetype.add({
---   pattern = {
---     ['*.hazel'] = 'hazel',
---   },
--- })
