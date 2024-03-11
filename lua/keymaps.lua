@@ -212,7 +212,7 @@ com_cent.add({
     {
         desc = "Open JABS (Buffer Switcher)",
         cmd = "<cmd>lua require('jabs').open()<CR>",
-        keys = { { "n", "<Tab>", noremap } }
+        keys = { { "n", "<S-Tab>", noremap } }
     }
 }
 )

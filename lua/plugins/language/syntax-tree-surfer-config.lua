@@ -4,7 +4,7 @@ local opts = { noremap = true, silent = true }
 -- Syntax Tree Surfer V2 Mappings
 -- Targeted Jump with virtual_text
 local sts = require("syntax-tree-surfer")
-vim.keymap.set("n", "gv", function() -- only jump to variable_declarations
+vim.keymap.set("n", "gV", function() -- only jump to variable_declarations
 	sts.targeted_jump({ "variable_declaration" })
 end, opts)
 vim.keymap.set("n", "gfu", function() -- only jump to functions
