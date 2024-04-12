@@ -1,4 +1,4 @@
-local com_cent = require("command_center")
+local com_cent = require("commander")
 local noremap = { noremap = true }
 local noremap_silent = { noremap = true, silent = true }
 
