@@ -83,3 +83,5 @@ require("colors")
 
 vim.cmd([[autocmd BufNewFile,BufRead *.hazel setfiletype hazel]])
 
+--always use system clipboard
+vim.cmd([[set clipboard+=unnamedplus]])
