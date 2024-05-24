@@ -69,6 +69,8 @@ tele.setup({
     },
 })
 
+
+tele.load_extension('todo-comments')
 tele.load_extension('possession')
 tele.load_extension('repo')
 tele.load_extension("projects")

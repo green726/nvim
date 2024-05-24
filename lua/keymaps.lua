@@ -14,16 +14,6 @@ com_cent.add({
         keys = { { "n", "<leader>ws", noremap } }
     },
     {
-        desc = "Paste Wihtout Yank (Visual)",
-        cmd = "p",
-        keys = { { "v", "p", noremap } }
-    },
-    {
-        desc = "Paste Wihtout Yank",
-        cmd = "p",
-        keys = { { "n", "p", noremap } }
-    },
-    {
         desc = "LSPSaga Finder",
         cmd = "<cmd>Lspsaga lsp_finder<CR>",
         keys = { { "n", "<leader>lf", noremap } }
@@ -57,7 +47,8 @@ com_cent.add({
     },
     {
         desc = "Open Telescope",
-        cmd = "<cmd>Telescope<CR>",
+        cmd = "<cmd>Telescope builtin include_extensions=true<CR>",
+        --cmd = "<cmd>Telescope<CR>",
         keys = { { "n", "to", noremap } }
     },
     {
@@ -118,7 +109,7 @@ com_cent.add({
     {
         desc = "Signature Help",
         cmd = "<cmd>lua vim.lsp.buf.signature_help()<CR>",
-        keys = { { "n", "<C-k>", noremap } }
+        keys = { { "n", "<C-k>", noremap }, {"i", "<C-k>", noremap} }
     },
     {
         desc = "Add Workspace Folder",
