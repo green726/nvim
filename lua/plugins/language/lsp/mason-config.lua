@@ -39,14 +39,15 @@ require("mason-lspconfig").setup_handlers {
     -- For example, a handler override for the `rust_analyzer`:
     ["clangd"] = function()
         require 'lspconfig'.clangd.setup {
-            root_dir = lspconfig.util.root_pattern(
-                'meson.build',
-                '.clangd',
-                '.clang-tidy',
-                'compile_commands.json',
-                'compile_flags.txt',
-                'configure.ac'
-            ),
+            -- root_dir = lspconfig.util.root_pattern(
+            --     -- 'meson.build',
+            --     -- '.clangd',
+            --     -- '.clang-tidy',
+            --     'compile_commands.json'
+            --     -- 'compile_flags.txt'
+            --     -- '.clang-format'
+            --     -- 'configure.ac'
+            -- ),
             capabilities = clangCapabilities,
             on_attach = custom_attach,
         }

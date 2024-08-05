@@ -15,6 +15,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+
 require("plugins/lazy")
 
 --set the colorscheme
@@ -84,4 +85,5 @@ require("colors")
 vim.cmd([[autocmd BufNewFile,BufRead *.hazel setfiletype hazel]])
 
 --always use system clipboard
-vim.cmd([[set clipboard+=unnamedplus]])
+vim.opt.clipboard="unnamedplus"
+

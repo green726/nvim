@@ -174,10 +174,10 @@ require("lazy").setup({
     --keymaps stuff
     { "FeiyouG/command_center.nvim" },
     --blackjack
-    { 'alanfortlink/blackjack.nvim' },
+    -- { 'alanfortlink/blackjack.nvim' },
     --killer sheep
-    { 'seandewar/killersheep.nvim' },
-    { 'seandewar/nvimesweeper' },
+    -- { 'seandewar/killersheep.nvim' },
+    -- { 'seandewar/nvimesweeper' },
     --session management
     {'jedrzejboczar/possession.nvim'},
     --stop using basic movement keys
