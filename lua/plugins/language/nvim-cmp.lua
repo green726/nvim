@@ -8,7 +8,6 @@ local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 --load snippets
 require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./lua/plugins/language/lsp/snippets" } })
 
-
 local source_mapping = {
     buffer = "[Buffer]",
     nvim_lsp = "[LSP]",
@@ -141,14 +140,18 @@ cmp.setup.cmdline('/', {
 
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(':', {
-    mapping = cmp.mapping.preset.cmdline(),
-    sources = cmp.config.sources({
-        { name = 'path' }
-    }, {
-        { name = 'cmdline' }
-    })
+  mapping = cmp.mapping.preset.insert(),
+  sources = cmp.config.sources({
+    { name = 'path' }
+  }, {
+    {
+      name = 'cmdline',
+      option = {
+        ignore_cmds = { 'Man', '!' }
+      }
+    }
+  })
 })
-
 -- local tabnine = require('cmp_tabnine.config')
 -- tabnine:setup({
 --     max_lines = 1000;

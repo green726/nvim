@@ -15,7 +15,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
 require("plugins/lazy")
 
 --set the colorscheme
@@ -41,8 +40,6 @@ vim.cmd([[autocmd TermOpen * setlocal nonumber norelativenumber]])
 
 vim.opt.encoding = "UTF-8"
 
-
-
 -- require("plugins/paq")
 
 require("plugins/util/util")
@@ -60,8 +57,6 @@ vim.cmd [[set relativenumber]]
 vim.g.instant_username = "green726"
 
 
-
-
 --below changes tabs to four spaces
 vim.cmd([[set tabstop=4]])
 vim.cmd([[set shiftwidth=4]])
@@ -73,17 +68,13 @@ vim.cmd [[set signcolumn=yes:1]]
 
 vim.g.do_filetype_lua = 1
 
-
-
 --folding for TS
 vim.o.foldmethod = "expr"
 vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
 
 require("colors")
 
-
 vim.cmd([[autocmd BufNewFile,BufRead *.hazel setfiletype hazel]])
 
 --always use system clipboard
 vim.opt.clipboard="unnamedplus"
-
