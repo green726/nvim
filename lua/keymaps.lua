@@ -33,11 +33,11 @@ com_cent.add({
     --     cmd = "<cmd>Nvimesweeper<CR>",
     --     keys = { { "n", "<leader>ms", noremap } }
     -- },
-    -- {
-    --     desc = "Open Command Center",
-    --     cmd = "<cmd>Telescope command_center<CR>",
-    --     keys = { { "n", "tc", noremap } }
-    -- },
+    {
+        desc = "Open Commander",
+        cmd = "<cmd>Telescope commander<CR>",
+        keys = { { "n", "tc", noremap } }
+    },
     {
         desc = "Open Spectre",
         cmd = "<cmd>lua require('spectre').open()<CR>",
