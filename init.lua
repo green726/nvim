@@ -17,6 +17,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require("plugins/lazy")
 
+--Stop the stupid pasting over thingy
+vim.api.nvim_set_keymap('x', 'p', 'pgvy', { noremap = true, silent = true })
+
 --set the colorscheme
 vim.cmd [[colorscheme nightfox]]
 

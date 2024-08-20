@@ -51,7 +51,7 @@ dashboard.section.buttons.val = {
 	-- dashboard.button( "f", " New Folder", ":call NewFile() <CR>"),
 --	dashboard.button("u", "累Load Previous Session", ":SessionManager load_last_session<CR>"),
 	dashboard.button("s", " Edit NVIM Config", ":e " .. pathToSettings .. "<CR>"),
-	dashboard.button("d", "󰇚 Paq Sync", ":PaqSync <CR>"),
+	dashboard.button("d", "󰇚 Lazy Sync", ":Lazy sync <CR>"),
 	dashboard.button("q", "󰅚 Quit NVIM", ":qa <CR>"),
 }
 

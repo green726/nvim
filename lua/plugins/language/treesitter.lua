@@ -38,7 +38,7 @@ require("nvim-treesitter.configs").setup({
     -- ...
     rainbow = {
         enable = true,
-        -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
+        -- disable = { "jsx", "cpp" }, -- list of languages you want to disable the plugin for
         extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
         max_file_lines = nil, -- Do not enable for files with more than n lines, int
         -- colors = {}, -- table of hex strings
@@ -48,15 +48,15 @@ require("nvim-treesitter.configs").setup({
 require("nvim-treesitter.install").compilers = { "gcc" }
 
 
-local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-parser_config.hazel = {
-  install_info = {
-    url = "~/coding/tree-sitter-hazel/", -- local path or git repo
-    files = {"src/parser.c"}, -- note that some parsers also require src/scanner.c or src/scanner.cc
-    -- optional entries:
-    branch = "main", -- default branch in case of git repo if different from master
-    generate_requires_npm = false, -- if stand-alone parser without npm dependencies
-    requires_generate_from_grammar = false, -- if folder contains pre-generated src/parser.c
-  },
-  filetype = "hazel", -- if filetype does not match the parser name
-}
+-- local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+-- parser_config.hazel = {
+--   install_info = {
+--     url = "~/coding/tree-sitter-hazel/", -- local path or git repo
+--     files = {"src/parser.c"}, -- note that some parsers also require src/scanner.c or src/scanner.cc
+--     -- optional entries:
+--     branch = "main", -- default branch in case of git repo if different from master
+--     generate_requires_npm = false, -- if stand-alone parser without npm dependencies
+--     requires_generate_from_grammar = false, -- if folder contains pre-generated src/parser.c
+--   },
+--   filetype = "hazel", -- if filetype does not match the parser name
+-- }

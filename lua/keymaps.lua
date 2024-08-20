@@ -4,6 +4,12 @@ local noremap_silent = { noremap = true, silent = true }
 
 com_cent.add({
     {
+        desc = "Open Telescope Diagnostics",
+        cmd = "<cmdTelescope diagnostics<CR>",
+        keys = { { "n", "td", noremap } }
+    },
+
+    {
         desc = "Toggle Term Open Float",
         cmd = "<cmd>ToggleTerm direction=float<CR>",
         keys = { { "n", "tt", noremap } }

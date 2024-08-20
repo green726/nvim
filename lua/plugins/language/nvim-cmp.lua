@@ -8,15 +8,15 @@ local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 --load snippets
 require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./lua/plugins/language/lsp/snippets" } })
 
-local source_mapping = {
-    buffer = "[Buffer]",
-    nvim_lsp = "[LSP]",
-    nvim_lua = "[Lua]",
-    cmp_tabnine = "[T9]",
-    path = "[Path]",
-}
-
-local compare = require('cmp.config.compare')
+-- local source_mapping = {
+--     buffer = "[Buffer]",
+--     nvim_lsp = "[LSP]",
+--     nvim_lua = "[Lua]",
+--     cmp_tabnine = "[T9]",
+--     path = "[Path]",
+-- }
+--
+-- local compare = require('cmp.config.compare')
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
@@ -71,26 +71,26 @@ cmp.setup {
     }),
     sources = {
         { name = 'nvim_lsp', max_item_count = 10 },
-        { name = 'luasnip', max_item_count = 2 },
-        { name = 'path', max_item_count = 3 },
+        { name = 'luasnip',  max_item_count = 2 },
+        { name = 'path',     max_item_count = 3 },
         -- { name = 'cmp_tabnine', max_item_count = 20 }
     },
-    -- enabled = function()
-    --     -- disable completion in comments
-    --     local context = require 'cmp.config.context'
-    --     -- keep command mode completion enabled when cursor is in a comment
-    --     if vim.api.nvim_get_mode().mode == 'c' then
-    --         return true
-    --     else
-    --         if vim.bo.filetype == "TelescopePrompt" then return end
-    --         return not context.in_treesitter_capture("comment")
-    --             and not context.in_syntax_group("Comment")
-    --     end
-    -- end,
+    enabled = function()
+        -- disable completion in comments
+        local context = require 'cmp.config.context'
+        -- keep command mode completion enabled when cursor is in a comment
+        if vim.api.nvim_get_mode().mode == 'c' then
+            return true
+        else
+            if vim.bo.filetype == "TelescopePrompt" then return end
+            return not context.in_treesitter_capture("comment")
+                and not context.in_syntax_group("Comment")
+        end
+    end,
     formatting = {
         format = lspkind.cmp_format({
             mode = 'symbol_text', -- show only symbol annotations
-            maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+            maxwidth = 50,        -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
             menu = {
                 cmp_tabnine = "[T9]",
                 buffer = "[Buffer]",
@@ -130,7 +130,7 @@ cmp.event:on(
     cmp_autopairs.on_confirm_done()
 )
 
--- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+-- `/` cmdline setup.
 cmp.setup.cmdline('/', {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
@@ -138,19 +138,20 @@ cmp.setup.cmdline('/', {
     }
 })
 
--- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+
+-- Use cmdline & path source for ':'
 cmp.setup.cmdline(':', {
-  mapping = cmp.mapping.preset.insert(),
-  sources = cmp.config.sources({
-    { name = 'path' }
-  }, {
-    {
-      name = 'cmdline',
-      option = {
-        ignore_cmds = { 'Man', '!' }
-      }
-    }
-  })
+    mapping = cmp.mapping.preset.insert(),
+    sources = cmp.config.sources({
+        { name = 'path' }
+    }, {
+        {
+            name = 'cmdline',
+            option = {
+                ignore_cmds = { 'Man', '!' }
+            }
+        }
+    })
 })
 -- local tabnine = require('cmp_tabnine.config')
 -- tabnine:setup({
