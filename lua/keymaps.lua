@@ -117,21 +117,21 @@ com_cent.add({
         cmd = "<cmd>lua vim.lsp.buf.signature_help()<CR>",
         keys = { { "n", "<C-k>", noremap }, {"i", "<C-k>", noremap} }
     },
-    {
-        desc = "Add Workspace Folder",
-        cmd = "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>",
-        keys = { { "n", "<Leader>wa", noremap } }
-    },
-    {
-        desc = "Remove Workspace Folder",
-        cmd = "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>",
-        keys = { { "n", "<Leader>wr", noremap } }
-    },
-    {
-        desc = "List Workspace Folders",
-        cmd = "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>",
-        keys = { { "n", "<Leader>wl", noremap } }
-    },
+    -- {
+    --     desc = "Add Workspace Folder",
+    --     cmd = "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>",
+    --     keys = { { "n", "<Leader>wa", noremap } }
+    -- },
+    -- {
+    --     desc = "Remove Workspace Folder",
+    --     cmd = "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>",
+    --     keys = { { "n", "<Leader>wr", noremap } }
+    -- },
+    -- {
+    --     desc = "List Workspace Folders",
+    --     cmd = "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>",
+    --     keys = { { "n", "<Leader>wl", noremap } }
+    -- },
     {
         desc = "List References",
         cmd = "<cmd>lua vim.lsp.buf.references()<CR>",

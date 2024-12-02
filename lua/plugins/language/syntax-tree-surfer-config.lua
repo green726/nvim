@@ -8,7 +8,7 @@ vim.keymap.set("n", "gV", function() -- only jump to variable_declarations
 	sts.targeted_jump({ "variable_declaration" })
 end, opts)
 vim.keymap.set("n", "gfu", function() -- only jump to functions
-	sts.targeted_jump({ "function", "arrrow_function", "function_definition", "method_declaration" })
+	sts.targeted_jump({ "function", "arrrow_function", --[[ "function_definition", ]] "method_declaration" })
   --> In this example, the Lua language schema uses "function",
   --  when the Python language uses "function_definition"
   --  we include both, so this keymap will work on both languages

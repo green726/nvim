@@ -57,11 +57,11 @@ require("lazy").setup({
     --highlight context with treesitter
     { "romgrk/nvim-treesitter-context" },
     --treesitter rainbow
-    { "p00f/nvim-ts-rainbow" },
+    -- { "p00f/nvim-ts-rainbow" },
     --dim code outside of context
     { "folke/twilight.nvim" },
     --dim inactive code
-    { "narutoxy/dim.lua" },
+    {"zbirenbaum/neodim"},
     --window management
     { "sindrets/winshift.nvim" },
     --bettwen window creation
