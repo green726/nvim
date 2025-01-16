@@ -1,1 +1,0 @@
-nvr --servername /tmp/unity-nvr --remote-silent +$(Line) $(File)

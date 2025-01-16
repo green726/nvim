@@ -1,6 +1,6 @@
 local tele = require("telescope")
 local sorters = require("telescope.sorters")
-local fb_actions = require "telescope".extensions.file_browser.actions
+-- local fb_actions = require "telescope".extensions.file_browser.actions
 
 
 tele.setup({
@@ -57,25 +57,18 @@ tele.setup({
         --   extension_config_key = value,
         -- }
         -- please take a look at the readme of the extension you want to configure
-        file_browser = {
-            hijack_netrw = true,
-            mappings = {
-                ["n"] = {
-                    ["<bs>/"] = false,
-                    ["<Left>"] = fb_actions.goto_parent_dir,
-                }
-            }
-        }
+        -- file_browser = {
+        --     hijack_netrw = true,
+        --     mappings = {
+        --         ["n"] = {
+        --             ["<bs>/"] = false,
+        --             ["<Left>"] = fb_actions.goto_parent_dir,
+        --         }
+        --     }
+        -- }
     },
 })
 
 
 tele.load_extension('todo-comments')
-tele.load_extension('possession')
-tele.load_extension('repo')
-tele.load_extension("projects")
-tele.load_extension("aerial")
 tele.load_extension("live_grep_args")
-tele.load_extension("file_browser")
--- tele.load_extension("noice")
-tele.load_extension("commander")

@@ -1,2 +1,0 @@
-1
-/home/green726/coding/nvim-config-manager/init.lua
