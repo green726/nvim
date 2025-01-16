@@ -51,7 +51,10 @@ require("lazy").setup({
         --plugin for mason for nvim-config
         { 'williamboman/mason-lspconfig.nvim' },
         --auto complete
-        { 'hrsh7th/nvim-cmp' },
+        {
+            'hrsh7th/nvim-cmp',
+            lazy = true
+        },
         --lsp source for nvim-cmp
         { 'hrsh7th/cmp-nvim-lsp' },
         --file path completion for nvim-cmp
@@ -71,9 +74,9 @@ require("lazy").setup({
         --cut and delete seperate
         { 'gbprod/cutlass.nvim' },
         --folds
-        { 'kevinhwang91/nvim-ufo' },
+        { 'kevinhwang91/nvim-ufo',                       lazy = true },
         --jdtls
-        { "mfussenegger/nvim-jdtls" },
+        { "mfussenegger/nvim-jdtls",                     lazy = true },
         --keymaps stuff
         { "FeiyouG/command_center.nvim" },
         { "nvim-telescope/telescope-live-grep-args.nvim" },
@@ -83,6 +86,7 @@ require("lazy").setup({
         },
         {
             "folke/flash.nvim",
+            lazy = true,
         },
         { 'folke/which-key.nvim' },
         {
