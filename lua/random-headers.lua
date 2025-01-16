@@ -3579,4 +3579,9 @@ local keys = {}
     end
 local selected_header = headers[keys[math.random(#keys)]]
 
-return selected_header
+local ret = ""
+for k, _ in pairs(selected_header) do
+    ret = ret.. selected_header[k] .. "\n"
+end
+
+return ret

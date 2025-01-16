@@ -2,7 +2,7 @@ return {
     dashboard = {
         enabled = true,
         preset = {
-            header = require("random-headers")[3],
+            header = require("random-headers"),
         },
         sections = {
             { section = "header", },
