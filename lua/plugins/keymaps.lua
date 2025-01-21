@@ -4,14 +4,41 @@ local noremap_silent = { noremap = true, silent = true }
 
 com_cent.add({
     {
-        desc = "Flash",
+        desc = "Telescope code companion",
+        cmd =
+            function()
+                local opts = {
+                    layout_strategy = "vertical",
+                    previewer = false,
+                    layout_config = {
+                        vertical = {
+                            width = 0.5,
+                            height = 0.7,
+                        },
+                    },
+                }
+                require("telescope").extensions.codecompanion.codecompanion(opts)
+            end,
+        keys = { { "n", "tc", noremap } }
+    },
+    {
+        desc = "Flash jump search",
         cmd = function() require("flash").jump() end,
         keys = { { "n", "<C-h>", noremap } }
     },
     {
+        desc = "Flash jump word under cursor",
+        cmd = function()
+            require("flash").jump({
+                pattern = vim.fn.expand("<cword>"),
+            })
+        end,
+        keys = { { "n", "<C-b>", noremap } }
+    },
+    {
         desc = "Toggle Scratch Buffer",
         cmd = function() Snacks.scratch() end,
-        keys = { { "n", "<Leader>s", noremap} }
+        keys = { { "n", "<Leader>s", noremap } }
     },
     -- {
     --     desc = "Flash treesitter",
@@ -23,7 +50,6 @@ com_cent.add({
         cmd = "<cmd>Telescope diagnostics<CR>",
         keys = { { "n", "td", noremap } }
     },
-
     {
         desc = "Toggle Term Open Float",
         cmd = "<cmd>ToggleTerm direction=float<CR>",
@@ -36,13 +62,13 @@ com_cent.add({
     -- },
     {
         desc = "LSPSaga Finder",
-        cmd = "<cmd>Lspsaga lsp_finder<CR>",
+        cmd = "<cmd>Lspsaga finder<CR>",
         keys = { { "n", "<leader>lf", noremap } }
     },
     {
         desc = "Open Commander",
-        cmd = "<cmd>Telescope commander<CR>",
-        keys = { { "n", "tc", noremap } }
+        cmd = "<cmd>Telescope commander (keymaps)<CR>",
+        keys = { { "n", "tk", noremap } }
     },
     {
         desc = "Open Telescope",
@@ -60,11 +86,11 @@ com_cent.add({
         cmd = "<cmd>Telescope live_grep<CR>",
         keys = { { "n", "ts", noremap } }
     },
-    {
-        desc = "Open Telescope Aerial",
-        cmd = "<cmd>Telescope aerial<CR>",
-        keys = { { "n", "ta", noremap } }
-    },
+    -- {
+    --     desc = "Open Telescope Aerial",
+    --     cmd = "<cmd>Telescope aerial<CR>",
+    --     keys = { { "n", "ta", noremap } }
+    -- },
     {
         desc = "Open Yazi",
         cmd = "<cmd>Yazi<CR>",
@@ -143,6 +169,9 @@ com_cent.add({
     {
         desc = "Show Cursor Diagnostics",
         cmd = "<cmd>Lspsaga show_cursor_diagnostics<CR>",
+        -- cmd = function()
+        --     require("lspsaga.diagnostic.show"):show_diagnostics({ cursor = true, show_layout = '++float' })
+        -- end,
         keys = { { "n", "<space>e", noremap } }
     },
     {
@@ -171,18 +200,14 @@ com_cent.add({
         keys = { { "n", "<space>fp", noremap } }
     },
     {
-        desc = "Jump to error next",
-        cmd = function()
-            require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
-        end,
-        keys = { { "n", "]E", noremap_silent } }
+        desc = "Jump to prev diagnostic",
+        cmd = "<cmd>Lspsaga diagnostic_jump_prev<CR>",
+        keys = { { "n", "[e", noremap_silent } }
     },
     {
-        desc = "Jump to error prev",
-        cmd = function()
-            require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR })
-        end,
-        keys = { { "n", "[E", noremap_silent } }
+        desc = "Jump to next diagnostic",
+        cmd = "<cmd>Lspsaga diagnostic_jump_next<CR>",
+        keys = { { "n", "]e", noremap_silent } }
     },
 }
 )

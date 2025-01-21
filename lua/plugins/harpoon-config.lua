@@ -43,13 +43,13 @@ com_cent.add({
     {
         "Add harpoon mark",
         cmd = function() harpoon:list():add() end,
-        keys = { { "n", "<S-Tab>", noremap } }
+        keys = { { "n", "<Leader>a", noremap } }
     },
 
     {
         desc = "Open harpoon telescope",
         cmd = function() toggle_telescope(harpoon:list()) end,
-        keys = { { "n", "th", noremap } }
+        keys = { { "n", "<S-Tab>", noremap } }
     },
     {
         desc = "Harpoon next",

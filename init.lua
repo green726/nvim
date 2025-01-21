@@ -1,6 +1,3 @@
-vim.cmd([[let g:copilot_assume_mapped = v:true]])
-vim.cmd("let g:copilot_no_tab_map = v:true")
-
 require("plugins/lazy")
 
 
@@ -43,11 +40,16 @@ require("plugins/harpoon-config")
 require("plugins/lspsaga-config")
 require("plugins/colors")
 require("plugins/yazi-config")
+require("plugins/codecompanion-config")
 
 ---end plugins
 
 require("plugins/keymaps")
 
+
+vim.cmd([[let g:copilot_assume_mapped = v:true]])
+vim.cmd("let g:copilot_no_tab_map = v:true")
+vim.api.nvim_set_keymap("i", "<C-s>", 'copilot#Accept("<CR>")', { silent = true, expr = true})
 
 --below changes tabs to four spaces
 vim.cmd([[set tabstop=4]])
