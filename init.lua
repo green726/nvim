@@ -41,6 +41,7 @@ require("plugins/lspsaga-config")
 require("plugins/colors")
 require("plugins/yazi-config")
 require("plugins/codecompanion-config")
+require("plugins/comment-config")
 
 ---end plugins
 
